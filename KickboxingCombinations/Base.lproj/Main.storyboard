@@ -38,12 +38,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" # of Rounds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eC-6F-1Nc">
-                                <rect key="frame" x="240" y="156" width="120" height="20"/>
-                                <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round Duration:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo8-2v-eJO">
                                 <rect key="frame" x="222" y="218" width="157" height="20"/>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="20"/>
@@ -63,115 +57,106 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ4-W0-1T6">
-                                <rect key="frame" x="284" y="248" width="33" height="17"/>
+                                <rect key="frame" x="225" y="248" width="150" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="RJc-Iq-Khb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2x-1B-cl5">
-                                <rect key="frame" x="291" y="372" width="19" height="17"/>
+                                <rect key="frame" x="225" y="372" width="150" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="6M0-DK-MMB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqG-dD-JWw">
-                                <rect key="frame" x="284" y="310" width="33" height="17"/>
+                                <rect key="frame" x="225" y="310" width="150" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="wr4-bH-pw4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfb-eQ-hQv">
-                                <rect key="frame" x="295" y="186" width="10" height="17"/>
+                                <rect key="frame" x="225" y="186" width="150" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="EMj-ma-KEB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beginner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuc-eM-5A5">
-                                <rect key="frame" x="264" y="124" width="73" height="17"/>
+                                <rect key="frame" x="225" y="124" width="150" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="cXz-4b-FGQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1v-Qg-7hx">
-                                <rect key="frame" x="194" y="118" width="30" height="30"/>
+                                <rect key="frame" x="195" y="118" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="&lt;-"/>
-                                <connections>
-                                    <action selector="typeLeftButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="hQB-TM-b5l"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUT-Wb-CME">
-                                <rect key="frame" x="377" y="118" width="30" height="30"/>
+                                <rect key="frame" x="375" y="118" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="-&gt;"/>
-                                <connections>
-                                    <action selector="typeRightButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="6kh-Hk-ss0"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shm-71-ssI">
-                                <rect key="frame" x="194" y="180" width="30" height="30"/>
+                                <rect key="frame" x="195" y="180" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="&lt;-"/>
-                                <connections>
-                                    <action selector="roundsLeftButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="kKb-1Z-WpO"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9s5-Y2-lKv">
-                                <rect key="frame" x="194" y="242" width="30" height="30"/>
+                                <rect key="frame" x="195" y="242" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="&lt;-"/>
-                                <connections>
-                                    <action selector="timeLeftButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="NGa-Wd-UAO"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2c-Ym-DP6">
-                                <rect key="frame" x="377" y="242" width="30" height="30"/>
+                                <rect key="frame" x="375" y="242" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="-&gt;"/>
-                                <connections>
-                                    <action selector="timeRightButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="szB-xn-FQ9"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1U9-gA-uen">
-                                <rect key="frame" x="194" y="304" width="30" height="30"/>
+                                <rect key="frame" x="195" y="304" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="&lt;-"/>
-                                <connections>
-                                    <action selector="restLeftButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="IvY-bf-i1w"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIj-9c-FuB">
-                                <rect key="frame" x="377" y="304" width="30" height="30"/>
+                                <rect key="frame" x="375" y="304" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="-&gt;"/>
-                                <connections>
-                                    <action selector="restRightButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="HRb-sv-s3b"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Agt-vv-Rv2">
-                                <rect key="frame" x="194" y="366" width="30" height="30"/>
+                                <rect key="frame" x="195" y="366" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="&lt;-"/>
-                                <connections>
-                                    <action selector="warningLeftButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="MZB-gt-who"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quz-6U-gdE">
-                                <rect key="frame" x="377" y="366" width="30" height="30"/>
+                                <rect key="frame" x="375" y="366" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="-&gt;"/>
-                                <connections>
-                                    <action selector="warningRightButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="fHk-je-XqC"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqf-En-LOs">
-                                <rect key="frame" x="377" y="180" width="30" height="30"/>
+                                <rect key="frame" x="375" y="180" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="-&gt;"/>
-                                <connections>
-                                    <action selector="roundsRightButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="IH8-OC-Iei"/>
-                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" # of Rounds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eC-6F-1Nc">
+                                <rect key="frame" x="240" y="156" width="120" height="20"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.22640607600000001" green="1" blue="0.15633545569999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -179,7 +164,7 @@
                             <constraint firstAttribute="centerX" secondItem="Xfb-eQ-hQv" secondAttribute="centerX" id="1Tp-6J-aw8"/>
                             <constraint firstItem="eUT-Wb-CME" firstAttribute="leading" secondItem="kuc-eM-5A5" secondAttribute="trailing" constant="30" id="4Dn-7I-XFz"/>
                             <constraint firstItem="h1v-Qg-7hx" firstAttribute="top" secondItem="kuc-eM-5A5" secondAttribute="top" id="5CT-mb-bcY"/>
-                            <constraint firstItem="kuc-eM-5A5" firstAttribute="leading" secondItem="h1v-Qg-7hx" secondAttribute="trailing" constant="40" id="6dk-7p-y6l"/>
+                            <constraint firstItem="kuc-eM-5A5" firstAttribute="leading" secondItem="h1v-Qg-7hx" secondAttribute="trailing" id="6dk-7p-y6l"/>
                             <constraint firstItem="h1v-Qg-7hx" firstAttribute="bottom" secondItem="kuc-eM-5A5" secondAttribute="bottom" id="6x3-92-JxA"/>
                             <constraint firstItem="rqG-dD-JWw" firstAttribute="top" secondItem="1U9-gA-uen" secondAttribute="top" id="70P-lI-cJW"/>
                             <constraint firstItem="h1v-Qg-7hx" firstAttribute="leading" secondItem="9s5-Y2-lKv" secondAttribute="leading" id="7sb-Gq-rtZ"/>
@@ -221,7 +206,7 @@
                             <constraint firstItem="Xfb-eQ-hQv" firstAttribute="top" secondItem="4eC-6F-1Nc" secondAttribute="bottom" constant="10" id="cOq-Ah-LuK">
                                 <variation key="heightClass=compact-widthClass=compact" constant="5"/>
                             </constraint>
-                            <constraint firstItem="eUT-Wb-CME" firstAttribute="leading" secondItem="kuc-eM-5A5" secondAttribute="trailing" constant="40" id="cax-jQ-PMy"/>
+                            <constraint firstItem="eUT-Wb-CME" firstAttribute="leading" secondItem="kuc-eM-5A5" secondAttribute="trailing" id="cax-jQ-PMy"/>
                             <constraint firstItem="DIj-9c-FuB" firstAttribute="trailing" secondItem="eUT-Wb-CME" secondAttribute="trailing" id="eJF-Ut-3q5"/>
                             <constraint firstItem="fyA-qa-2BR" firstAttribute="top" secondItem="MyX-hX-Jqz" secondAttribute="bottom" constant="20" id="fLY-Kc-U8E">
                                 <variation key="heightClass=compact-widthClass=compact" constant="5"/>
@@ -257,18 +242,18 @@
                                 <exclude reference="6x3-92-JxA"/>
                                 <exclude reference="Zgr-PX-QAO"/>
                                 <exclude reference="na5-8P-eMy"/>
-                                <exclude reference="O8r-2b-wcM"/>
                                 <exclude reference="Ko5-Xx-l2h"/>
                                 <exclude reference="nO8-PH-RMY"/>
+                                <exclude reference="O8r-2b-wcM"/>
                                 <exclude reference="A4E-A7-eTP"/>
                                 <exclude reference="KvG-B2-lbx"/>
                                 <exclude reference="PlB-tX-yZs"/>
                                 <exclude reference="yMX-eI-JgV"/>
+                                <exclude reference="70P-lI-cJW"/>
                                 <exclude reference="4Dn-7I-XFz"/>
+                                <exclude reference="bVf-jb-tam"/>
                                 <exclude reference="IEV-mn-z8O"/>
                                 <exclude reference="Jf1-60-vJk"/>
-                                <exclude reference="70P-lI-cJW"/>
-                                <exclude reference="bVf-jb-tam"/>
                                 <exclude reference="phg-2A-Ins"/>
                                 <exclude reference="thG-k4-ZfK"/>
                                 <exclude reference="EwI-vR-bW4"/>
@@ -276,11 +261,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Setup Workout" id="KLM-q2-W0r">
-                        <barButtonItem key="rightBarButtonItem" title="Start" id="MJD-WS-d5m">
-                            <connections>
-                                <action selector="startButtonPressed:" destination="6Gm-5b-JzN" id="YKg-cR-hqn"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Start" id="MJD-WS-d5m"/>
                     </navigationItem>
                     <connections>
                         <outlet property="numberOfRoundsTextLabel" destination="Xfb-eQ-hQv" id="f89-2O-m2S"/>

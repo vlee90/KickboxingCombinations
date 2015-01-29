@@ -21,7 +21,7 @@
 
 - (void)setUp {
     [super setUp];
-    self.setupViewModel = [[SetupViewModel alloc] init];
+    self.setupViewModel = [[SetupViewModel alloc] initWithPoolProperties];
 }
 
 - (void)tearDown {
@@ -41,6 +41,91 @@
     [self.setupViewModel createWorkoutOfType:workoutType withRoundLengthOf:roundLength withRestBetweenRounds:restPeriod withNumberOfRounds:numberOfRounds withCountdownRingerStartingAt:countdownTimer];
     //Assert
     XCTAssertTrue([self.setupViewModel.workout isKindOfClass:[Workout class]]);
+}
+
+-(void)testPositiveIncrementOfType {
+    //Given
+    //Starts with Beginner
+    //Do
+    [self.setupViewModel typePositiveIncrement];
+    //Assert
+    XCTAssertTrue([self.setupViewModel.currentWorkoutType isEqualToString:@"Advanced"]);
+}
+
+-(void)testNegativeIncrementOfType {
+    //Starts with Beginner
+    [self.setupViewModel typeNegativeIncrement];
+    XCTAssertTrue([self.setupViewModel.currentWorkoutType isEqualToString:@"Advanced"]);
+}
+
+-(void)testPositiveIncrementOfNumberOfRounds {
+    //Starts with 3 rounds
+    [self.setupViewModel numberOfRoundsPositiveIncrement];
+    XCTAssertTrue(self.setupViewModel.currentNumberOfRounds == 4);
+}
+
+-(void)testNegativeIncrementOfNumberOfRounds {
+    //Starts with 3 rounds
+    [self.setupViewModel numberOfRoundsNegativeIncrement];
+    XCTAssertTrue(self.setupViewModel.currentNumberOfRounds == 2);
+}
+
+-(void)testNegativeIncrementOfNumberOfRoundsCannotGoBelow1 {
+    self.setupViewModel.currentNumberOfRounds = 1;
+    [self.setupViewModel numberOfRoundsNegativeIncrement];
+    XCTAssertTrue(self.setupViewModel.currentNumberOfRounds = 1);
+}
+
+-(void)testPositiveIncrementOfRoundTime {
+    [self.setupViewModel roundTimePositiveIncrement];
+    XCTAssertTrue(self.setupViewModel.currentRoundTimeINT == 310);
+}
+
+-(void)testNegativeIncrementOfRoundTime {
+    [self.setupViewModel roundTimeNegativeIncrement];
+    XCTAssertTrue(self.setupViewModel.currentRoundTimeINT == 290);
+}
+
+-(void)testNegativeIncrementOfRoundTimeCannotGoBelow10 {
+    self.setupViewModel.currentRoundTimeINT = 10;
+    [self.setupViewModel roundTimeNegativeIncrement];
+    XCTAssertTrue(self.setupViewModel.currentRoundTimeINT = 10);
+}
+
+-(void)testPositiveIncrementOfRestTime {
+    [self.setupViewModel roundRestPositiveIncrement];
+    XCTAssertTrue(self.setupViewModel.currentRestTimeINT == 70);
+}
+
+-(void)testNegativeIncrementOfRestTime {
+    [self.setupViewModel roundRestNegativeIncrement];
+    XCTAssertTrue(self.setupViewModel.currentRestTimeINT == 50);
+}
+
+-(void)testNegativeIncrementOfRestTimeCannotGoBelow10 {
+    self.setupViewModel.currentRestTimeINT = 10;
+    [self.setupViewModel roundRestNegativeIncrement];
+    XCTAssertTrue(self.setupViewModel.currentRestTimeINT = 10);
+}
+
+-(void)testPositiveIncrementOfWarningTime {
+    [self.setupViewModel warningTimePositiveIncrement];
+    XCTAssertTrue(self.setupViewModel.currentWarningTimeINT == 15);
+}
+
+-(void)testNegativeIncrementOfWarningTime {
+    [self.setupViewModel warningTimeNegativeIncrement];
+    XCTAssertTrue(self.setupViewModel.currentWarningTimeINT == 5);
+}
+
+-(void)testNegativeIncrementOfWarningTimeCannotGoBelow5 {
+    self.setupViewModel.currentWarningTimeINT = 5;
+    [self.setupViewModel warningTimeNegativeIncrement];
+    XCTAssertTrue(self.setupViewModel.currentWarningTimeINT == 5);
+}
+
+-(void)testConvertTimeIntoString {
+    
 }
 
 - (void)testPerformanceExample {
