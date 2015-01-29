@@ -45,11 +45,35 @@
 
 -(void)testPositiveIncrementOfType {
     //Given
-    
+    //Starts with Beginner
     //Do
     [self.setupViewModel typePositiveIncrement];
     //Assert
     XCTAssertTrue([self.setupViewModel.currentWorkoutType isEqualToString:@"Advanced"]);
+}
+
+-(void)testNegativeIncrementOfType {
+    //Starts with Beginner
+    [self.setupViewModel typeNegativeIncrement];
+    XCTAssertTrue([self.setupViewModel.currentWorkoutType isEqualToString:@"Advanced"]);
+}
+
+-(void)testPositiveIncrementOfNumberOfRounds {
+    //Starts with 3 rounds
+    [self.setupViewModel numberOfRoundsPositiveIncrement];
+    XCTAssertTrue(self.setupViewModel.currentNumberOfRounds == 4);
+}
+
+-(void)testNegativeIncrementOfNumberOfRounds {
+    //Starts with 3 rounds
+    [self.setupViewModel numberOfRoundsNegativeIncrement];
+    XCTAssertTrue(self.setupViewModel.currentNumberOfRounds == 2);
+}
+
+-(void)testNegativeIncrementOfNumberOfRoundsCannotGoBelow1 {
+    self.setupViewModel.currentNumberOfRounds = 1;
+    [self.setupViewModel numberOfRoundsNegativeIncrement];
+    XCTAssertTrue(self.setupViewModel.currentNumberOfRounds = 1);
 }
 
 - (void)testPerformanceExample {

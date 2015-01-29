@@ -14,6 +14,7 @@
     if (self = [super init]) {
         self.typeArray = @[@"Beginner", @"Advanced"];
         self.currentWorkoutType = [self.typeArray objectAtIndex:0];
+        self.currentNumberOfRounds = 3;
     }
     return self;
 }
@@ -35,6 +36,27 @@
         default:
             self.currentWorkoutType = [self.typeArray objectAtIndex:0];
             break;
+    }
+}
+
+-(void)typeNegativeIncrement {
+    NSInteger currentIndex = [self.typeArray indexOfObject:self.currentWorkoutType];
+    switch(currentIndex) {
+        case 0:
+            self.currentWorkoutType = [self.typeArray objectAtIndex:1];
+            break;
+        default:
+            self.currentWorkoutType = [self.typeArray objectAtIndex:0];
+            break;
+    }
+}
+
+-(void)numberOfRoundsPositiveIncrement {
+    self.currentNumberOfRounds++;
+}
+-(void)numberOfRoundsNegativeIncrement {
+    if(self.currentNumberOfRounds > 1) {
+        self.currentNumberOfRounds--;
     }
 }
 

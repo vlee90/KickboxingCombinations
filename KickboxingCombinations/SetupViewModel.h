@@ -18,11 +18,15 @@
 
 //State Properties
 @property (nonatomic, strong) NSString* currentWorkoutType;
+@property NSInteger currentNumberOfRounds;
 
 -(instancetype)initWithPoolProperties;
 
 -(void)createWorkoutOfType:(NSString*)type withRoundLengthOf:(NSString*)roundLength withRestBetweenRounds:(NSString*)rest withNumberOfRounds:(NSInteger)rounds withCountdownRingerStartingAt:(NSInteger)countdownTime;
 
 -(void)typePositiveIncrement;
+-(void)typeNegativeIncrement;
+-(void)numberOfRoundsPositiveIncrement;
+-(void)numberOfRoundsNegativeIncrement;
 
 @end

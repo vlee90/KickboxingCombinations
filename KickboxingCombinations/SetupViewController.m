@@ -48,46 +48,41 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.setupViewModel = [[SetupViewModel alloc] initWithPoolProperties];
+    //WorkoutType
     [RACObserve(self.setupViewModel, currentWorkoutType)
         subscribeNext:^(id x) {
-            NSLog(@"RACObserved change in currentWorkoutType");
             self.typeTextLabel.text = self.setupViewModel.currentWorkoutType;
         }];
+    @weakify(self)
     self.typeRightButon.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self)
         [self.setupViewModel typePositiveIncrement];
         return [RACSignal empty];
-    }];
+        }];
+    self.typeLeftButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self)
+        [self.setupViewModel typeNegativeIncrement];
+        return [RACSignal empty];
+        }];
     
+    //Number of Rounds
+    [RACObserve(self.setupViewModel, currentNumberOfRounds)
+         subscribeNext:^(id x) {
+             self.numberOfRoundsTextLabel.text = [NSString stringWithFormat:@"%ld",self.setupViewModel.currentNumberOfRounds];
+         }];
+    self.roundsRightButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        [self.setupViewModel numberOfRoundsPositiveIncrement];
+        return [RACSignal empty];
+        }];
+    self.roundsLeftButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        [self.setupViewModel numberOfRoundsNegativeIncrement];
+        return [RACSignal empty];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)startButtonPressed:(id)sender {
-    NSLog(@"startButtonPressed");
-}
-- (IBAction)typeLeftButtonPressed:(id)sender {
-}
-- (IBAction)typeRightButtonPressed:(id)sender {
-    
-}
-- (IBAction)roundsLeftButtonPressed:(id)sender {
-}
-- (IBAction)roundsRightButtonPressed:(id)sender {
-}
-- (IBAction)timeLeftButtonPressed:(id)sender {
-}
-- (IBAction)timeRightButtonPressed:(id)sender {
-}
-- (IBAction)restLeftButtonPressed:(id)sender {
-}
-- (IBAction)restRightButtonPressed:(id)sender {
-}
-- (IBAction)warningLeftButtonPressed:(id)sender {
-}
-- (IBAction)warningRightButtonPressed:(id)sender {
 }
 
 

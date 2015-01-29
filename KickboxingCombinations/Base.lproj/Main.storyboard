@@ -105,81 +105,51 @@
                                 <rect key="frame" x="195" y="118" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="&lt;-"/>
-                                <connections>
-                                    <action selector="typeLeftButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="hQB-TM-b5l"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUT-Wb-CME">
                                 <rect key="frame" x="375" y="118" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="-&gt;"/>
-                                <connections>
-                                    <action selector="typeRightButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="6kh-Hk-ss0"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shm-71-ssI">
                                 <rect key="frame" x="195" y="180" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="&lt;-"/>
-                                <connections>
-                                    <action selector="roundsLeftButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="kKb-1Z-WpO"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9s5-Y2-lKv">
                                 <rect key="frame" x="195" y="242" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="&lt;-"/>
-                                <connections>
-                                    <action selector="timeLeftButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="NGa-Wd-UAO"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2c-Ym-DP6">
                                 <rect key="frame" x="375" y="242" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="-&gt;"/>
-                                <connections>
-                                    <action selector="timeRightButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="szB-xn-FQ9"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1U9-gA-uen">
                                 <rect key="frame" x="195" y="304" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="&lt;-"/>
-                                <connections>
-                                    <action selector="restLeftButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="IvY-bf-i1w"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIj-9c-FuB">
                                 <rect key="frame" x="375" y="304" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="-&gt;"/>
-                                <connections>
-                                    <action selector="restRightButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="HRb-sv-s3b"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Agt-vv-Rv2">
                                 <rect key="frame" x="195" y="366" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="&lt;-"/>
-                                <connections>
-                                    <action selector="warningLeftButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="MZB-gt-who"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quz-6U-gdE">
                                 <rect key="frame" x="375" y="366" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="-&gt;"/>
-                                <connections>
-                                    <action selector="warningRightButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="fHk-je-XqC"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqf-En-LOs">
                                 <rect key="frame" x="375" y="180" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="-&gt;"/>
-                                <connections>
-                                    <action selector="roundsRightButtonPressed:" destination="6Gm-5b-JzN" eventType="touchUpInside" id="IH8-OC-Iei"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" # of Rounds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eC-6F-1Nc">
                                 <rect key="frame" x="240" y="156" width="120" height="20"/>
@@ -272,18 +242,18 @@
                                 <exclude reference="6x3-92-JxA"/>
                                 <exclude reference="Zgr-PX-QAO"/>
                                 <exclude reference="na5-8P-eMy"/>
-                                <exclude reference="O8r-2b-wcM"/>
                                 <exclude reference="Ko5-Xx-l2h"/>
                                 <exclude reference="nO8-PH-RMY"/>
+                                <exclude reference="O8r-2b-wcM"/>
                                 <exclude reference="A4E-A7-eTP"/>
                                 <exclude reference="KvG-B2-lbx"/>
                                 <exclude reference="PlB-tX-yZs"/>
                                 <exclude reference="yMX-eI-JgV"/>
+                                <exclude reference="70P-lI-cJW"/>
                                 <exclude reference="4Dn-7I-XFz"/>
                                 <exclude reference="bVf-jb-tam"/>
                                 <exclude reference="IEV-mn-z8O"/>
                                 <exclude reference="Jf1-60-vJk"/>
-                                <exclude reference="70P-lI-cJW"/>
                                 <exclude reference="phg-2A-Ins"/>
                                 <exclude reference="thG-k4-ZfK"/>
                                 <exclude reference="EwI-vR-bW4"/>
@@ -291,11 +261,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Setup Workout" id="KLM-q2-W0r">
-                        <barButtonItem key="rightBarButtonItem" title="Start" id="MJD-WS-d5m">
-                            <connections>
-                                <action selector="startButtonPressed:" destination="6Gm-5b-JzN" id="YKg-cR-hqn"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Start" id="MJD-WS-d5m"/>
                     </navigationItem>
                     <connections>
                         <outlet property="numberOfRoundsTextLabel" destination="Xfb-eQ-hQv" id="f89-2O-m2S"/>
