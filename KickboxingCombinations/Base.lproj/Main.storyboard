@@ -23,7 +23,7 @@
         <!--SetupViewController-->
         <scene sceneID="DJ5-h2-XsJ">
             <objects>
-                <viewController title="SetupViewController" id="6Gm-5b-JzN" customClass="SetupViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SetupViewController" title="SetupViewController" id="6Gm-5b-JzN" customClass="SetupViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MyX-hX-Jqz"/>
                         <viewControllerLayoutGuide type="bottom" id="AQk-IB-kaM"/>
@@ -294,7 +294,7 @@
         <!--TimerViewController-->
         <scene sceneID="s2C-Al-DNb">
             <objects>
-                <viewController title="TimerViewController" id="fMp-Nd-a3x" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimerViewController" title="TimerViewController" id="fMp-Nd-a3x" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8mi-f0-x2b"/>
                         <viewControllerLayoutGuide type="bottom" id="hDu-4S-hX9"/>
