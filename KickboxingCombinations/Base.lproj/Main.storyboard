@@ -33,132 +33,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyA-qa-2BR">
-                                <rect key="frame" x="36" y="84" width="47" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" # of Rounds:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eC-6F-1Nc">
-                                <rect key="frame" x="36" y="164" width="118" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round Duration:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo8-2v-eJO">
-                                <rect key="frame" x="36" y="234" width="144" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rest:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gx4-f7-oKv">
-                                <rect key="frame" x="36" y="304" width="46" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warning Bell:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htE-7m-R9b">
-                                <rect key="frame" x="36" y="374" width="117" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="RFV-pI-Jgs">
-                                <rect key="frame" x="470" y="128" width="94" height="29"/>
-                            </stepper>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="say-cA-ywJ">
-                                <rect key="frame" x="470" y="198" width="94" height="29"/>
-                            </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RoundTime" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ4-W0-1T6">
-                                <rect key="frame" x="56" y="268" width="89" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="OW8-IQ-t1H">
-                                <rect key="frame" x="470" y="268" width="94" height="29"/>
-                            </stepper>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="EdN-TG-34u">
-                                <rect key="frame" x="470" y="338" width="94" height="29"/>
-                            </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WarningBell" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2x-1B-cl5">
-                                <rect key="frame" x="56" y="408" width="92" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ohN-AZ-kdf">
-                                <rect key="frame" x="470" y="408" width="94" height="29"/>
-                            </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RestTime" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqG-dD-JWw">
-                                <rect key="frame" x="56" y="338" width="73" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#ofRounds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfb-eQ-hQv">
-                                <rect key="frame" x="56" y="198" width="84" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WorkoutType" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuc-eM-5A5">
-                                <rect key="frame" x="46" y="128" width="100" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TpP-z4-4w5">
+                                <rect key="frame" x="16" y="224" width="568" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.22640607600000001" green="1" blue="0.15633545569999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="fyA-qa-2BR" firstAttribute="leading" secondItem="eo8-2v-eJO" secondAttribute="leading" id="3xM-o2-eDn"/>
-                            <constraint firstItem="OW8-IQ-t1H" firstAttribute="leading" secondItem="say-cA-ywJ" secondAttribute="leading" id="AHX-IR-mDb"/>
-                            <constraint firstItem="kuc-eM-5A5" firstAttribute="leading" secondItem="fyA-qa-2BR" secondAttribute="leading" constant="10" id="CML-Ef-HFF"/>
-                            <constraint firstItem="OW8-IQ-t1H" firstAttribute="top" secondItem="PJ4-W0-1T6" secondAttribute="top" id="Doz-2V-7Q4"/>
-                            <constraint firstItem="say-cA-ywJ" firstAttribute="leading" secondItem="RFV-pI-Jgs" secondAttribute="leading" id="JN9-8X-eEH"/>
-                            <constraint firstItem="htE-7m-R9b" firstAttribute="leading" secondItem="fyA-qa-2BR" secondAttribute="leading" id="JoY-L9-S47"/>
-                            <constraint firstItem="f2x-1B-cl5" firstAttribute="top" secondItem="ohN-AZ-kdf" secondAttribute="top" id="O9O-R5-uhW"/>
-                            <constraint firstItem="4eC-6F-1Nc" firstAttribute="top" secondItem="kuc-eM-5A5" secondAttribute="bottom" constant="15" id="Pmf-RL-ca9"/>
-                            <constraint firstItem="ohN-AZ-kdf" firstAttribute="leading" secondItem="EdN-TG-34u" secondAttribute="leading" id="RDa-DQ-Rje"/>
-                            <constraint firstItem="PJ4-W0-1T6" firstAttribute="top" secondItem="eo8-2v-eJO" secondAttribute="bottom" constant="10" id="TQW-Uo-hil">
-                                <variation key="heightClass=compact-widthClass=compact" constant="5"/>
-                            </constraint>
-                            <constraint firstItem="eo8-2v-eJO" firstAttribute="leading" secondItem="PJ4-W0-1T6" secondAttribute="leading" constant="-20" id="Ujd-K1-4ck"/>
-                            <constraint firstItem="kuc-eM-5A5" firstAttribute="top" secondItem="fyA-qa-2BR" secondAttribute="bottom" constant="20" id="VXJ-q3-11G">
-                                <variation key="heightClass=compact-widthClass=compact" constant="5"/>
-                            </constraint>
-                            <constraint firstItem="gx4-f7-oKv" firstAttribute="leading" secondItem="fyA-qa-2BR" secondAttribute="leading" id="XrI-OS-ycg"/>
-                            <constraint firstItem="rqG-dD-JWw" firstAttribute="top" secondItem="gx4-f7-oKv" secondAttribute="bottom" constant="10" id="bhq-za-Igf">
-                                <variation key="heightClass=compact-widthClass=compact" constant="5"/>
-                            </constraint>
-                            <constraint firstItem="Xfb-eQ-hQv" firstAttribute="top" secondItem="4eC-6F-1Nc" secondAttribute="bottom" constant="10" id="cOq-Ah-LuK">
-                                <variation key="heightClass=compact-widthClass=compact" constant="5"/>
-                            </constraint>
-                            <constraint firstItem="fyA-qa-2BR" firstAttribute="top" secondItem="MyX-hX-Jqz" secondAttribute="bottom" constant="20" id="fLY-Kc-U8E">
-                                <variation key="heightClass=compact-widthClass=compact" constant="5"/>
-                            </constraint>
-                            <constraint firstItem="OW8-IQ-t1H" firstAttribute="leading" secondItem="EdN-TG-34u" secondAttribute="leading" id="i3Y-Mi-YJE"/>
-                            <constraint firstItem="EdN-TG-34u" firstAttribute="top" secondItem="rqG-dD-JWw" secondAttribute="top" id="i53-RU-lYA"/>
-                            <constraint firstItem="gx4-f7-oKv" firstAttribute="leading" secondItem="rqG-dD-JWw" secondAttribute="leading" constant="-20" id="ia0-u5-WyD"/>
-                            <constraint firstItem="f2x-1B-cl5" firstAttribute="leading" secondItem="htE-7m-R9b" secondAttribute="leading" constant="20" id="mFY-p7-z9M"/>
-                            <constraint firstItem="htE-7m-R9b" firstAttribute="top" secondItem="rqG-dD-JWw" secondAttribute="bottom" constant="15" id="mbl-IS-bj6">
-                                <variation key="heightClass=compact-widthClass=compact" constant="8"/>
-                            </constraint>
-                            <constraint firstItem="4eC-6F-1Nc" firstAttribute="leading" secondItem="Xfb-eQ-hQv" secondAttribute="leading" constant="-20" id="pFS-ec-iNm"/>
-                            <constraint firstItem="f2x-1B-cl5" firstAttribute="top" secondItem="htE-7m-R9b" secondAttribute="bottom" constant="10" id="vPf-fk-VVK">
-                                <variation key="heightClass=compact-widthClass=compact" constant="5"/>
-                            </constraint>
-                            <constraint firstItem="say-cA-ywJ" firstAttribute="top" secondItem="Xfb-eQ-hQv" secondAttribute="top" id="w0y-Pl-MMg"/>
-                            <constraint firstItem="eo8-2v-eJO" firstAttribute="top" secondItem="Xfb-eQ-hQv" secondAttribute="bottom" constant="15" id="xR7-MD-Ig3">
-                                <variation key="heightClass=compact-widthClass=compact" constant="8"/>
-                            </constraint>
-                            <constraint firstItem="4eC-6F-1Nc" firstAttribute="leading" secondItem="fyA-qa-2BR" secondAttribute="leading" id="xaQ-kV-nB9"/>
-                            <constraint firstItem="RFV-pI-Jgs" firstAttribute="top" secondItem="kuc-eM-5A5" secondAttribute="top" id="xxN-Dn-lpu"/>
-                            <constraint firstItem="fyA-qa-2BR" firstAttribute="leading" secondItem="3OU-Yd-dfL" secondAttribute="leadingMargin" constant="20" id="ycy-4M-31Q"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RFV-pI-Jgs" secondAttribute="trailing" constant="20" id="zpU-bH-EGl"/>
-                            <constraint firstItem="gx4-f7-oKv" firstAttribute="top" secondItem="PJ4-W0-1T6" secondAttribute="bottom" constant="15" id="zwX-R7-kPd">
-                                <variation key="heightClass=compact-widthClass=compact" constant="8"/>
-                            </constraint>
+                            <constraint firstItem="AQk-IB-kaM" firstAttribute="top" secondItem="TpP-z4-4w5" secondAttribute="bottom" id="0ei-db-i4S"/>
+                            <constraint firstItem="TpP-z4-4w5" firstAttribute="top" secondItem="MyX-hX-Jqz" secondAttribute="bottom" id="IDG-Cs-Dit"/>
+                            <constraint firstItem="TpP-z4-4w5" firstAttribute="leading" secondItem="3OU-Yd-dfL" secondAttribute="leadingMargin" id="Tie-MH-6EX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TpP-z4-4w5" secondAttribute="trailing" id="l2V-3q-2P2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="KLM-q2-W0r">
@@ -169,22 +53,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="numberOfRoundsStepper" destination="say-cA-ywJ" id="Lxk-Yv-do2"/>
-                        <outlet property="numberOfRoundsTextLabel" destination="Xfb-eQ-hQv" id="f89-2O-m2S"/>
-                        <outlet property="numberOfRoundsTitleTextlabel" destination="4eC-6F-1Nc" id="sJ5-7A-CZY"/>
-                        <outlet property="restStepper" destination="EdN-TG-34u" id="MaO-4i-pJy"/>
-                        <outlet property="restTextLabel" destination="rqG-dD-JWw" id="BbZ-06-07a"/>
-                        <outlet property="restTitleTextlabel" destination="gx4-f7-oKv" id="qXd-VQ-BRV"/>
-                        <outlet property="roundDurationStepper" destination="OW8-IQ-t1H" id="mxj-1Y-7RB"/>
-                        <outlet property="roundDurationTextLabel" destination="PJ4-W0-1T6" id="r2Y-cy-xF5"/>
-                        <outlet property="roundDurationTitleTextlabel" destination="eo8-2v-eJO" id="Wu6-OM-2x6"/>
+                        <outlet property="pickerView" destination="TpP-z4-4w5" id="8UT-QH-CU0"/>
                         <outlet property="startButton" destination="MJD-WS-d5m" id="gsH-yb-lKT"/>
-                        <outlet property="typeStepper" destination="RFV-pI-Jgs" id="nqF-LO-Wqs"/>
-                        <outlet property="typeTextLabel" destination="kuc-eM-5A5" id="gZA-ym-IPX"/>
-                        <outlet property="typeTitleTextlabel" destination="fyA-qa-2BR" id="JvV-hU-FMD"/>
-                        <outlet property="warningStepper" destination="ohN-AZ-kdf" id="67f-Jk-9gW"/>
-                        <outlet property="warningTextLabel" destination="f2x-1B-cl5" id="LY4-2k-Eha"/>
-                        <outlet property="warningTitleTextlabel" destination="htE-7m-R9b" id="Cma-4G-gK1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QLM-3F-ZOH" userLabel="First Responder" sceneMemberID="firstResponder"/>
