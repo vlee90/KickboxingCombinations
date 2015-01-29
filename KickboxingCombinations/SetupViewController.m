@@ -10,19 +10,50 @@
 
 @interface SetupViewController ()
 
+//Immutable Labels
+@property (weak, nonatomic) IBOutlet UILabel *typeTitleTextlabel;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfRoundsTitleTextlabel;
+@property (weak, nonatomic) IBOutlet UILabel *roundDurationTitleTextlabel;
+@property (weak, nonatomic) IBOutlet UILabel *restTitleTextlabel;
+@property (weak, nonatomic) IBOutlet UILabel *warningTitleTextlabel;
+
+//Mutable Labels
+@property (weak, nonatomic) IBOutlet UILabel *typeTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfRoundsTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *roundDurationTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *restTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *warningTextLabel;
+
+//Steppers
+@property (weak, nonatomic) IBOutlet UIStepper *typeStepper;
+@property (weak, nonatomic) IBOutlet UIStepper *numberOfRoundsStepper;
+@property (weak, nonatomic) IBOutlet UIStepper *roundDurationStepper;
+@property (weak, nonatomic) IBOutlet UIStepper *restStepper;
+@property (weak, nonatomic) IBOutlet UIStepper *warningStepper;
+
+//Button
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *startButton;
+
+
+
 @end
 
 @implementation SetupViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)startButtonPressed:(id)sender {
+    NSLog(@"startButtonPressed");
+}
+
 
 /*
 #pragma mark - Navigation

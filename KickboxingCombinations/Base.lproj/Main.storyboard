@@ -24,7 +24,7 @@
         <!--SetupViewController-->
         <scene sceneID="DJ5-h2-XsJ">
             <objects>
-                <viewController title="SetupViewController" id="6Gm-5b-JzN" sceneMemberID="viewController">
+                <viewController title="SetupViewController" id="6Gm-5b-JzN" customClass="SetupViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MyX-hX-Jqz"/>
                         <viewControllerLayoutGuide type="bottom" id="AQk-IB-kaM"/>
@@ -161,7 +161,31 @@
                             </constraint>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Setup Your Workout" id="BRE-8G-EoX"/>
+                    <navigationItem key="navigationItem" title="Title" id="KLM-q2-W0r">
+                        <barButtonItem key="rightBarButtonItem" title="Start" id="MJD-WS-d5m">
+                            <connections>
+                                <action selector="startButtonPressed:" destination="6Gm-5b-JzN" id="YKg-cR-hqn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="numberOfRoundsStepper" destination="say-cA-ywJ" id="Lxk-Yv-do2"/>
+                        <outlet property="numberOfRoundsTextLabel" destination="Xfb-eQ-hQv" id="f89-2O-m2S"/>
+                        <outlet property="numberOfRoundsTitleTextlabel" destination="4eC-6F-1Nc" id="sJ5-7A-CZY"/>
+                        <outlet property="restStepper" destination="EdN-TG-34u" id="MaO-4i-pJy"/>
+                        <outlet property="restTextLabel" destination="rqG-dD-JWw" id="BbZ-06-07a"/>
+                        <outlet property="restTitleTextlabel" destination="gx4-f7-oKv" id="qXd-VQ-BRV"/>
+                        <outlet property="roundDurationStepper" destination="OW8-IQ-t1H" id="mxj-1Y-7RB"/>
+                        <outlet property="roundDurationTextLabel" destination="PJ4-W0-1T6" id="r2Y-cy-xF5"/>
+                        <outlet property="roundDurationTitleTextlabel" destination="eo8-2v-eJO" id="Wu6-OM-2x6"/>
+                        <outlet property="startButton" destination="MJD-WS-d5m" id="gsH-yb-lKT"/>
+                        <outlet property="typeStepper" destination="RFV-pI-Jgs" id="nqF-LO-Wqs"/>
+                        <outlet property="typeTextLabel" destination="kuc-eM-5A5" id="gZA-ym-IPX"/>
+                        <outlet property="typeTitleTextlabel" destination="fyA-qa-2BR" id="JvV-hU-FMD"/>
+                        <outlet property="warningStepper" destination="ohN-AZ-kdf" id="67f-Jk-9gW"/>
+                        <outlet property="warningTextLabel" destination="f2x-1B-cl5" id="LY4-2k-Eha"/>
+                        <outlet property="warningTitleTextlabel" destination="htE-7m-R9b" id="Cma-4G-gK1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QLM-3F-ZOH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
