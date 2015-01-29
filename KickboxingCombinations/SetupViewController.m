@@ -7,13 +7,36 @@
 //
 
 #import "SetupViewController.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
-@interface SetupViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface SetupViewController ()
 
-@property (weak, nonatomic) IBOutlet UIPickerView* pickerView;
+//Immutable Labels
+@property (weak, nonatomic) IBOutlet UILabel *typeTitleTextlabel;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfRoundsTitleTextlabel;
+@property (weak, nonatomic) IBOutlet UILabel *roundDurationTitleTextlabel;
+@property (weak, nonatomic) IBOutlet UILabel *restTitleTextlabel;
+@property (weak, nonatomic) IBOutlet UILabel *warningTitleTextlabel;
+
+//Mutable Labels
+@property (weak, nonatomic) IBOutlet UILabel *typeTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfRoundsTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *roundDurationTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *restTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *warningTextLabel;
 
 //Button
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *startButton;
+@property (weak, nonatomic) IBOutlet UIButton *typeLeftButton;
+@property (weak, nonatomic) IBOutlet UIButton *typeRightButon;
+@property (weak, nonatomic) IBOutlet UIButton *roundsLeftButton;
+@property (weak, nonatomic) IBOutlet UIButton *roundsRightButton;
+@property (weak, nonatomic) IBOutlet UIButton *timeLeftButton;
+@property (weak, nonatomic) IBOutlet UIButton *timeRightButton;
+@property (weak, nonatomic) IBOutlet UIButton *restLeftButton;
+@property (weak, nonatomic) IBOutlet UIButton *restRightButton;
+@property (weak, nonatomic) IBOutlet UIButton *warningLeftButton;
+@property (weak, nonatomic) IBOutlet UIButton *warningRightButton;
 
 //State
 @property (strong, nonatomic) SetupViewModel* setupViewModel;
@@ -24,21 +47,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.pickerView.delegate = self;
-    self.pickerView.dataSource = self;
-    
-    
-}
-
--(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 3;
-}
--(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return 2;
-}
-
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return @"hello";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,6 +57,28 @@
 - (IBAction)startButtonPressed:(id)sender {
     NSLog(@"startButtonPressed");
 }
+- (IBAction)typeLeftButtonPressed:(id)sender {
+}
+- (IBAction)typeRightButtonPressed:(id)sender {
+}
+- (IBAction)roundsLeftButtonPressed:(id)sender {
+}
+- (IBAction)roundsRightButtonPressed:(id)sender {
+}
+- (IBAction)timeLeftButtonPressed:(id)sender {
+}
+- (IBAction)timeRightButtonPressed:(id)sender {
+}
+- (IBAction)restLeftButtonPressed:(id)sender {
+}
+- (IBAction)restRightButtonPressed:(id)sender {
+}
+- (IBAction)warningLeftButtonPressed:(id)sender {
+}
+- (IBAction)warningRightButtonPressed:(id)sender {
+}
+
+
 
 
 /*
