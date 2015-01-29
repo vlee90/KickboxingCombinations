@@ -14,10 +14,14 @@
     if (self = [super init]) {
         self.typeArray = @[@"Beginner", @"Advanced"];
         self.currentWorkoutType = [self.typeArray objectAtIndex:0];
-        self.currentNumberOfRounds = 3;
+        self.currentNumberOfRoundsINT = 3;
         self.currentRoundTimeINT = 300;
         self.currentRestTimeINT = 60;
         self.currentWarningTimeINT = 10;
+        self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%d",self.currentNumberOfRoundsINT];
+        self.currentRestTimeSTRING = [self convertTimeIntegerIntoString:self.currentRestTimeINT];
+        self.currentRoundTimeSTRING = [self convertTimeIntegerIntoString:self.currentRoundTimeINT];
+        self.currentWarningTimeSTRING = [self convertTimeIntegerIntoString:self.currentWarningTimeINT];
     }
     return self;
 }
@@ -55,48 +59,56 @@
 }
 
 -(void)numberOfRoundsPositiveIncrement {
-    self.currentNumberOfRounds++;
+    self.currentNumberOfRoundsINT++;
+    self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%d", self.currentNumberOfRoundsINT];
 }
 -(void)numberOfRoundsNegativeIncrement {
-    if(self.currentNumberOfRounds > 1) {
-        self.currentNumberOfRounds--;
+    if(self.currentNumberOfRoundsINT > 1) {
+        self.currentNumberOfRoundsINT--;
+        self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%d", self.currentNumberOfRoundsINT];
     }
 }
 
 -(void)roundTimePositiveIncrement {
     self.currentRoundTimeINT = self.currentRoundTimeINT + 10;
+    self.currentRoundTimeSTRING = [self convertTimeIntegerIntoString:self.currentRoundTimeINT];
 }
 
 -(void)roundTimeNegativeIncrement {
     if(self.currentRoundTimeINT > 10) {
         self.currentRoundTimeINT = self.currentRoundTimeINT - 10;
+        self.currentRoundTimeSTRING = [self convertTimeIntegerIntoString:self.currentRoundTimeINT];
     }
 }
 
 -(void)roundRestPositiveIncrement {
     self.currentRestTimeINT = self.currentRestTimeINT + 10;
+    self.currentRestTimeSTRING = [self convertTimeIntegerIntoString:self.currentRestTimeINT];
 }
 
 -(void)roundRestNegativeIncrement {
     if(self.currentRestTimeINT > 10) {
         self.currentRestTimeINT = self.currentRestTimeINT - 10;
+        self.currentRestTimeSTRING = [self convertTimeIntegerIntoString:self.currentRestTimeINT];
     }
 }
 
 -(void)warningTimePositiveIncrement {
     self.currentWarningTimeINT = self.currentWarningTimeINT + 5;
+    self.currentWarningTimeSTRING = [self convertTimeIntegerIntoString:self.currentWarningTimeINT];
 }
 
 -(void)warningTimeNegativeIncrement {
     if(self.currentWarningTimeINT > 5) {
         self.currentWarningTimeINT = self.currentWarningTimeINT - 5;
+        self.currentWarningTimeSTRING = [self convertTimeIntegerIntoString:self.currentWarningTimeINT];
     }
 }
 
 -(NSString *)convertTimeIntegerIntoString:(NSInteger)seconds {
     NSInteger minutes = seconds / 60;
     NSInteger remainingSeconds = seconds % 60;
-    NSString* returnString = [NSString stringWithFormat:@"%ld:%ld", minutes, remainingSeconds];
+    NSString* returnString = [NSString stringWithFormat:@"%d:%02d", minutes, remainingSeconds];
     return returnString;
 }
 

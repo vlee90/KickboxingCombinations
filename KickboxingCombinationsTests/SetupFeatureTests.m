@@ -61,19 +61,19 @@
 -(void)testPositiveIncrementOfNumberOfRounds {
     //Starts with 3 rounds
     [self.setupViewModel numberOfRoundsPositiveIncrement];
-    XCTAssertTrue(self.setupViewModel.currentNumberOfRounds == 4);
+    XCTAssertTrue(self.setupViewModel.currentNumberOfRoundsINT == 4);
 }
 
 -(void)testNegativeIncrementOfNumberOfRounds {
     //Starts with 3 rounds
     [self.setupViewModel numberOfRoundsNegativeIncrement];
-    XCTAssertTrue(self.setupViewModel.currentNumberOfRounds == 2);
+    XCTAssertTrue(self.setupViewModel.currentNumberOfRoundsINT == 2);
 }
 
 -(void)testNegativeIncrementOfNumberOfRoundsCannotGoBelow1 {
-    self.setupViewModel.currentNumberOfRounds = 1;
+    self.setupViewModel.currentNumberOfRoundsINT = 1;
     [self.setupViewModel numberOfRoundsNegativeIncrement];
-    XCTAssertTrue(self.setupViewModel.currentNumberOfRounds = 1);
+    XCTAssertTrue(self.setupViewModel.currentNumberOfRoundsINT = 1);
 }
 
 -(void)testPositiveIncrementOfRoundTime {
@@ -128,6 +128,12 @@
     NSInteger testTime = 200;
     NSString* newString = [self.setupViewModel convertTimeIntegerIntoString:(NSInteger)testTime];
     XCTAssertTrue([newString isEqualToString:@"3:20"]);
+}
+
+-(void)testConvertTimeIntoStringMethodForDoubleDigitSeconds {
+    NSInteger testTime = 90;
+    NSString* newString = [self.setupViewModel convertTimeIntegerIntoString:testTime];
+    XCTAssertTrue([newString isEqualToString:@"1:30"]);
 }
 
 - (void)testPerformanceExample {

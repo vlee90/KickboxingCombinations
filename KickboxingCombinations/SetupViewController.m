@@ -48,28 +48,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.setupViewModel = [[SetupViewModel alloc] initWithPoolProperties];
+    
+    
+    RAC(self.typeTextLabel, text) = RACObserve(self.setupViewModel, currentWorkoutType);
     //WorkoutType
-    [RACObserve(self.setupViewModel, currentWorkoutType)
-        subscribeNext:^(id x) {
-            self.typeTextLabel.text = self.setupViewModel.currentWorkoutType;
-        }];
-    @weakify(self)
     self.typeRightButon.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-        @strongify(self)
         [self.setupViewModel typePositiveIncrement];
         return [RACSignal empty];
         }];
     self.typeLeftButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-        @strongify(self)
         [self.setupViewModel typeNegativeIncrement];
         return [RACSignal empty];
         }];
     
     //Number of Rounds
-    [RACObserve(self.setupViewModel, currentNumberOfRounds)
-         subscribeNext:^(id x) {
-             self.numberOfRoundsTextLabel.text = [NSString stringWithFormat:@"%ld",self.setupViewModel.currentNumberOfRounds];
-         }];
+    RAC(self.numberOfRoundsTextLabel, text) = RACObserve(self.setupViewModel, currentNumberOfRoundsSTRING);
     self.roundsRightButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         [self.setupViewModel numberOfRoundsPositiveIncrement];
         return [RACSignal empty];
@@ -80,10 +73,7 @@
     }];
     
     //RoundTime
-    [RACObserve(self.setupViewModel, currentRoundTimeINT)
-        subscribeNext:^(id x) {
-            self.roundDurationTextLabel.text = [NSString stringWithFormat:@"%ld", self.setupViewModel.currentRoundTimeINT];
-        }];
+    RAC(self.roundDurationTextLabel, text) = RACObserve(self.setupViewModel, currentRoundTimeSTRING);
     self.timeRightButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         [self.setupViewModel roundTimePositiveIncrement];
         return [RACSignal empty];
@@ -94,10 +84,7 @@
     }];
     
     //RestTime
-    [RACObserve(self.setupViewModel, currentRestTimeINT)
-        subscribeNext:^(id x) {
-            self.restTextLabel.text = [NSString stringWithFormat:@"%ld", self.setupViewModel.currentRestTimeINT];
-        }];
+    RAC(self.restTextLabel, text) = RACObserve(self.setupViewModel, currentRestTimeSTRING);
     self.restRightButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         [self.setupViewModel roundRestPositiveIncrement];
         return [RACSignal empty];
@@ -108,10 +95,7 @@
     }];
     
     //WarningTime
-    [RACObserve(self.setupViewModel, currentWarningTimeINT)
-        subscribeNext:^(id x) {
-            self.warningTextLabel.text = [NSString stringWithFormat:@"%ld", self.setupViewModel.currentWarningTimeINT];
-        }];
+    RAC(self.warningTextLabel, text) = RACObserve(self.setupViewModel, currentWarningTimeSTRING);
     self.warningRightButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         [self.setupViewModel warningTimePositiveIncrement];
         return [RACSignal empty];
@@ -126,8 +110,6 @@
 //        [self.setupViewModel createWorkoutOfType:self.setupViewModel.currentWorkoutType withRoundLengthOf:<#(NSString *)#> withRestBetweenRounds:<#(NSString *)#> withNumberOfRounds:<#(NSInteger)#> withCountdownRingerStartingAt:<#(NSInteger)#>]
         return [RACSignal empty];
     }];
-    
-    NSLog(@"%@",[self.setupViewModel convertTimeIntegerIntoString:60]);
 }
 
 - (void)didReceiveMemoryWarning {

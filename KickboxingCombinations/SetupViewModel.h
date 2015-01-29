@@ -13,15 +13,20 @@
 
 @property(nonatomic, strong) Workout* workout;
 
-//Pool Properties
+//Backed Properties
 @property (nonatomic, strong) NSArray* typeArray;
 
 //State Properties
 @property (nonatomic, strong) NSString* currentWorkoutType;
-@property NSInteger currentNumberOfRounds;
+@property NSInteger currentNumberOfRoundsINT;
 @property NSInteger currentRoundTimeINT;
 @property NSInteger currentRestTimeINT;
 @property NSInteger currentWarningTimeINT;
+
+@property (nonatomic, strong) NSString* currentNumberOfRoundsSTRING;
+@property (nonatomic, strong) NSString* currentRoundTimeSTRING;
+@property (nonatomic, strong) NSString* currentRestTimeSTRING;
+@property (nonatomic, strong) NSString* currentWarningTimeSTRING;
 
 -(instancetype)initWithPoolProperties;
 
