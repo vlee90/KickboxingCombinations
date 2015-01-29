@@ -38,4 +38,6 @@
 -(void)warningTimePositiveIncrement;
 -(void)warningTimeNegativeIncrement;
 
+-(NSString*)convertTimeIntegerIntoString:(NSInteger)seconds;
+
 @end

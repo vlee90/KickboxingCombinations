@@ -125,7 +125,9 @@
 }
 
 -(void)testConvertTimeIntoString {
-    
+    NSInteger testTime = 200;
+    NSString* newString = [self.setupViewModel convertTimeIntegerIntoString:(NSInteger)testTime];
+    XCTAssertTrue([newString isEqualToString:@"3:20"]);
 }
 
 - (void)testPerformanceExample {

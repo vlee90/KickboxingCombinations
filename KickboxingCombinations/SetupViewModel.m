@@ -93,4 +93,11 @@
     }
 }
 
+-(NSString *)convertTimeIntegerIntoString:(NSInteger)seconds {
+    NSInteger minutes = seconds / 60;
+    NSInteger remainingSeconds = seconds % 60;
+    NSString* returnString = [NSString stringWithFormat:@"%ld:%ld", minutes, remainingSeconds];
+    return returnString;
+}
+
 @end

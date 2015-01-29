@@ -120,6 +120,14 @@
         [self.setupViewModel warningTimeNegativeIncrement];
         return [RACSignal empty];
     }];
+    
+    //Start Button
+    self.startButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+//        [self.setupViewModel createWorkoutOfType:self.setupViewModel.currentWorkoutType withRoundLengthOf:<#(NSString *)#> withRestBetweenRounds:<#(NSString *)#> withNumberOfRounds:<#(NSInteger)#> withCountdownRingerStartingAt:<#(NSInteger)#>]
+        return [RACSignal empty];
+    }];
+    
+    NSLog(@"%@",[self.setupViewModel convertTimeIntegerIntoString:60]);
 }
 
 - (void)didReceiveMemoryWarning {
