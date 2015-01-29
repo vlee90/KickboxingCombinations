@@ -7,6 +7,7 @@
 //
 
 #import "SetupViewController.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface SetupViewController ()
 
@@ -24,15 +25,18 @@
 @property (weak, nonatomic) IBOutlet UILabel *restTextLabel;
 @property (weak, nonatomic) IBOutlet UILabel *warningTextLabel;
 
-//Steppers
-@property (weak, nonatomic) IBOutlet UIStepper *typeStepper;
-@property (weak, nonatomic) IBOutlet UIStepper *numberOfRoundsStepper;
-@property (weak, nonatomic) IBOutlet UIStepper *roundDurationStepper;
-@property (weak, nonatomic) IBOutlet UIStepper *restStepper;
-@property (weak, nonatomic) IBOutlet UIStepper *warningStepper;
-
 //Button
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *startButton;
+@property (weak, nonatomic) IBOutlet UIButton *typeLeftButton;
+@property (weak, nonatomic) IBOutlet UIButton *typeRightButon;
+@property (weak, nonatomic) IBOutlet UIButton *roundsLeftButton;
+@property (weak, nonatomic) IBOutlet UIButton *roundsRightButton;
+@property (weak, nonatomic) IBOutlet UIButton *timeLeftButton;
+@property (weak, nonatomic) IBOutlet UIButton *timeRightButton;
+@property (weak, nonatomic) IBOutlet UIButton *restLeftButton;
+@property (weak, nonatomic) IBOutlet UIButton *restRightButton;
+@property (weak, nonatomic) IBOutlet UIButton *warningLeftButton;
+@property (weak, nonatomic) IBOutlet UIButton *warningRightButton;
 
 
 
@@ -42,7 +46,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,6 +56,28 @@
 - (IBAction)startButtonPressed:(id)sender {
     NSLog(@"startButtonPressed");
 }
+- (IBAction)typeLeftButtonPressed:(id)sender {
+}
+- (IBAction)typeRightButtonPressed:(id)sender {
+}
+- (IBAction)roundsLeftButtonPressed:(id)sender {
+}
+- (IBAction)roundsRightButtonPressed:(id)sender {
+}
+- (IBAction)timeLeftButtonPressed:(id)sender {
+}
+- (IBAction)timeRightButtonPressed:(id)sender {
+}
+- (IBAction)restLeftButtonPressed:(id)sender {
+}
+- (IBAction)restRightButtonPressed:(id)sender {
+}
+- (IBAction)warningLeftButtonPressed:(id)sender {
+}
+- (IBAction)warningRightButtonPressed:(id)sender {
+}
+
+
 
 
 /*
