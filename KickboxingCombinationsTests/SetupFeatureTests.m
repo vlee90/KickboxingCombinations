@@ -21,7 +21,7 @@
 
 - (void)setUp {
     [super setUp];
-    self.setupViewModel = [[SetupViewModel alloc] init];
+    self.setupViewModel = [[SetupViewModel alloc] initWithPoolProperties];
 }
 
 - (void)tearDown {
@@ -41,6 +41,15 @@
     [self.setupViewModel createWorkoutOfType:workoutType withRoundLengthOf:roundLength withRestBetweenRounds:restPeriod withNumberOfRounds:numberOfRounds withCountdownRingerStartingAt:countdownTimer];
     //Assert
     XCTAssertTrue([self.setupViewModel.workout isKindOfClass:[Workout class]]);
+}
+
+-(void)testPositiveIncrementOfType {
+    //Given
+    
+    //Do
+    [self.setupViewModel typePositiveIncrement];
+    //Assert
+    XCTAssertTrue([self.setupViewModel.currentWorkoutType isEqualToString:@"Advanced"]);
 }
 
 - (void)testPerformanceExample {

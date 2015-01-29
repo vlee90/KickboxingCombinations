@@ -13,6 +13,16 @@
 
 @property(nonatomic, strong) Workout* workout;
 
+//Pool Properties
+@property (nonatomic, strong) NSArray* typeArray;
+
+//State Properties
+@property (nonatomic, strong) NSString* currentWorkoutType;
+
+-(instancetype)initWithPoolProperties;
+
 -(void)createWorkoutOfType:(NSString*)type withRoundLengthOf:(NSString*)roundLength withRestBetweenRounds:(NSString*)rest withNumberOfRounds:(NSInteger)rounds withCountdownRingerStartingAt:(NSInteger)countdownTime;
+
+-(void)typePositiveIncrement;
 
 @end

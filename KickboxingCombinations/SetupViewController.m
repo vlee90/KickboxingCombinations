@@ -47,6 +47,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.setupViewModel = [[SetupViewModel alloc] initWithPoolProperties];
+    [RACObserve(self.setupViewModel, currentWorkoutType)
+        subscribeNext:^(id x) {
+            NSLog(@"RACObserved change in currentWorkoutType");
+            self.typeTextLabel.text = self.setupViewModel.currentWorkoutType;
+        }];
+    self.typeRightButon.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        [self.setupViewModel typePositiveIncrement];
+        return [RACSignal empty];
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,6 +71,7 @@
 - (IBAction)typeLeftButtonPressed:(id)sender {
 }
 - (IBAction)typeRightButtonPressed:(id)sender {
+    
 }
 - (IBAction)roundsLeftButtonPressed:(id)sender {
 }
