@@ -19,6 +19,9 @@
 //State Properties
 @property (nonatomic, strong) NSString* currentWorkoutType;
 @property NSInteger currentNumberOfRounds;
+@property NSInteger currentRoundTimeINT;
+@property NSInteger currentRestTimeINT;
+@property NSInteger currentWarningTimeINT;
 
 -(instancetype)initWithPoolProperties;
 
@@ -28,5 +31,11 @@
 -(void)typeNegativeIncrement;
 -(void)numberOfRoundsPositiveIncrement;
 -(void)numberOfRoundsNegativeIncrement;
+-(void)roundTimePositiveIncrement;
+-(void)roundTimeNegativeIncrement;
+-(void)roundRestPositiveIncrement;
+-(void)roundRestNegativeIncrement;
+-(void)warningTimePositiveIncrement;
+-(void)warningTimeNegativeIncrement;
 
 @end

@@ -15,6 +15,9 @@
         self.typeArray = @[@"Beginner", @"Advanced"];
         self.currentWorkoutType = [self.typeArray objectAtIndex:0];
         self.currentNumberOfRounds = 3;
+        self.currentRoundTimeINT = 300;
+        self.currentRestTimeINT = 60;
+        self.currentWarningTimeINT = 10;
     }
     return self;
 }
@@ -57,6 +60,36 @@
 -(void)numberOfRoundsNegativeIncrement {
     if(self.currentNumberOfRounds > 1) {
         self.currentNumberOfRounds--;
+    }
+}
+
+-(void)roundTimePositiveIncrement {
+    self.currentRoundTimeINT = self.currentRoundTimeINT + 10;
+}
+
+-(void)roundTimeNegativeIncrement {
+    if(self.currentRoundTimeINT > 10) {
+        self.currentRoundTimeINT = self.currentRoundTimeINT - 10;
+    }
+}
+
+-(void)roundRestPositiveIncrement {
+    self.currentRestTimeINT = self.currentRestTimeINT + 10;
+}
+
+-(void)roundRestNegativeIncrement {
+    if(self.currentRestTimeINT > 10) {
+        self.currentRestTimeINT = self.currentRestTimeINT - 10;
+    }
+}
+
+-(void)warningTimePositiveIncrement {
+    self.currentWarningTimeINT = self.currentWarningTimeINT + 5;
+}
+
+-(void)warningTimeNegativeIncrement {
+    if(self.currentWarningTimeINT > 5) {
+        self.currentWarningTimeINT = self.currentWarningTimeINT - 5;
     }
 }
 

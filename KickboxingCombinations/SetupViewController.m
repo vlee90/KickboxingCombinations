@@ -78,6 +78,48 @@
         [self.setupViewModel numberOfRoundsNegativeIncrement];
         return [RACSignal empty];
     }];
+    
+    //RoundTime
+    [RACObserve(self.setupViewModel, currentRoundTimeINT)
+        subscribeNext:^(id x) {
+            self.roundDurationTextLabel.text = [NSString stringWithFormat:@"%ld", self.setupViewModel.currentRoundTimeINT];
+        }];
+    self.timeRightButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        [self.setupViewModel roundTimePositiveIncrement];
+        return [RACSignal empty];
+    }];
+    self.timeLeftButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        [self.setupViewModel roundTimeNegativeIncrement];
+        return [RACSignal empty];
+    }];
+    
+    //RestTime
+    [RACObserve(self.setupViewModel, currentRestTimeINT)
+        subscribeNext:^(id x) {
+            self.restTextLabel.text = [NSString stringWithFormat:@"%ld", self.setupViewModel.currentRestTimeINT];
+        }];
+    self.restRightButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        [self.setupViewModel roundRestPositiveIncrement];
+        return [RACSignal empty];
+    }];
+    self.restLeftButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        [self.setupViewModel roundRestNegativeIncrement];
+        return [RACSignal empty];
+    }];
+    
+    //WarningTime
+    [RACObserve(self.setupViewModel, currentWarningTimeINT)
+        subscribeNext:^(id x) {
+            self.warningTextLabel.text = [NSString stringWithFormat:@"%ld", self.setupViewModel.currentWarningTimeINT];
+        }];
+    self.warningRightButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        [self.setupViewModel warningTimePositiveIncrement];
+        return [RACSignal empty];
+    }];
+    self.warningLeftButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        [self.setupViewModel warningTimeNegativeIncrement];
+        return [RACSignal empty];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

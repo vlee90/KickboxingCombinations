@@ -76,6 +76,58 @@
     XCTAssertTrue(self.setupViewModel.currentNumberOfRounds = 1);
 }
 
+-(void)testPositiveIncrementOfRoundTime {
+    [self.setupViewModel roundTimePositiveIncrement];
+    XCTAssertTrue(self.setupViewModel.currentRoundTimeINT == 310);
+}
+
+-(void)testNegativeIncrementOfRoundTime {
+    [self.setupViewModel roundTimeNegativeIncrement];
+    XCTAssertTrue(self.setupViewModel.currentRoundTimeINT == 290);
+}
+
+-(void)testNegativeIncrementOfRoundTimeCannotGoBelow10 {
+    self.setupViewModel.currentRoundTimeINT = 10;
+    [self.setupViewModel roundTimeNegativeIncrement];
+    XCTAssertTrue(self.setupViewModel.currentRoundTimeINT = 10);
+}
+
+-(void)testPositiveIncrementOfRestTime {
+    [self.setupViewModel roundRestPositiveIncrement];
+    XCTAssertTrue(self.setupViewModel.currentRestTimeINT == 70);
+}
+
+-(void)testNegativeIncrementOfRestTime {
+    [self.setupViewModel roundRestNegativeIncrement];
+    XCTAssertTrue(self.setupViewModel.currentRestTimeINT == 50);
+}
+
+-(void)testNegativeIncrementOfRestTimeCannotGoBelow10 {
+    self.setupViewModel.currentRestTimeINT = 10;
+    [self.setupViewModel roundRestNegativeIncrement];
+    XCTAssertTrue(self.setupViewModel.currentRestTimeINT = 10);
+}
+
+-(void)testPositiveIncrementOfWarningTime {
+    [self.setupViewModel warningTimePositiveIncrement];
+    XCTAssertTrue(self.setupViewModel.currentWarningTimeINT == 15);
+}
+
+-(void)testNegativeIncrementOfWarningTime {
+    [self.setupViewModel warningTimeNegativeIncrement];
+    XCTAssertTrue(self.setupViewModel.currentWarningTimeINT == 5);
+}
+
+-(void)testNegativeIncrementOfWarningTimeCannotGoBelow5 {
+    self.setupViewModel.currentWarningTimeINT = 5;
+    [self.setupViewModel warningTimeNegativeIncrement];
+    XCTAssertTrue(self.setupViewModel.currentWarningTimeINT == 5);
+}
+
+-(void)testConvertTimeIntoString {
+    
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
