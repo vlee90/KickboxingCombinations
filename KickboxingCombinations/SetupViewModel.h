@@ -30,7 +30,7 @@
 
 -(instancetype)initWithPoolProperties;
 
--(void)createWorkoutOfType:(NSString*)type withRoundLengthOf:(NSString*)roundLength withRestBetweenRounds:(NSString*)rest withNumberOfRounds:(NSInteger)rounds withCountdownRingerStartingAt:(NSInteger)countdownTime;
+-(void)createWorkout;
 
 -(void)typePositiveIncrement;
 -(void)typeNegativeIncrement;

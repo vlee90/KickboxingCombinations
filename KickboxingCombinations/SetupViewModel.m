@@ -18,7 +18,7 @@
         self.currentRoundTimeINT = 300;
         self.currentRestTimeINT = 60;
         self.currentWarningTimeINT = 10;
-        self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%d",self.currentNumberOfRoundsINT];
+        self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%ld",(long)self.currentNumberOfRoundsINT];
         self.currentRestTimeSTRING = [self convertTimeIntegerIntoString:self.currentRestTimeINT];
         self.currentRoundTimeSTRING = [self convertTimeIntegerIntoString:self.currentRoundTimeINT];
         self.currentWarningTimeSTRING = [self convertTimeIntegerIntoString:self.currentWarningTimeINT];
@@ -26,12 +26,8 @@
     return self;
 }
 
--(void)createWorkoutOfType:(NSString *)type withRoundLengthOf:(NSString *)roundLength withRestBetweenRounds:(NSString *)rest withNumberOfRounds:(NSInteger)rounds withCountdownRingerStartingAt:(NSInteger)countdownTime {
-    self.workout = [[Workout alloc] initWithType:type
-                                    withRoundTimerOf:roundLength
-                                    withRestTimeOf:rest
-                                    withNumberOfRounds:rounds
-                                    withCountdownTimer:countdownTime];
+-(void)createWorkout {
+    self.workout = [[Workout alloc] initWithType:self.currentWorkoutType withRoundTimerOf:self.currentRoundTimeINT withRestTimeOf:self.currentRestTimeINT withNumberOfRounds:self.currentNumberOfRoundsINT withCountdownTimer:self.currentWarningTimeINT];
 }
 
 -(void)typePositiveIncrement {
@@ -60,12 +56,12 @@
 
 -(void)numberOfRoundsPositiveIncrement {
     self.currentNumberOfRoundsINT++;
-    self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%d", self.currentNumberOfRoundsINT];
+    self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%ld", (long)self.currentNumberOfRoundsINT];
 }
 -(void)numberOfRoundsNegativeIncrement {
     if(self.currentNumberOfRoundsINT > 1) {
         self.currentNumberOfRoundsINT--;
-        self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%d", self.currentNumberOfRoundsINT];
+        self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%ld", (long)self.currentNumberOfRoundsINT];
     }
 }
 
@@ -108,7 +104,7 @@
 -(NSString *)convertTimeIntegerIntoString:(NSInteger)seconds {
     NSInteger minutes = seconds / 60;
     NSInteger remainingSeconds = seconds % 60;
-    NSString* returnString = [NSString stringWithFormat:@"%d:%02d", minutes, remainingSeconds];
+    NSString* returnString = [NSString stringWithFormat:@"%ld:%02ld", (long)minutes, (long)remainingSeconds];
     return returnString;
 }
 
