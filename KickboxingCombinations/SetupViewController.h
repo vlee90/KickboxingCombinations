@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SetupViewModel.h"
 
 @interface SetupViewController : UIViewController
 

@@ -38,7 +38,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *warningLeftButton;
 @property (weak, nonatomic) IBOutlet UIButton *warningRightButton;
 
-
+//State
+@property (strong, nonatomic) SetupViewModel* setupViewModel;
 
 @end
 
