@@ -18,6 +18,9 @@
 		EB94D1A91A79B89A00774138 /* SetupViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1A81A79B89A00774138 /* SetupViewModel.m */; };
 		EB94D1AC1A79B8CE00774138 /* SetupFeatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1AB1A79B8CE00774138 /* SetupFeatureTests.m */; };
 		EB94D1AF1A79BB0900774138 /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1AE1A79BB0900774138 /* Workout.m */; };
+		EBDFA78F1A7AFC5300905488 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA78E1A7AFC5300905488 /* TimerViewController.m */; };
+		EBDFA7921A7AFC6200905488 /* TimerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA7911A7AFC6200905488 /* TimerViewModel.m */; };
+		EBDFA7941A7AFC7600905488 /* TimerFeatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA7931A7AFC7600905488 /* TimerFeatureTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		EB94D1AB1A79B8CE00774138 /* SetupFeatureTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupFeatureTests.m; sourceTree = "<group>"; };
 		EB94D1AD1A79BB0900774138 /* Workout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Workout.h; sourceTree = "<group>"; };
 		EB94D1AE1A79BB0900774138 /* Workout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Workout.m; sourceTree = "<group>"; };
+		EBDFA78D1A7AFC5200905488 /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		EBDFA78E1A7AFC5300905488 /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		EBDFA7901A7AFC6200905488 /* TimerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewModel.h; sourceTree = "<group>"; };
+		EBDFA7911A7AFC6200905488 /* TimerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewModel.m; sourceTree = "<group>"; };
+		EBDFA7931A7AFC7600905488 /* TimerFeatureTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerFeatureTests.m; sourceTree = "<group>"; };
 		EC28EB7736237EA5702BD7FB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -115,6 +123,7 @@
 			children = (
 				EB94D1AA1A79B8A800774138 /* Model */,
 				EB94D1A31A79B86800774138 /* SetupFeature */,
+				EBDFA78C1A7AFC2B00905488 /* TimerFeature */,
 				EB4BDFD51A79B34700C56F6B /* AppDelegate.h */,
 				EB4BDFD61A79B34700C56F6B /* AppDelegate.m */,
 				EB4BDFDE1A79B34700C56F6B /* Main.storyboard */,
@@ -140,6 +149,7 @@
 			children = (
 				EB4BDFEE1A79B34700C56F6B /* Supporting Files */,
 				EB94D1AB1A79B8CE00774138 /* SetupFeatureTests.m */,
+				EBDFA7931A7AFC7600905488 /* TimerFeatureTests.m */,
 			);
 			path = KickboxingCombinationsTests;
 			sourceTree = "<group>";
@@ -170,6 +180,17 @@
 				EB94D1AE1A79BB0900774138 /* Workout.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		EBDFA78C1A7AFC2B00905488 /* TimerFeature */ = {
+			isa = PBXGroup;
+			children = (
+				EBDFA78D1A7AFC5200905488 /* TimerViewController.h */,
+				EBDFA78E1A7AFC5300905488 /* TimerViewController.m */,
+				EBDFA7901A7AFC6200905488 /* TimerViewModel.h */,
+				EBDFA7911A7AFC6200905488 /* TimerViewModel.m */,
+			);
+			name = TimerFeature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,8 +328,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDFA7921A7AFC6200905488 /* TimerViewModel.m in Sources */,
 				EB94D1A91A79B89A00774138 /* SetupViewModel.m in Sources */,
 				EB94D1A61A79B88900774138 /* SetupViewController.m in Sources */,
+				EBDFA78F1A7AFC5300905488 /* TimerViewController.m in Sources */,
 				EB4BDFD71A79B34700C56F6B /* AppDelegate.m in Sources */,
 				EB4BDFD41A79B34700C56F6B /* main.m in Sources */,
 				EB4BDFDA1A79B34700C56F6B /* KickboxingCombinations.xcdatamodeld in Sources */,
@@ -320,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDFA7941A7AFC7600905488 /* TimerFeatureTests.m in Sources */,
 				EB94D1AC1A79B8CE00774138 /* SetupFeatureTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
