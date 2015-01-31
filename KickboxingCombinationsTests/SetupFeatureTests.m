@@ -10,6 +10,8 @@
 #import <XCTest/XCTest.h>
 #import "SetupViewModel.h"
 #import "Workout.h"
+#import "TimerViewController.h"
+#import <OCMock/OCMock.h>
 
 @interface SetupFeatureTests : XCTestCase
 
@@ -30,16 +32,7 @@
 }
 
 - (void)testIfCreateWorkoutCreatesWorkoutObject {
-    //Given
-//    NSString* workoutType = self.setupViewModel.currentWorkoutType;
-//    NSInteger roundLength = self.setupViewModel.currentRoundTimeINT;
-//    NSInteger restPeriod = self.setupViewModel.currentRestTimeINT;
-//    NSInteger numberOfRounds = self.setupViewModel.currentNumberOfRoundsINT;
-//    NSInteger countdownTimer = self.setupViewModel.currentWarningTimeINT;
-    
-    //Do
     [self.setupViewModel createWorkout];
-    //Assert
     XCTAssertTrue([self.setupViewModel.workout isKindOfClass:[Workout class]]);
 }
 
@@ -57,6 +50,24 @@
     XCTAssertTrue(self.setupViewModel.workout.restTime == self.setupViewModel.currentRestTimeINT);
     XCTAssertTrue(self.setupViewModel.workout.rounds == self.setupViewModel.currentNumberOfRoundsINT);
     XCTAssertTrue(self.setupViewModel.workout.countdownTimer == self.setupViewModel.currentWarningTimeINT);
+}
+
+-(void)testIfCreateTimerViewControllerHasATimerViewModel {;
+    TimerViewController* timerViewController = [self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel];
+    XCTAssertNotNil(timerViewController.timerViewModel);
+}
+
+//-(void)testCreateTimerViewController {
+//    
+//    [self.setupViewModel createTimerViewControllerWithStoryboard];
+//    XCTAssertNotNil(timerViewController)
+//}
+
+-(void)testIfSetupViewModelPassesWorkoutToTimerViewModel {
+    TimerViewModel* timerViewModel = [[TimerViewModel alloc] init];
+    [self.setupViewModel createWorkout];
+    [self.setupViewModel passWorkoutToTimerViewModel:timerViewModel];
+    XCTAssertNotNil(timerViewModel.workout);
 }
 
 -(void)testPositiveIncrementOfType {

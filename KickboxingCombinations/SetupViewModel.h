@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "Workout.h"
+#import "TimerViewModel.h"
+#import "TimerViewController.h"
 
 @interface SetupViewModel : NSObject
 
@@ -30,8 +32,6 @@
 
 -(instancetype)initWithPoolProperties;
 
--(void)createWorkout;
-
 -(void)typePositiveIncrement;
 -(void)typeNegativeIncrement;
 -(void)numberOfRoundsPositiveIncrement;
@@ -44,5 +44,9 @@
 -(void)warningTimeNegativeIncrement;
 
 -(NSString*)convertTimeIntegerIntoString:(NSInteger)seconds;
+
+-(void)createWorkout;
+-(void)passWorkoutToTimerViewModel:(TimerViewModel*)timerViewModel;
+-(TimerViewController*)createTimerViewControllerFromStoryboardWithTimerViewModel;
 
 @end

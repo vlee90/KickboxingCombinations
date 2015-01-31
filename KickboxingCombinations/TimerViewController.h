@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TimerViewModel.h"
 
 @interface TimerViewController : UIViewController
+
+@property (strong, nonatomic) TimerViewModel* timerViewModel;
 
 @end

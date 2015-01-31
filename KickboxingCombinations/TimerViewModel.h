@@ -11,8 +11,8 @@
 
 @interface TimerViewModel : NSObject
 
-@property (nonatomic, weak) Workout* workout;
+@property (nonatomic, strong) Workout* workout;
 
--(instancetype)initWithWorkout:(Workout*)workout;
+//-(instancetype)initWithWorkout:(Workout*)workout;
 
 @end

@@ -26,6 +26,19 @@
     return self;
 }
 
+-(TimerViewController*)createTimerViewControllerFromStoryboardWithTimerViewModel {
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    TimerViewController* timerViewController = [storyboard instantiateViewControllerWithIdentifier:@"TimerViewController"];
+    TimerViewModel* timerViewModel = [[TimerViewModel alloc] init];
+    [self passWorkoutToTimerViewModel:timerViewModel];
+    timerViewController.timerViewModel = timerViewModel;
+    return timerViewController;
+}
+
+-(void)passWorkoutToTimerViewModel:(TimerViewModel *)timerViewModel {
+    timerViewModel.workout = self.workout;
+}
+
 -(void)createWorkout {
     self.workout = [[Workout alloc] initWithType:self.currentWorkoutType withRoundTimerOf:self.currentRoundTimeINT withRestTimeOf:self.currentRestTimeINT withNumberOfRounds:self.currentNumberOfRoundsINT withCountdownTimer:self.currentWarningTimeINT];
 }
@@ -100,6 +113,7 @@
         self.currentWarningTimeSTRING = [self convertTimeIntegerIntoString:self.currentWarningTimeINT];
     }
 }
+
 
 -(NSString *)convertTimeIntegerIntoString:(NSInteger)seconds {
     NSInteger minutes = seconds / 60;

@@ -23,9 +23,8 @@
 
 - (void)setUp {
     [super setUp];
-    SetupViewModel* setupViewModel = [[SetupViewModel alloc] initWithPoolProperties];
-    
-//    self.timerViewModel = [[TimerViewModel alloc] initWithWorkout:<#(Workout *)#>]
+    id mockWorkout = [OCMockObject mockForClass:[Workout class]];
+//    self.timerViewModel = [[TimerViewModel alloc] initWithWorkout:mockWorkout];
 }
 
 - (void)tearDown {
@@ -33,12 +32,9 @@
     self.timerViewModel = nil;
 }
 
--(void)testTimerViewModelHasWorkout {
-    id lol = [OCMockObject mockForClass:[SetupViewModel class]];
-    [[[lol stub] andReturn:@"hi"] createWorkout];
-    [lol createWorkout];
-    
-}
+//-(void)testTimerViewModelHasWorkout {
+//    XCTAssertNotNil(self.timerViewModel.workout);
+//}
 
 
 - (void)testPerformanceExample {
