@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "TimerViewModel.h"
+#import "Workout.h"
+#import "SetupViewModel.h"
+#import <OCMock/OCMock.h>
 
 @interface TimerFeatureTests : XCTestCase
+
+@property (nonatomic, strong) TimerViewModel* timerViewModel;
 
 @end
 
@@ -17,18 +23,23 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    SetupViewModel* setupViewModel = [[SetupViewModel alloc] initWithPoolProperties];
+    
+//    self.timerViewModel = [[TimerViewModel alloc] initWithWorkout:<#(Workout *)#>]
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
+    self.timerViewModel = nil;
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+-(void)testTimerViewModelHasWorkout {
+    id lol = [OCMockObject mockForClass:[SetupViewModel class]];
+    [[[lol stub] andReturn:@"hi"] createWorkout];
+    [lol createWorkout];
+    
 }
+
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.

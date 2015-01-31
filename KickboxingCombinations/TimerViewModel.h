@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Workout.h"
 
 @interface TimerViewModel : NSObject
+
+@property (nonatomic, weak) Workout* workout;
+
+-(instancetype)initWithWorkout:(Workout*)workout;
 
 @end

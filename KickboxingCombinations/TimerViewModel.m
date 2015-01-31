@@ -10,4 +10,11 @@
 
 @implementation TimerViewModel
 
+-(instancetype)initWithWorkout:(Workout *)workout {
+    if(self = [super init]) {
+        _workout = workout;
+    }
+    return self;
+}
+
 @end
