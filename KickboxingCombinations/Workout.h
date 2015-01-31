@@ -10,7 +10,13 @@
 
 @interface Workout : NSObject
 
--(instancetype)initWithType:(NSString*)type withRoundTimerOf:(NSString*)roundTime withRestTimeOf:(NSString*)restTime withNumberOfRounds:(NSInteger)rounds withCountdownTimer:(NSInteger)countdownTimer;
+@property (nonatomic, strong) NSString* type;
+@property NSInteger roundTime;
+@property NSInteger restTime;
+@property NSInteger rounds;
+@property NSInteger countdownTimer;
+
+-(instancetype)initWithType:(NSString*)type withRoundTimerOf:(NSInteger)roundTime withRestTimeOf:(NSInteger)restTime withNumberOfRounds:(NSInteger)rounds withCountdownTimer:(NSInteger)countdownTimer;
 
 
 @end

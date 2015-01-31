@@ -31,16 +31,32 @@
 
 - (void)testIfCreateWorkoutCreatesWorkoutObject {
     //Given
-    NSString* workoutType = @"Beginner";
-    NSString* roundLength = @"5:00";
-    NSString* restPeriod = @"1:00";
-    NSInteger numberOfRounds = 5;
-    NSInteger countdownTimer = 10;
+//    NSString* workoutType = self.setupViewModel.currentWorkoutType;
+//    NSInteger roundLength = self.setupViewModel.currentRoundTimeINT;
+//    NSInteger restPeriod = self.setupViewModel.currentRestTimeINT;
+//    NSInteger numberOfRounds = self.setupViewModel.currentNumberOfRoundsINT;
+//    NSInteger countdownTimer = self.setupViewModel.currentWarningTimeINT;
     
     //Do
-    [self.setupViewModel createWorkoutOfType:workoutType withRoundLengthOf:roundLength withRestBetweenRounds:restPeriod withNumberOfRounds:numberOfRounds withCountdownRingerStartingAt:countdownTimer];
+    [self.setupViewModel createWorkout];
     //Assert
     XCTAssertTrue([self.setupViewModel.workout isKindOfClass:[Workout class]]);
+}
+
+-(void)testIfCreateWorkoutAssignsSetupViewModelPropertiesCorrectly {
+    self.setupViewModel.currentWorkoutType = @"Advanced";
+    self.setupViewModel.currentRoundTimeINT = 180;
+    self.setupViewModel.currentRestTimeINT = 30;
+    self.setupViewModel.currentWarningTimeINT = 30;
+    self.setupViewModel.currentNumberOfRoundsINT = 10;
+    
+    [self.setupViewModel createWorkout];
+
+    XCTAssertTrue(self.setupViewModel.workout.type == self.setupViewModel.currentWorkoutType);
+    XCTAssertTrue(self.setupViewModel.workout.roundTime == self.setupViewModel.currentRoundTimeINT);
+    XCTAssertTrue(self.setupViewModel.workout.restTime == self.setupViewModel.currentRestTimeINT);
+    XCTAssertTrue(self.setupViewModel.workout.rounds == self.setupViewModel.currentNumberOfRoundsINT);
+    XCTAssertTrue(self.setupViewModel.workout.countdownTimer == self.setupViewModel.currentWarningTimeINT);
 }
 
 -(void)testPositiveIncrementOfType {
@@ -61,19 +77,19 @@
 -(void)testPositiveIncrementOfNumberOfRounds {
     //Starts with 3 rounds
     [self.setupViewModel numberOfRoundsPositiveIncrement];
-    XCTAssertTrue(self.setupViewModel.currentNumberOfRounds == 4);
+    XCTAssertTrue(self.setupViewModel.currentNumberOfRoundsINT == 4);
 }
 
 -(void)testNegativeIncrementOfNumberOfRounds {
     //Starts with 3 rounds
     [self.setupViewModel numberOfRoundsNegativeIncrement];
-    XCTAssertTrue(self.setupViewModel.currentNumberOfRounds == 2);
+    XCTAssertTrue(self.setupViewModel.currentNumberOfRoundsINT == 2);
 }
 
 -(void)testNegativeIncrementOfNumberOfRoundsCannotGoBelow1 {
-    self.setupViewModel.currentNumberOfRounds = 1;
+    self.setupViewModel.currentNumberOfRoundsINT = 1;
     [self.setupViewModel numberOfRoundsNegativeIncrement];
-    XCTAssertTrue(self.setupViewModel.currentNumberOfRounds = 1);
+    XCTAssertTrue(self.setupViewModel.currentNumberOfRoundsINT = 1);
 }
 
 -(void)testPositiveIncrementOfRoundTime {
@@ -125,7 +141,15 @@
 }
 
 -(void)testConvertTimeIntoString {
-    
+    NSInteger testTime = 200;
+    NSString* newString = [self.setupViewModel convertTimeIntegerIntoString:(NSInteger)testTime];
+    XCTAssertTrue([newString isEqualToString:@"3:20"]);
+}
+
+-(void)testConvertTimeIntoStringMethodForDoubleDigitSeconds {
+    NSInteger testTime = 90;
+    NSString* newString = [self.setupViewModel convertTimeIntegerIntoString:testTime];
+    XCTAssertTrue([newString isEqualToString:@"1:30"]);
 }
 
 - (void)testPerformanceExample {
