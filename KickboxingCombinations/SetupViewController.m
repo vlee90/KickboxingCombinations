@@ -108,6 +108,8 @@
     //Start Button
     self.startButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
 //        [self.setupViewModel createWorkoutOfType:self.setupViewModel.currentWorkoutType withRoundLengthOf:<#(NSString *)#> withRestBetweenRounds:<#(NSString *)#> withNumberOfRounds:<#(NSInteger)#> withCountdownRingerStartingAt:<#(NSInteger)#>]
+        UIViewController* timerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TimerViewController"];
+        [self.navigationController pushViewController:timerViewController animated:true];
         return [RACSignal empty];
     }];
 }
