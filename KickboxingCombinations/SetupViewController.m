@@ -11,7 +11,8 @@
 
 @interface SetupViewController ()
 
-@property (weak, nonatomic) IBOutlet UIWebView * webViewBG;
+@property (weak, nonatomic) IBOutlet UIImageView* backgroundImageView;
+@property (strong, nonatomic) NSMutableArray* backgroundArray;
 
 //Immutable Labels
 @property (weak, nonatomic) IBOutlet UILabel *typeTitleTextlabel;
@@ -50,14 +51,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"bag" ofType:@"gif"];
-    NSData* gif = [NSData dataWithContentsOfFile:filePath];
+    self.backgroundArray = [[NSMutableArray alloc] init];
+    for (NSInteger i = 1; i <= 132 ; i++) {
+        NSString* imageName = [NSString stringWithFormat:@"bag-%ld", (long)i];
+        UIImage* image = [UIImage imageNamed:imageName];
+        [self.backgroundArray addObject:image];
+    }
     
-    [self.webViewBG loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
-    self.webViewBG.userInteractionEnabled = false;
-    self.webViewBG.alpha = 0.2;
-    
+    self.backgroundImageView.animationImages = self.backgroundArray;
+    self.backgroundImageView.animationDuration = 10;
+    [self.backgroundImageView startAnimating];
+
     self.setupViewModel = [[SetupViewModel alloc] initWithPoolProperties];
+    self.backgroundImageView.alpha = 0.3;
     
     
     RAC(self.typeTextLabel, text) = RACObserve(self.setupViewModel, currentWorkoutType);

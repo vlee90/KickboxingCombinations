@@ -14,7 +14,6 @@
 		EB4BDFE01A79B34700C56F6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4BDFDE1A79B34700C56F6B /* Main.storyboard */; };
 		EB4BDFE21A79B34700C56F6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB4BDFE11A79B34700C56F6B /* Images.xcassets */; };
 		EB4BDFE51A79B34700C56F6B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB4BDFE31A79B34700C56F6B /* LaunchScreen.xib */; };
-		EB60C0261A7DD1D20006BBA2 /* bag.gif in Resources */ = {isa = PBXBuildFile; fileRef = EB60C0251A7DD1D20006BBA2 /* bag.gif */; };
 		EB94D1A61A79B88900774138 /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1A51A79B88900774138 /* SetupViewController.m */; };
 		EB94D1A91A79B89A00774138 /* SetupViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1A81A79B89A00774138 /* SetupViewModel.m */; };
 		EB94D1AC1A79B8CE00774138 /* SetupFeatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1AB1A79B8CE00774138 /* SetupFeatureTests.m */; };
@@ -48,7 +47,6 @@
 		EB4BDFE41A79B34700C56F6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EB4BDFEA1A79B34700C56F6B /* KickboxingCombinationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KickboxingCombinationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4BDFEF1A79B34700C56F6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB60C0251A7DD1D20006BBA2 /* bag.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = bag.gif; path = ../../../../Desktop/bag.gif; sourceTree = "<group>"; };
 		EB94D1A41A79B88900774138 /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
 		EB94D1A51A79B88900774138 /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		EB94D1A71A79B89A00774138 /* SetupViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewModel.h; sourceTree = "<group>"; };
@@ -123,7 +121,6 @@
 		EB4BDFD01A79B34700C56F6B /* KickboxingCombinations */ = {
 			isa = PBXGroup;
 			children = (
-				EB60C0251A7DD1D20006BBA2 /* bag.gif */,
 				EB94D1AA1A79B8A800774138 /* Model */,
 				EB94D1A31A79B86800774138 /* SetupFeature */,
 				EBDFA78C1A7AFC2B00905488 /* TimerFeature */,
@@ -279,7 +276,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB4BDFE01A79B34700C56F6B /* Main.storyboard in Resources */,
-				EB60C0261A7DD1D20006BBA2 /* bag.gif in Resources */,
 				EB4BDFE51A79B34700C56F6B /* LaunchScreen.xib in Resources */,
 				EB4BDFE21A79B34700C56F6B /* Images.xcassets in Resources */,
 			);
