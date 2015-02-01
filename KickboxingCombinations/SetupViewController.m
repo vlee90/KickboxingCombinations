@@ -11,6 +11,8 @@
 
 @interface SetupViewController ()
 
+@property (weak, nonatomic) IBOutlet UIWebView * webViewBG;
+
 //Immutable Labels
 @property (weak, nonatomic) IBOutlet UILabel *typeTitleTextlabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfRoundsTitleTextlabel;
@@ -47,6 +49,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"bag" ofType:@"gif"];
+    NSData* gif = [NSData dataWithContentsOfFile:filePath];
+    
+    [self.webViewBG loadData:gif MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
+    self.webViewBG.userInteractionEnabled = false;
+    self.webViewBG.alpha = 0.2;
+    
     self.setupViewModel = [[SetupViewModel alloc] initWithPoolProperties];
     
     
