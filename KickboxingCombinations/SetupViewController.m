@@ -11,6 +11,7 @@
 
 @interface SetupViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView* backgroundImageView;
 //Immutable Labels
 @property (weak, nonatomic) IBOutlet UILabel *typeTitleTextlabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfRoundsTitleTextlabel;
@@ -48,6 +49,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.setupViewModel = [[SetupViewModel alloc] initWithPoolProperties];
+
+    //BackgroundAnimation
+    [self.setupViewModel loadImagesIntoBackgroundArray];
+    self.backgroundImageView.animationImages = self.setupViewModel.backgroundArray;
+    self.backgroundImageView.animationDuration = 10;
+    [self.backgroundImageView startAnimating];
+    self.backgroundImageView.alpha = 0.3;
     
     
     RAC(self.typeTextLabel, text) = RACObserve(self.setupViewModel, currentWorkoutType);

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Workout.h"
+#import <UIKit/UIKit.h>
 
 @interface SetupViewModel : NSObject
 
@@ -15,6 +16,7 @@
 
 //Backed Properties
 @property (nonatomic, strong) NSArray* typeArray;
+@property (nonatomic, strong) NSMutableArray* backgroundArray;
 
 //State Properties
 @property (nonatomic, strong) NSString* currentWorkoutType;
@@ -42,6 +44,8 @@
 -(void)roundRestNegativeIncrement;
 -(void)warningTimePositiveIncrement;
 -(void)warningTimeNegativeIncrement;
+
+-(void)loadImagesIntoBackgroundArray;
 
 -(NSString*)convertTimeIntegerIntoString:(NSInteger)seconds;
 
