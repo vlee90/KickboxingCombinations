@@ -59,6 +59,11 @@
     XCTAssertTrue(self.setupViewModel.workout.countdownTimer == self.setupViewModel.currentWarningTimeINT);
 }
 
+-(void)testCreatingBackgroundArrayLoadsImages {
+    [self.setupViewModel loadImagesIntoBackgroundArray];
+    XCTAssertTrue(self.setupViewModel.backgroundArray.count > 0);
+}
+
 -(void)testPositiveIncrementOfType {
     //Given
     //Starts with Beginner
