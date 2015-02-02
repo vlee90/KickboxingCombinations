@@ -48,7 +48,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.setupViewModel = [[SetupViewModel alloc] initWithPoolProperties];
+    self.setupViewModel = [[SetupViewModel alloc] initWithStateProperties];
 
     //BackgroundAnimation
     [self.setupViewModel loadImagesIntoBackgroundArray];

@@ -23,8 +23,13 @@
 
 - (void)setUp {
     [super setUp];
-    id mockWorkout = [OCMockObject mockForClass:[Workout class]];
-//    self.timerViewModel = [[TimerViewModel alloc] initWithWorkout:mockWorkout];
+    NSString* workoutType = @"Advanced";
+    NSInteger roundTime = 200;
+    NSInteger restTime = 50;
+    NSInteger rounds = 2;
+    NSInteger warningTime = 15;
+    Workout* workout = [[Workout alloc] initWithType:workoutType withRoundTimerOf:roundTime withRestTimeOf:restTime withNumberOfRounds:rounds withCountdownTimer:warningTime];
+    self.timerViewModel = [[TimerViewModel alloc] initWithWorkoutProperties:workout];
 }
 
 - (void)tearDown {
@@ -32,9 +37,9 @@
     self.timerViewModel = nil;
 }
 
-//-(void)testTimerViewModelHasWorkout {
-//    XCTAssertNotNil(self.timerViewModel.workout);
-//}
+-(void)testTimerViewModelHasWorkout {
+    XCTAssertNotNil(self.timerViewModel.workout);
+}
 
 
 - (void)testPerformanceExample {

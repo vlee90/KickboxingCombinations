@@ -10,11 +10,21 @@
 
 @implementation TimerViewModel
 
-//-(instancetype)initWithWorkout:(Workout *)workout {
-//    if(self = [super init]) {
-//        _workout = workout;
-//    }
-//    return self;
-//}
+-(instancetype)initWithWorkoutProperties:(Workout *)workout {
+    if (self = [super init]) {
+        self.workout = workout;
+        self.helper = [[Helper alloc] init];
+        self.currentWorkoutType = workout.type;
+        self.currentNumberOfRoundsINT = workout.rounds;
+        self.currentRoundTimeINT = workout.roundTime;
+        self.currentRestTimeINT = workout.restTime;
+        self.currentWarningTimeINT = workout.countdownTimer;
+        self.currentNumberOfRoundsSTRING = [self.helper convertTimeIntegerIntoString:self.currentNumberOfRoundsINT];
+        self.currentRoundTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRoundTimeINT];
+        self.currentRestTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRestTimeINT];
+        self.currentWarningTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentWarningTimeINT];
+    }
+    return self;
+}
 
 @end

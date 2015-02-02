@@ -23,7 +23,7 @@
 
 - (void)setUp {
     [super setUp];
-    self.setupViewModel = [[SetupViewModel alloc] initWithPoolProperties];
+    self.setupViewModel = [[SetupViewModel alloc] initWithStateProperties];
 }
 
 - (void)tearDown {
@@ -34,6 +34,7 @@
 - (void)testIfCreateWorkoutCreatesWorkoutObject {
     [self.setupViewModel createWorkout];
     XCTAssertTrue([self.setupViewModel.workout isKindOfClass:[Workout class]]);
+    XCTAssertNotNil(self.setupViewModel.workout);
 }
 
 -(void)testIfCreateWorkoutAssignsSetupViewModelPropertiesCorrectly {
@@ -52,22 +53,14 @@
     XCTAssertTrue(self.setupViewModel.workout.countdownTimer == self.setupViewModel.currentWarningTimeINT);
 }
 
--(void)testIfCreateTimerViewControllerHasATimerViewModel {;
+-(void)testIfCreateTimerViewControllerHasATimerViewModel {
     TimerViewController* timerViewController = [self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel];
     XCTAssertNotNil(timerViewController.timerViewModel);
 }
 
-//-(void)testCreateTimerViewController {
-//    
-//    [self.setupViewModel createTimerViewControllerWithStoryboard];
-//    XCTAssertNotNil(timerViewController)
-//}
-
--(void)testIfSetupViewModelPassesWorkoutToTimerViewModel {
-    TimerViewModel* timerViewModel = [[TimerViewModel alloc] init];
-    [self.setupViewModel createWorkout];
-    [self.setupViewModel passWorkoutToTimerViewModel:timerViewModel];
-    XCTAssertNotNil(timerViewModel.workout);
+-(void)testCreatingBackgroundArrayLoadsImages {
+    [self.setupViewModel loadImagesIntoBackgroundArray];
+    XCTAssertTrue(self.setupViewModel.backgroundArray.count > 0);
 }
 
 -(void)testPositiveIncrementOfType {
@@ -149,18 +142,6 @@
     self.setupViewModel.currentWarningTimeINT = 5;
     [self.setupViewModel warningTimeNegativeIncrement];
     XCTAssertTrue(self.setupViewModel.currentWarningTimeINT == 5);
-}
-
--(void)testConvertTimeIntoString {
-    NSInteger testTime = 200;
-    NSString* newString = [self.setupViewModel convertTimeIntegerIntoString:(NSInteger)testTime];
-    XCTAssertTrue([newString isEqualToString:@"3:20"]);
-}
-
--(void)testConvertTimeIntoStringMethodForDoubleDigitSeconds {
-    NSInteger testTime = 90;
-    NSString* newString = [self.setupViewModel convertTimeIntegerIntoString:testTime];
-    XCTAssertTrue([newString isEqualToString:@"1:30"]);
 }
 
 - (void)testPerformanceExample {
