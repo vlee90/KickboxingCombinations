@@ -41,6 +41,17 @@
     XCTAssertNotNil(self.timerViewModel.workout);
 }
 
+-(void)testTimerBeginsCountdown {
+    [self.timerViewModel hitTimerCountdown];
+    XCTAssertTrue(self.timerViewModel.timerOn);
+}
+
+-(void)testTimerStopsCountdown {
+    self.timerViewModel.timerOn = true;
+    [self.timerViewModel hitTimerCountdown];
+    XCTAssertFalse(self.timerViewModel.timerOn);
+}
+
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.

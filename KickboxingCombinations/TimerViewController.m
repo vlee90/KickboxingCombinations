@@ -7,6 +7,7 @@
 //
 
 #import "TimerViewController.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface TimerViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *timerTextLabel;
@@ -22,21 +23,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    RAC(self.timerTextLabel, text) = RACObserve(self.timerViewModel, currentRoundTimeSTRING);
+    RAC(self.roundsTextLabel, text) = RACObserve(self.timerViewModel, currentNumberOfRoundsSTRING);
+    RAC(self.restTextLabel, text) = RACObserve(self.timerViewModel, currentRestTimeSTRING);
+    RAC(self, title) = RACObserve(self.timerViewModel, currentWorkoutType);
+    RAC(self.startButton, backgroundColor) =
+        [RACObserve(self.timerViewModel, timerOn)
+         map:^id(NSNumber* timerIsOn) {
+             return [timerIsOn boolValue] ? [UIColor redColor] : [UIColor greenColor];
+         }];
+    
+    self.startButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        [self.timerViewModel hitTimerCountdown];
+        return [RACSignal empty];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
