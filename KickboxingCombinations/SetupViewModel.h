@@ -17,6 +17,7 @@
 
 //Backed Properties
 @property (nonatomic, strong) NSArray* typeArray;
+@property (nonatomic, strong) NSMutableArray* backgroundArray;
 
 //State Properties
 @property (nonatomic, strong) NSString* currentWorkoutType;
@@ -42,6 +43,8 @@
 -(void)roundRestNegativeIncrement;
 -(void)warningTimePositiveIncrement;
 -(void)warningTimeNegativeIncrement;
+
+-(void)loadImagesIntoBackgroundArray;
 
 -(NSString*)convertTimeIntegerIntoString:(NSInteger)seconds;
 

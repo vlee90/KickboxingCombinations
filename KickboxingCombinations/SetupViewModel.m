@@ -67,6 +67,15 @@
     }
 }
 
+-(void)loadImagesIntoBackgroundArray {
+    self.backgroundArray = [[NSMutableArray alloc] init];
+    for (NSInteger i = 1; i <= 132 ; i++) {
+        NSString* imageName = [NSString stringWithFormat:@"bag-%ld", (long)i];
+        UIImage* image = [UIImage imageNamed:imageName];
+        [self.backgroundArray addObject:image];
+    }
+}
+
 -(void)numberOfRoundsPositiveIncrement {
     self.currentNumberOfRoundsINT++;
     self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%ld", (long)self.currentNumberOfRoundsINT];
