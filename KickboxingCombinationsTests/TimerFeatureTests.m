@@ -48,14 +48,14 @@
 
 -(void)testRoundTimerDecreasesRoundTime {
     self.timerViewModel.roundTimerOn = true;
-    [self.timerViewModel decreaseCountdownTimer];
+    [self.timerViewModel updateTimer];
     XCTAssertTrue([self.timerViewModel.currentRoundTimeSTRING isEqualToString:@"3:19"]);
     XCTAssertEqual(self.timerViewModel.currentRoundTimeINT, 199);
 }
 
 -(void)testRoundTimerChangesToRestModeAt0 {
     self.timerViewModel.currentRoundTimeINT = 0;
-    [self.timerViewModel decreaseCountdownTimer];
+    [self.timerViewModel updateTimer];
     XCTAssertFalse(self.timerViewModel.roundTimerOn);
 }
 
