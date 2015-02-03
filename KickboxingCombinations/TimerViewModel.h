@@ -14,9 +14,10 @@
 
 @property (nonatomic, strong) Workout* workout;
 @property (nonatomic, strong) Helper* helper;
+@property (nonatomic, strong) NSTimer* timer;
 
 //State Properties
-@property BOOL timerOn;
+@property BOOL roundTimerOn;
 @property (nonatomic, strong) NSString* currentWorkoutType;
 @property NSInteger currentNumberOfRoundsINT;
 @property NSInteger currentRoundTimeINT;
@@ -31,6 +32,8 @@
 @property (nonatomic, strong) NSString* currentRoundSTRING;
 
 -(instancetype)initWithWorkoutProperties:(Workout*)workout;
--(void)hitTimerCountdown;
+
+-(void)beginRoundCountdownTimer;
+-(void)decreaseCountdownTimer;
 
 @end

@@ -41,17 +41,29 @@
     XCTAssertNotNil(self.timerViewModel.workout);
 }
 
--(void)testTimerBeginsCountdown {
-    [self.timerViewModel hitTimerCountdown];
-    XCTAssertTrue(self.timerViewModel.timerOn);
+-(void)testRoundTimerBeginsCountdown {
+    [self.timerViewModel beginRoundCountdownTimer];
+    XCTAssertTrue(self.timerViewModel.roundTimerOn);
+}
+
+-(void)testRoundTimerDecreasesRoundTime {
+    self.timerViewModel.roundTimerOn = true;
+    [self.timerViewModel decreaseCountdownTimer];
+    XCTAssertTrue([self.timerViewModel.currentRoundTimeSTRING isEqualToString:@"3:19"]);
+    XCTAssertEqual(self.timerViewModel.currentRoundTimeINT, 199);
+}
+
+-(void)testRoundTimerChangesToRestModeAt0 {
+    self.timerViewModel.currentRoundTimeINT = 0;
+    [self.timerViewModel decreaseCountdownTimer];
+    XCTAssertFalse(self.timerViewModel.roundTimerOn);
 }
 
 -(void)testTimerStopsCountdown {
-    self.timerViewModel.timerOn = true;
-    [self.timerViewModel hitTimerCountdown];
-    XCTAssertFalse(self.timerViewModel.timerOn);
+    self.timerViewModel.roundTimerOn = true;
+    [self.timerViewModel beginRoundCountdownTimer];
+    XCTAssertFalse(self.timerViewModel.roundTimerOn);
 }
-
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.

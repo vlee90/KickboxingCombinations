@@ -13,7 +13,7 @@
 -(instancetype)initWithWorkoutProperties:(Workout *)workout {
     if (self = [super init]) {
         self.workout = workout;
-        self.timerOn = false;
+        self.roundTimerOn = false;
         self.helper = [[Helper alloc] init];
         self.currentWorkoutType = workout.type;
         self.currentNumberOfRoundsINT = workout.rounds;
@@ -29,15 +29,48 @@
     return self;
 }
 
--(void)hitTimerCountdown {
-    if (self.timerOn) {
-        self.timerOn = false;
-        NSLog(@"TIMER IS ON");
+-(void)beginRoundCountdownTimer {
+    if (self.roundTimerOn) {
+        self.roundTimerOn = false;
+        [self.timer invalidate];
+        self.timer = nil;
     }
     else {
-        self.timerOn = true;
-        NSLog(@"TIMER IS OFF");
+        self.roundTimerOn = true;
+        self.currentRoundTimeINT -= 1;
+        self.currentRoundTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRoundTimeINT];
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(decreaseCountdownTimer) userInfo:nil repeats:true];
+        [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     }
 }
+
+-(void)decreaseCountdownTimer {
+    if (self.roundTimerOn) {
+        if (self.currentRoundTimeINT > 1) {
+            self.currentRoundTimeINT -= 1;
+            self.currentRoundTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRoundTimeINT];
+        }
+        else {
+            self.roundTimerOn = false;
+            self.currentRoundTimeINT -= 1;
+            self.currentRoundTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRoundTimeINT];
+        }
+    }
+    else {
+        if (self.currentRestTimeINT > 1) {
+            self.currentRestTimeINT -= 1;
+            self.currentRestTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRestTimeINT];
+        }
+        else {
+            self.roundTimerOn = true;
+            self.currentRestTimeINT -= 1;
+            self.currentRestTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRestTimeINT];
+        }
+    }
+}
+
+
+
+
 
 @end

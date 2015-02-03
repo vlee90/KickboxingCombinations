@@ -11,9 +11,7 @@
 
 @interface TimerViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *timerTextLabel;
-@property (weak, nonatomic) IBOutlet UILabel *roundTitleTextLabel;
 @property (weak, nonatomic) IBOutlet UILabel *roundsTextLabel;
-@property (weak, nonatomic) IBOutlet UILabel *restTitleTextLabel;
 @property (weak, nonatomic) IBOutlet UILabel *restTextLabel;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
 
@@ -28,13 +26,18 @@
     RAC(self.restTextLabel, text) = RACObserve(self.timerViewModel, currentRestTimeSTRING);
     RAC(self, title) = RACObserve(self.timerViewModel, currentWorkoutType);
     RAC(self.startButton, backgroundColor) =
-        [RACObserve(self.timerViewModel, timerOn)
+        [RACObserve(self.timerViewModel, roundTimerOn)
          map:^id(NSNumber* timerIsOn) {
              return [timerIsOn boolValue] ? [UIColor redColor] : [UIColor greenColor];
          }];
+    RAC(self.view, backgroundColor) =
+        [RACObserve(self.timerViewModel, roundTimerOn)
+         map:^id(NSNumber* roundTimerOn) {
+             return [roundTimerOn boolValue] ? [UIColor whiteColor] : [UIColor blueColor];
+         }];
     
     self.startButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-        [self.timerViewModel hitTimerCountdown];
+        [self.timerViewModel beginRoundCountdownTimer];
         return [RACSignal empty];
     }];
 }
