@@ -23,9 +23,13 @@
 
 - (void)setUp {
     [super setUp];
-    SetupViewModel* setupViewModel = [[SetupViewModel alloc] initWithPoolProperties];
-    
-//    self.timerViewModel = [[TimerViewModel alloc] initWithWorkout:<#(Workout *)#>]
+    NSString* workoutType = @"Advanced";
+    NSInteger roundTime = 200;
+    NSInteger restTime = 50;
+    NSInteger rounds = 2;
+    NSInteger warningTime = 15;
+    Workout* workout = [[Workout alloc] initWithType:workoutType withRoundTimerOf:roundTime withRestTimeOf:restTime withNumberOfRounds:rounds withCountdownTimer:warningTime];
+    self.timerViewModel = [[TimerViewModel alloc] initWithWorkoutProperties:workout];
 }
 
 - (void)tearDown {
@@ -34,12 +38,32 @@
 }
 
 -(void)testTimerViewModelHasWorkout {
-    id lol = [OCMockObject mockForClass:[SetupViewModel class]];
-    [[[lol stub] andReturn:@"hi"] createWorkout];
-    [lol createWorkout];
-    
+    XCTAssertNotNil(self.timerViewModel.workout);
 }
 
+-(void)testRoundTimerBeginsCountdown {
+    [self.timerViewModel beginRoundCountdownTimer];
+    XCTAssertTrue(self.timerViewModel.roundTimerOn);
+}
+
+-(void)testRoundTimerDecreasesRoundTime {
+    self.timerViewModel.roundTimerOn = true;
+    [self.timerViewModel decreaseCountdownTimer];
+    XCTAssertTrue([self.timerViewModel.currentRoundTimeSTRING isEqualToString:@"3:19"]);
+    XCTAssertEqual(self.timerViewModel.currentRoundTimeINT, 199);
+}
+
+-(void)testRoundTimerChangesToRestModeAt0 {
+    self.timerViewModel.currentRoundTimeINT = 0;
+    [self.timerViewModel decreaseCountdownTimer];
+    XCTAssertFalse(self.timerViewModel.roundTimerOn);
+}
+
+-(void)testTimerStopsCountdown {
+    self.timerViewModel.roundTimerOn = true;
+    [self.timerViewModel beginRoundCountdownTimer];
+    XCTAssertFalse(self.timerViewModel.roundTimerOn);
+}
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.

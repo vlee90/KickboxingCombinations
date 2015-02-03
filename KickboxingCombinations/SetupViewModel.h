@@ -8,11 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "Workout.h"
-#import <UIKit/UIKit.h>
+#import "TimerViewModel.h"
+#import "TimerViewController.h"
+#import "Helper.h"
 
 @interface SetupViewModel : NSObject
 
 @property(nonatomic, strong) Workout* workout;
+@property(nonatomic, strong) Helper* helper;
 
 //Backed Properties
 @property (nonatomic, strong) NSArray* typeArray;
@@ -30,9 +33,7 @@
 @property (nonatomic, strong) NSString* currentRestTimeSTRING;
 @property (nonatomic, strong) NSString* currentWarningTimeSTRING;
 
--(instancetype)initWithPoolProperties;
-
--(void)createWorkout;
+-(instancetype)initWithStateProperties;
 
 -(void)typePositiveIncrement;
 -(void)typeNegativeIncrement;
@@ -47,6 +48,7 @@
 
 -(void)loadImagesIntoBackgroundArray;
 
--(NSString*)convertTimeIntegerIntoString:(NSInteger)seconds;
+-(void)createWorkout;
+-(TimerViewController*)createTimerViewControllerFromStoryboardWithTimerViewModel;
 
 @end

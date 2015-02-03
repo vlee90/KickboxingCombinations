@@ -18,6 +18,8 @@
 		EB94D1A91A79B89A00774138 /* SetupViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1A81A79B89A00774138 /* SetupViewModel.m */; };
 		EB94D1AC1A79B8CE00774138 /* SetupFeatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1AB1A79B8CE00774138 /* SetupFeatureTests.m */; };
 		EB94D1AF1A79BB0900774138 /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1AE1A79BB0900774138 /* Workout.m */; };
+		EBABEB141A801FEC0049BA93 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = EBABEB131A801FEC0049BA93 /* Helper.m */; };
+		EBABEB161A8020140049BA93 /* HelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBABEB151A8020140049BA93 /* HelperTests.m */; };
 		EBDFA78F1A7AFC5300905488 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA78E1A7AFC5300905488 /* TimerViewController.m */; };
 		EBDFA7921A7AFC6200905488 /* TimerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA7911A7AFC6200905488 /* TimerViewModel.m */; };
 		EBDFA7941A7AFC7600905488 /* TimerFeatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDFA7931A7AFC7600905488 /* TimerFeatureTests.m */; };
@@ -54,6 +56,9 @@
 		EB94D1AB1A79B8CE00774138 /* SetupFeatureTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupFeatureTests.m; sourceTree = "<group>"; };
 		EB94D1AD1A79BB0900774138 /* Workout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Workout.h; sourceTree = "<group>"; };
 		EB94D1AE1A79BB0900774138 /* Workout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Workout.m; sourceTree = "<group>"; };
+		EBABEB121A801FEC0049BA93 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		EBABEB131A801FEC0049BA93 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
+		EBABEB151A8020140049BA93 /* HelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelperTests.m; sourceTree = "<group>"; };
 		EBDFA78D1A7AFC5200905488 /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		EBDFA78E1A7AFC5300905488 /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		EBDFA7901A7AFC6200905488 /* TimerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewModel.h; sourceTree = "<group>"; };
@@ -121,6 +126,7 @@
 		EB4BDFD01A79B34700C56F6B /* KickboxingCombinations */ = {
 			isa = PBXGroup;
 			children = (
+				EBABEB111A801FAF0049BA93 /* Helper */,
 				EB94D1AA1A79B8A800774138 /* Model */,
 				EB94D1A31A79B86800774138 /* SetupFeature */,
 				EBDFA78C1A7AFC2B00905488 /* TimerFeature */,
@@ -150,6 +156,7 @@
 				EB4BDFEE1A79B34700C56F6B /* Supporting Files */,
 				EB94D1AB1A79B8CE00774138 /* SetupFeatureTests.m */,
 				EBDFA7931A7AFC7600905488 /* TimerFeatureTests.m */,
+				EBABEB151A8020140049BA93 /* HelperTests.m */,
 			);
 			path = KickboxingCombinationsTests;
 			sourceTree = "<group>";
@@ -180,6 +187,15 @@
 				EB94D1AE1A79BB0900774138 /* Workout.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		EBABEB111A801FAF0049BA93 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				EBABEB121A801FEC0049BA93 /* Helper.h */,
+				EBABEB131A801FEC0049BA93 /* Helper.m */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 		EBDFA78C1A7AFC2B00905488 /* TimerFeature */ = {
@@ -335,6 +351,7 @@
 				EB4BDFD71A79B34700C56F6B /* AppDelegate.m in Sources */,
 				EB4BDFD41A79B34700C56F6B /* main.m in Sources */,
 				EB4BDFDA1A79B34700C56F6B /* KickboxingCombinations.xcdatamodeld in Sources */,
+				EBABEB141A801FEC0049BA93 /* Helper.m in Sources */,
 				EB94D1AF1A79BB0900774138 /* Workout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBDFA7941A7AFC7600905488 /* TimerFeatureTests.m in Sources */,
+				EBABEB161A8020140049BA93 /* HelperTests.m in Sources */,
 				EB94D1AC1A79B8CE00774138 /* SetupFeatureTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
