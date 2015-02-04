@@ -21,7 +21,7 @@
 -(instancetype)initWithWorkoutProperties:(Workout *)workout {
     if (self = [super init]) {
         self.workout = workout;
-        self.roundTimerOn = false;
+        self.roundModeIsOn = true;
         self.isPaused = true;
         self.helper = [[Helper alloc] init];
         self.currentWorkoutType = workout.type;
@@ -40,59 +40,45 @@
 
 -(void)updateTimer {
     //Round Mode
-    if (self.roundTimerOn == true && [self workoutComplete] == false) {
+    if (self.roundModeIsOn == true && [self workoutComplete] == false) {
         if (self.currentRoundTimeINT > 0) {
             [self incrementRoundTimer];
         }
         else {
-            self.roundTimerOn = false;
+            self.roundModeIsOn = false;
             [self resetRestTimer];
             [self resetRestTimer];
         }
     }
     //Rest Mode
-    else if (self.roundTimerOn == false && [self workoutComplete] == false) {
+    else if (self.roundModeIsOn == false && [self workoutComplete] == false) {
         if (self.currentRestTimeINT > 0) {
             [self incrementRestTimer];
         }
         else {
             [self increaseRound];
-            self.roundTimerOn = true;
+            self.roundModeIsOn = true;
             [self resetRoundTimer];
             [self resetRestTimer];
         }
     }
     //End of workout
     else {
-        NSLog(@"End Workout");
         [self.timer invalidate];
         self.timer = nil;
     }
 }
 
--(void)beginRoundCountdownTimer {
+-(void)startButtonPressed {
     if (self.isPaused) {
         self.isPaused = false;
-        //Starts round or rest depending on self.roundTimerOn
-//        if(self.roundTimerOn == false) {
-            self.roundTimerOn = true;
-            self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:true];
-            [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
-//        }
-//        else {
-//            
-//        }
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:true];
+        [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     }
     else {
-        //Pauses round or rest depending on self.roundTimerOn
         self.isPaused = true;
         [self.timer invalidate];
         self.timer = nil;
-        
-//        if(self.roundTimerOn) {
-//        }
-//        else {
-//        }
     }
 }
 
@@ -108,7 +94,7 @@
 -(void)increaseRound {
     self.currentRoundSTRING = [NSString stringWithFormat:@"%ld",[self.currentRoundSTRING integerValue] + 1];
     //If on final round, don't update the round UI (ex: 3/3)
-    if ([self.currentRoundSTRING integerValue] < self.workout.rounds) {
+    if ([self.currentRoundSTRING integerValue] <= self.workout.rounds) {
         self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%@ / %ld", self.currentRoundSTRING, (long) self.currentNumberOfRoundsINT];
     }
 }

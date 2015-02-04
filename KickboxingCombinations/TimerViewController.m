@@ -31,13 +31,13 @@
              return [paused boolValue] ? [UIColor greenColor] : [UIColor redColor];
          }];
     RAC(self.view, backgroundColor) =
-        [RACObserve(self.timerViewModel, roundTimerOn)
-         map:^id(NSNumber* roundTimerOn) {
-             return [roundTimerOn boolValue] ? [UIColor whiteColor] : [UIColor blueColor];
+        [RACObserve(self.timerViewModel, roundModeIsOn)
+         map:^id(NSNumber* roundModeIsOn) {
+             return [roundModeIsOn boolValue] ? [UIColor whiteColor] : [UIColor blueColor];
          }];
     
     self.startButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-        [self.timerViewModel beginRoundCountdownTimer];
+        [self.timerViewModel startButtonPressed];
         return [RACSignal empty];
     }];
     
