@@ -57,6 +57,20 @@
     [self.backgroundImageView startAnimating];
     self.backgroundImageView.alpha = 0.3;
     
+    UIImageView* redView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
+    redView.alpha = 0.3;
+    redView.layer.cornerRadius = 50;
+    redView.layer.masksToBounds = false;
+    redView.animationImages = self.setupViewModel.backgroundArray;
+    redView.animationDuration = 20;
+    [redView startAnimating];
+    [self.view addSubview:redView];
+    
+    [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse animations:^{
+        redView.center = CGPointMake(400, 400);
+    } completion:^(BOOL finished) {
+        
+    }];
     
     RAC(self.typeTextLabel, text) = RACObserve(self.setupViewModel, currentWorkoutType);
     //WorkoutType
@@ -125,7 +139,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 
 
