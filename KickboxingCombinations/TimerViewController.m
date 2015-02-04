@@ -25,16 +25,16 @@
     RAC(self.roundsTextLabel, text) = RACObserve(self.timerViewModel, currentNumberOfRoundsSTRING);
     RAC(self.restTextLabel, text) = RACObserve(self.timerViewModel, currentRestTimeSTRING);
     RAC(self, title) = RACObserve(self.timerViewModel, currentWorkoutType);
-    RAC(self.startButton, backgroundColor) =
-        [RACObserve(self.timerViewModel, isPaused)
-         map:^id(NSNumber* paused) {
-             return [paused boolValue] ? [UIColor greenColor] : [UIColor redColor];
-         }];
-    RAC(self.view, backgroundColor) =
-        [RACObserve(self.timerViewModel, roundModeIsOn)
-         map:^id(NSNumber* roundModeIsOn) {
-             return [roundModeIsOn boolValue] ? [UIColor whiteColor] : [UIColor blueColor];
-         }];
+//    RAC(self.startButton, backgroundColor) =
+//        [RACObserve(self.timerViewModel, isPaused)
+//         map:^id(NSNumber* paused) {
+//             return [paused boolValue] ? [UIColor greenColor] : [UIColor redColor];
+//         }];
+//    RAC(self.view, backgroundColor) =
+//        [RACObserve(self.timerViewModel, roundModeIsOn)
+//         map:^id(NSNumber* roundModeIsOn) {
+//             return [roundModeIsOn boolValue] ? [UIColor whiteColor] : [UIColor blueColor];
+//         }];
     
     self.startButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         [self.timerViewModel startButtonPressed];

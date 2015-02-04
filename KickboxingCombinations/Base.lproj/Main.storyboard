@@ -3,7 +3,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -37,25 +36,25 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyA-qa-2BR">
                                 <rect key="frame" x="277" y="84" width="46" height="20"/>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.67450980392156867" green="0.71372549019607845" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round Duration:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo8-2v-eJO">
                                 <rect key="frame" x="222" y="218" width="157" height="20"/>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.67450980392156867" green="0.71372549019607845" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rest:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gx4-f7-oKv">
                                 <rect key="frame" x="277" y="280" width="46" height="20"/>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.67450980392156867" green="0.71372549019607845" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warning Bell:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htE-7m-R9b">
                                 <rect key="frame" x="238" y="342" width="124" height="20"/>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.67450980392156867" green="0.71372549019607845" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ4-W0-1T6">
@@ -64,7 +63,7 @@
                                     <constraint firstAttribute="width" constant="150" id="RJc-Iq-Khb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.67450980392156867" green="0.71372549019607845" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2x-1B-cl5">
@@ -73,7 +72,7 @@
                                     <constraint firstAttribute="width" constant="150" id="6M0-DK-MMB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.67450980392156867" green="0.71372549019607845" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqG-dD-JWw">
@@ -82,7 +81,7 @@
                                     <constraint firstAttribute="width" constant="150" id="wr4-bH-pw4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.67450980392156867" green="0.71372549019607845" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfb-eQ-hQv">
@@ -91,7 +90,13 @@
                                     <constraint firstAttribute="width" constant="150" id="EMj-ma-KEB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.67450980392156867" green="0.71372549019607845" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" # of Rounds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eC-6F-1Nc">
+                                <rect key="frame" x="240" y="156" width="120" height="20"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="20"/>
+                                <color key="textColor" red="0.67450980392156867" green="0.71372549019607845" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beginner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuc-eM-5A5">
@@ -100,71 +105,83 @@
                                     <constraint firstAttribute="width" constant="150" id="cXz-4b-FGQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.67450980392156867" green="0.71372549019607845" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1v-Qg-7hx">
                                 <rect key="frame" x="195" y="118" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="&lt;-"/>
+                                <state key="normal" title="&lt;-">
+                                    <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUT-Wb-CME">
                                 <rect key="frame" x="375" y="118" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="-&gt;"/>
+                                <state key="normal" title="-&gt;">
+                                    <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shm-71-ssI">
                                 <rect key="frame" x="195" y="180" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="&lt;-"/>
+                                <state key="normal" title="&lt;-">
+                                    <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9s5-Y2-lKv">
                                 <rect key="frame" x="195" y="242" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="&lt;-"/>
+                                <state key="normal" title="&lt;-">
+                                    <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2c-Ym-DP6">
                                 <rect key="frame" x="375" y="242" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="-&gt;"/>
+                                <state key="normal" title="-&gt;">
+                                    <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1U9-gA-uen">
                                 <rect key="frame" x="195" y="304" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="&lt;-"/>
+                                <state key="normal" title="&lt;-">
+                                    <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIj-9c-FuB">
                                 <rect key="frame" x="375" y="304" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="-&gt;"/>
+                                <state key="normal" title="-&gt;">
+                                    <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Agt-vv-Rv2">
                                 <rect key="frame" x="195" y="366" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="&lt;-"/>
+                                <state key="normal" title="&lt;-">
+                                    <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quz-6U-gdE">
                                 <rect key="frame" x="375" y="366" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="-&gt;"/>
+                                <state key="normal" title="-&gt;">
+                                    <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqf-En-LOs">
                                 <rect key="frame" x="375" y="180" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="-&gt;"/>
+                                <state key="normal" title="-&gt;">
+                                    <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" # of Rounds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eC-6F-1Nc">
-                                <rect key="frame" x="240" y="156" width="120" height="20"/>
-                                <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p1Z-Dj-hQN">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.023529411764705882" green="0.098039215686274508" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="fyA-qa-2BR" firstAttribute="top" secondItem="MyX-hX-Jqz" secondAttribute="bottom" constant="20" id="0Nc-Fh-txe"/>
                             <constraint firstItem="h1v-Qg-7hx" firstAttribute="leading" secondItem="1U9-gA-uen" secondAttribute="leading" id="17U-Ow-2uQ"/>
                             <constraint firstAttribute="centerX" secondItem="Xfb-eQ-hQv" secondAttribute="centerX" id="1Tp-6J-aw8"/>
                             <constraint firstItem="eUT-Wb-CME" firstAttribute="leading" secondItem="kuc-eM-5A5" secondAttribute="trailing" constant="30" id="4Dn-7I-XFz"/>
@@ -175,7 +192,6 @@
                             <constraint firstItem="h1v-Qg-7hx" firstAttribute="leading" secondItem="9s5-Y2-lKv" secondAttribute="leading" id="7sb-Gq-rtZ"/>
                             <constraint firstAttribute="centerX" secondItem="fyA-qa-2BR" secondAttribute="centerX" id="8qa-y1-Mtj"/>
                             <constraint firstItem="Xfb-eQ-hQv" firstAttribute="top" secondItem="sqf-En-LOs" secondAttribute="top" id="A4E-A7-eTP"/>
-                            <constraint firstItem="p1Z-Dj-hQN" firstAttribute="top" secondItem="MyX-hX-Jqz" secondAttribute="bottom" id="BSR-Dn-aTB"/>
                             <constraint firstItem="rqG-dD-JWw" firstAttribute="centerY" secondItem="1U9-gA-uen" secondAttribute="centerY" id="Bzg-zH-0R5"/>
                             <constraint firstItem="h1v-Qg-7hx" firstAttribute="leading" secondItem="shm-71-ssI" secondAttribute="leading" id="CPH-Pw-qaN"/>
                             <constraint firstItem="h2c-Ym-DP6" firstAttribute="trailing" secondItem="eUT-Wb-CME" secondAttribute="trailing" id="Clt-aY-em3"/>
@@ -214,13 +230,7 @@
                             </constraint>
                             <constraint firstItem="eUT-Wb-CME" firstAttribute="leading" secondItem="kuc-eM-5A5" secondAttribute="trailing" id="cax-jQ-PMy"/>
                             <constraint firstItem="DIj-9c-FuB" firstAttribute="trailing" secondItem="eUT-Wb-CME" secondAttribute="trailing" id="eJF-Ut-3q5"/>
-                            <constraint firstAttribute="trailing" secondItem="p1Z-Dj-hQN" secondAttribute="trailing" id="esz-5N-Lz0"/>
-                            <constraint firstItem="fyA-qa-2BR" firstAttribute="top" secondItem="MyX-hX-Jqz" secondAttribute="bottom" constant="20" id="fLY-Kc-U8E">
-                                <variation key="heightClass=compact-widthClass=compact" constant="5"/>
-                            </constraint>
-                            <constraint firstItem="AQk-IB-kaM" firstAttribute="top" secondItem="p1Z-Dj-hQN" secondAttribute="bottom" id="h0P-bG-1ZQ"/>
                             <constraint firstItem="h1v-Qg-7hx" firstAttribute="centerY" secondItem="kuc-eM-5A5" secondAttribute="centerY" id="hKL-YT-Zc5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="p1Z-Dj-hQN" secondAttribute="trailing" id="i02-Zr-Q3z"/>
                             <constraint firstItem="DIj-9c-FuB" firstAttribute="centerY" secondItem="rqG-dD-JWw" secondAttribute="centerY" id="kpi-7k-GhT"/>
                             <constraint firstItem="htE-7m-R9b" firstAttribute="top" secondItem="rqG-dD-JWw" secondAttribute="bottom" constant="15" id="mbl-IS-bj6">
                                 <variation key="heightClass=compact-widthClass=compact" constant="8"/>
@@ -230,7 +240,6 @@
                             <constraint firstItem="sqf-En-LOs" firstAttribute="trailing" secondItem="eUT-Wb-CME" secondAttribute="trailing" id="oLu-QR-czH"/>
                             <constraint firstItem="h2c-Ym-DP6" firstAttribute="top" secondItem="PJ4-W0-1T6" secondAttribute="top" id="phg-2A-Ins"/>
                             <constraint firstItem="shm-71-ssI" firstAttribute="centerY" secondItem="Xfb-eQ-hQv" secondAttribute="centerY" id="qug-9n-CSI"/>
-                            <constraint firstItem="p1Z-Dj-hQN" firstAttribute="leading" secondItem="3OU-Yd-dfL" secondAttribute="leadingMargin" id="qz1-EP-hGr"/>
                             <constraint firstItem="PJ4-W0-1T6" firstAttribute="centerY" secondItem="9s5-Y2-lKv" secondAttribute="centerY" id="t1k-cg-1lh"/>
                             <constraint firstItem="DIj-9c-FuB" firstAttribute="top" secondItem="rqG-dD-JWw" secondAttribute="top" id="thG-k4-ZfK"/>
                             <constraint firstAttribute="centerX" secondItem="PJ4-W0-1T6" secondAttribute="centerX" id="uaY-X5-6w4"/>
@@ -240,7 +249,6 @@
                             <constraint firstItem="eo8-2v-eJO" firstAttribute="top" secondItem="Xfb-eQ-hQv" secondAttribute="bottom" constant="15" id="xR7-MD-Ig3">
                                 <variation key="heightClass=compact-widthClass=compact" constant="8"/>
                             </constraint>
-                            <constraint firstItem="p1Z-Dj-hQN" firstAttribute="leading" secondItem="3OU-Yd-dfL" secondAttribute="leading" id="xgc-lP-eG7"/>
                             <constraint firstItem="PJ4-W0-1T6" firstAttribute="top" secondItem="9s5-Y2-lKv" secondAttribute="top" id="yMX-eI-JgV"/>
                             <constraint firstAttribute="centerX" secondItem="f2x-1B-cl5" secondAttribute="centerX" id="zGz-9K-JkR"/>
                             <constraint firstItem="gx4-f7-oKv" firstAttribute="top" secondItem="PJ4-W0-1T6" secondAttribute="bottom" constant="15" id="zwX-R7-kPd">
@@ -249,8 +257,6 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="i02-Zr-Q3z"/>
-                                <exclude reference="qz1-EP-hGr"/>
                                 <exclude reference="5CT-mb-bcY"/>
                                 <exclude reference="6x3-92-JxA"/>
                                 <exclude reference="Zgr-PX-QAO"/>
@@ -277,7 +283,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Timer" id="MJD-WS-d5m"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="backgroundImageView" destination="p1Z-Dj-hQN" id="h6o-f5-Vq5"/>
                         <outlet property="numberOfRoundsTextLabel" destination="Xfb-eQ-hQv" id="f89-2O-m2S"/>
                         <outlet property="numberOfRoundsTitleTextlabel" destination="4eC-6F-1Nc" id="sJ5-7A-CZY"/>
                         <outlet property="restLeftButton" destination="1U9-gA-uen" id="Az8-zT-GxW"/>
@@ -325,7 +330,7 @@
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" secondItem="fpf-Ua-Njd" secondAttribute="height" multiplier="19:12" constant="1" id="wCI-4W-Cac"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.67450980392156867" green="0.71372549019607845" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -338,25 +343,25 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92I-Dn-icx">
                                 <rect key="frame" x="205" y="200" width="190" height="120"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.67450980392156867" green="0.71372549019607845" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ac7-2K-KWx">
                                 <rect key="frame" x="258" y="428" width="84" height="122"/>
-                                <color key="backgroundColor" red="0.22640607600000001" green="1" blue="0.15633545569999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 / 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HT2-Lg-Rqe">
                                 <rect key="frame" x="261" y="350" width="78" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.67450980392156867" green="0.71372549019607845" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.023529411764705882" green="0.098039215686274508" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HT2-Lg-Rqe" firstAttribute="top" secondItem="92I-Dn-icx" secondAttribute="bottom" constant="30" id="0KL-Go-ZAt"/>
                             <constraint firstAttribute="centerX" secondItem="ac7-2K-KWx" secondAttribute="centerX" id="0bL-aJ-JVc"/>
