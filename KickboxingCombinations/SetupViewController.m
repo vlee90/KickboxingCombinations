@@ -11,7 +11,6 @@
 
 @interface SetupViewController ()
 
-@property (weak, nonatomic) IBOutlet UIImageView* backgroundImageView;
 //Immutable Labels
 @property (weak, nonatomic) IBOutlet UILabel *typeTitleTextlabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfRoundsTitleTextlabel;
@@ -41,6 +40,8 @@
 
 //State
 @property (strong, nonatomic) SetupViewModel* setupViewModel;
+@property NSInteger randX;
+@property NSInteger randY;
 
 @end
 
@@ -52,25 +53,21 @@
 
     //BackgroundAnimation
     [self.setupViewModel loadImagesIntoBackgroundArray];
-    self.backgroundImageView.animationImages = self.setupViewModel.backgroundArray;
-    self.backgroundImageView.animationDuration = 10;
-    [self.backgroundImageView startAnimating];
-    self.backgroundImageView.alpha = 0.3;
+    UIImageView* movingImageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
+    movingImageView.alpha = 0.3;
+    movingImageView.layer.cornerRadius = 50;
+    movingImageView.layer.masksToBounds = true;
+    movingImageView.layer.borderWidth = 10.0;
+    movingImageView.layer.borderColor = [[[UIColor alloc] initWithRed:0.675 green:0.714 blue:0.737 alpha:1.0] CGColor];
     
-    UIImageView* redView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
-    redView.alpha = 0.3;
-    redView.layer.cornerRadius = 50;
-    redView.layer.masksToBounds = false;
-    redView.animationImages = self.setupViewModel.backgroundArray;
-    redView.animationDuration = 20;
-    [redView startAnimating];
-    [self.view addSubview:redView];
-    
-    [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse animations:^{
-        redView.center = CGPointMake(400, 400);
-    } completion:^(BOOL finished) {
-        
-    }];
+    movingImageView.animationImages = self.setupViewModel.backgroundArray;
+    movingImageView.animationDuration = 10;
+    [movingImageView startAnimating];
+    [self.view addSubview:movingImageView];
+//    6: 375 667
+//    4: 320 480
+    [self moveImage:movingImageView];
+
     
     RAC(self.typeTextLabel, text) = RACObserve(self.setupViewModel, currentWorkoutType);
     //WorkoutType
@@ -140,7 +137,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)moveImage:(UIView*)imageView {
+    [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionAutoreverse animations:^{
+        imageView.center = CGPointMake(self.randX, self.randY);
+    } completion:^(BOOL finished) {
+        [self calculateNewRandomPosition];
+        [self moveImage:imageView];
+    }];
+}
 
+-(void)calculateNewRandomPosition {
+    self.randX = arc4random_uniform(375);
+    self.randY = arc4random_uniform(667);
+}
 
 /*
 #pragma mark - Navigation
