@@ -42,34 +42,52 @@
 }
 
 -(void)testRoundTimerBeginsCountdown {
-    [self.timerViewModel beginRoundCountdownTimer];
-    XCTAssertTrue(self.timerViewModel.roundTimerOn);
+    [self.timerViewModel startButtonPressed];
+    XCTAssertTrue(self.timerViewModel.roundModeIsOn);
 }
 
 -(void)testRoundTimerDecreasesRoundTime {
-    self.timerViewModel.roundTimerOn = true;
-    [self.timerViewModel decreaseCountdownTimer];
+    self.timerViewModel.roundModeIsOn = true;
+    [self.timerViewModel updateTimer];
     XCTAssertTrue([self.timerViewModel.currentRoundTimeSTRING isEqualToString:@"3:19"]);
     XCTAssertEqual(self.timerViewModel.currentRoundTimeINT, 199);
 }
 
 -(void)testRoundTimerChangesToRestModeAt0 {
     self.timerViewModel.currentRoundTimeINT = 0;
-    [self.timerViewModel decreaseCountdownTimer];
-    XCTAssertFalse(self.timerViewModel.roundTimerOn);
+    [self.timerViewModel updateTimer];
+    XCTAssertFalse(self.timerViewModel.roundModeIsOn);
 }
 
--(void)testTimerStopsCountdown {
-    self.timerViewModel.roundTimerOn = true;
-    [self.timerViewModel beginRoundCountdownTimer];
-    XCTAssertFalse(self.timerViewModel.roundTimerOn);
+-(void)testStartButtonPressedCanStopTimer {
+    self.timerViewModel.isPaused = true;
+    [self.timerViewModel startButtonPressed];
+    XCTAssertFalse(self.timerViewModel.isPaused);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+-(void)testIncreaseRoundMethodIncreasesTheRound {
+    [self.timerViewModel increaseRound];
+    XCTAssertEqualObjects(self.timerViewModel.currentRoundSTRING, @"2");
+    XCTAssertEqualObjects(self.timerViewModel.currentNumberOfRoundsSTRING, @"2 / 2");
+}
+
+-(void)testIncreaseRoundDoesNotIncreaseStringIfFinalRound {
+    self.timerViewModel.currentRoundSTRING = @"2";
+    self.timerViewModel.currentNumberOfRoundsSTRING = @"2 / 2";
+    XCTAssertEqual([self.timerViewModel.currentRoundSTRING integerValue], self.timerViewModel.workout.rounds);
+    [self.timerViewModel increaseRound];
+    XCTAssertTrue([self.timerViewModel.currentNumberOfRoundsSTRING isEqualToString:@"2 / 2"]);
+}
+
+-(void)testWorkoutCompleteReturnsTrue {
+    self.timerViewModel.currentRoundSTRING = @"3";
+    BOOL returnValue = [self.timerViewModel workoutComplete];
+    XCTAssertTrue(returnValue);
+}
+
+-(void)testWorkoutCompleteReturnsFalse {
+    BOOL returnValue = [self.timerViewModel workoutComplete];
+    XCTAssertFalse(returnValue);
 }
 
 @end
