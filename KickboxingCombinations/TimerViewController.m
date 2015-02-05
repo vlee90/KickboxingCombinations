@@ -50,6 +50,15 @@
                 [self.startButton setTitle:@"Pause" forState:UIControlStateNormal];
             }
         }];
+    
+    UISwipeGestureRecognizer* swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRight:)];
+    [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
+    [self.view addGestureRecognizer:swipeRight];
+    
+}
+
+-(void)swipeRight:(UISwipeGestureRecognizer*)swipe {
+    [self.navigationController popToRootViewControllerAnimated:true];
 }
 
 - (void)didReceiveMemoryWarning {

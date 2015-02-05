@@ -50,6 +50,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.setupViewModel = [[SetupViewModel alloc] initWithStateProperties];
+    [self.navigationController setNavigationBarHidden:true];
     
     UISwipeGestureRecognizer* swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeft:)];
     [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
@@ -129,11 +130,11 @@
     }];
     
     //Start Button
-    self.startButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-        [self.setupViewModel createWorkout];
-        [self.navigationController pushViewController:[self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel] animated:true];
-        return [RACSignal empty];
-    }];
+//    self.startButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+//        [self.setupViewModel createWorkout];
+//        [self.navigationController pushViewController:[self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel] animated:true];
+//        return [RACSignal empty];
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -156,6 +157,8 @@
 }
 
 -(void)swipeLeft:(UISwipeGestureRecognizer*)swipe {
+    NSLog(@"SWHIPE");
+    
     [self.setupViewModel createWorkout];
     [self.navigationController pushViewController:[self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel] animated:true];
 }
