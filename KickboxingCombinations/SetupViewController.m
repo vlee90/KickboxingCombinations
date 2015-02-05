@@ -50,6 +50,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.setupViewModel = [[SetupViewModel alloc] initWithStateProperties];
+    
+    UISwipeGestureRecognizer* swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeft:)];
+    [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.view addGestureRecognizer:swipeLeft];
 
     //BackgroundAnimation
     [self.setupViewModel loadImagesIntoBackgroundArray];
@@ -149,6 +153,11 @@
 -(void)calculateNewRandomPosition {
     self.randX = arc4random_uniform(375);
     self.randY = arc4random_uniform(667);
+}
+
+-(void)swipeLeft:(UISwipeGestureRecognizer*)swipe {
+    [self.setupViewModel createWorkout];
+    [self.navigationController pushViewController:[self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel] animated:true];
 }
 
 /*
