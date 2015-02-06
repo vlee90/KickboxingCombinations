@@ -50,6 +50,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.setupViewModel = [[SetupViewModel alloc] initWithStateProperties];
+    [self.navigationController setNavigationBarHidden:true];
+    
+    UISwipeGestureRecognizer* swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeft:)];
+    [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.view addGestureRecognizer:swipeLeft];
 
     //BackgroundAnimation
     [self.setupViewModel loadImagesIntoBackgroundArray];
@@ -125,11 +130,16 @@
     }];
     
     //Start Button
-    self.startButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-        [self.setupViewModel createWorkout];
-        [self.navigationController pushViewController:[self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel] animated:true];
-        return [RACSignal empty];
-    }];
+//    self.startButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+//        [self.setupViewModel createWorkout];
+//        [UIView animateWithDuration:1.0 animations:^{
+//            [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+//            [self.navigationController pushViewController:[self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel] animated:false];
+//            [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:false];
+//        }];
+//
+//        return [RACSignal empty];
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -138,9 +148,10 @@
 }
 
 -(void)moveImage:(UIView*)imageView {
-    [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionAutoreverse animations:^{
+    [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
         imageView.center = CGPointMake(self.randX, self.randY);
     } completion:^(BOOL finished) {
+        imageView.center = CGPointMake(self.randX, self.randY);
         [self calculateNewRandomPosition];
         [self moveImage:imageView];
     }];
@@ -149,6 +160,16 @@
 -(void)calculateNewRandomPosition {
     self.randX = arc4random_uniform(375);
     self.randY = arc4random_uniform(667);
+}
+
+-(void)swipeLeft:(UISwipeGestureRecognizer*)swipe {
+    [self.setupViewModel createWorkout];
+    [self.setupViewModel createWorkout];
+    [UIView animateWithDuration:0.3 animations:^{
+        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+        [self.navigationController pushViewController:[self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel] animated:false];
+        [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:false];
+    }];
 }
 
 /*

@@ -50,6 +50,19 @@
                 [self.startButton setTitle:@"Pause" forState:UIControlStateNormal];
             }
         }];
+    
+    UISwipeGestureRecognizer* swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRight:)];
+    [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
+    [self.view addGestureRecognizer:swipeRight];
+    
+}
+
+-(void)swipeRight:(UISwipeGestureRecognizer*)swipe {
+    [UIView animateWithDuration:0.3 animations:^{
+        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+        [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:false];
+    }];
+    [self.navigationController popToRootViewControllerAnimated:true];
 }
 
 - (void)didReceiveMemoryWarning {
