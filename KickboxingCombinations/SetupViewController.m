@@ -143,9 +143,10 @@
 }
 
 -(void)moveImage:(UIView*)imageView {
-    [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionAutoreverse animations:^{
+    [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
         imageView.center = CGPointMake(self.randX, self.randY);
     } completion:^(BOOL finished) {
+        imageView.center = CGPointMake(self.randX, self.randY);
         [self calculateNewRandomPosition];
         [self moveImage:imageView];
     }];
@@ -157,8 +158,6 @@
 }
 
 -(void)swipeLeft:(UISwipeGestureRecognizer*)swipe {
-    NSLog(@"SWHIPE");
-    
     [self.setupViewModel createWorkout];
     [self.navigationController pushViewController:[self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel] animated:true];
 }
