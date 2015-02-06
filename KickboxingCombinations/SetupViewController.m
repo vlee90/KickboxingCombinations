@@ -50,6 +50,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.setupViewModel = [[SetupViewModel alloc] initWithStateProperties];
+    [self.navigationController setNavigationBarHidden:true];
+    
+    UISwipeGestureRecognizer* swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeft:)];
+    [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.view addGestureRecognizer:swipeLeft];
 
     //BackgroundAnimation
     [self.setupViewModel loadImagesIntoBackgroundArray];
@@ -143,9 +148,10 @@
 }
 
 -(void)moveImage:(UIView*)imageView {
-    [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionAutoreverse animations:^{
+    [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
         imageView.center = CGPointMake(self.randX, self.randY);
     } completion:^(BOOL finished) {
+        imageView.center = CGPointMake(self.randX, self.randY);
         [self calculateNewRandomPosition];
         [self moveImage:imageView];
     }];
@@ -154,6 +160,11 @@
 -(void)calculateNewRandomPosition {
     self.randX = arc4random_uniform(375);
     self.randY = arc4random_uniform(667);
+}
+
+-(void)swipeLeft:(UISwipeGestureRecognizer*)swipe {
+    [self.setupViewModel createWorkout];
+    [self.navigationController pushViewController:[self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel] animated:true];
 }
 
 /*
