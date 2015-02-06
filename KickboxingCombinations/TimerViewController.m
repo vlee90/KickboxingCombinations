@@ -58,6 +58,10 @@
 }
 
 -(void)swipeRight:(UISwipeGestureRecognizer*)swipe {
+    [UIView animateWithDuration:0.3 animations:^{
+        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+        [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:false];
+    }];
     [self.navigationController popToRootViewControllerAnimated:true];
 }
 

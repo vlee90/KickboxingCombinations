@@ -130,16 +130,16 @@
     }];
     
     //Start Button
-    self.startButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-        [self.setupViewModel createWorkout];
-        [UIView animateWithDuration:1.0 animations:^{
-            [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-            [self.navigationController pushViewController:[self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel] animated:false];
-            [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:false];
-        }];
-
-        return [RACSignal empty];
-    }];
+//    self.startButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+//        [self.setupViewModel createWorkout];
+//        [UIView animateWithDuration:1.0 animations:^{
+//            [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+//            [self.navigationController pushViewController:[self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel] animated:false];
+//            [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:false];
+//        }];
+//
+//        return [RACSignal empty];
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -164,7 +164,12 @@
 
 -(void)swipeLeft:(UISwipeGestureRecognizer*)swipe {
     [self.setupViewModel createWorkout];
-    [self.navigationController pushViewController:[self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel] animated:true];
+    [self.setupViewModel createWorkout];
+    [UIView animateWithDuration:0.3 animations:^{
+        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+        [self.navigationController pushViewController:[self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel] animated:false];
+        [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:false];
+    }];
 }
 
 /*
