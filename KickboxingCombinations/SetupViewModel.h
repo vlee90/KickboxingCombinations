@@ -33,6 +33,8 @@
 @property (nonatomic, strong) NSString* currentRestTimeSTRING;
 @property (nonatomic, strong) NSString* currentWarningTimeSTRING;
 
+@property (nonatomic, strong) TimerViewController* timerViewController;
+
 -(instancetype)initWithStateProperties;
 
 -(void)typePositiveIncrement;
@@ -49,6 +51,6 @@
 -(void)loadImagesIntoBackgroundArray;
 
 -(void)createWorkout;
--(TimerViewController*)createTimerViewControllerFromStoryboardWithTimerViewModel;
+-(void)createTimerViewControllerFromStoryboardWithTimerViewModel;
 
 @end

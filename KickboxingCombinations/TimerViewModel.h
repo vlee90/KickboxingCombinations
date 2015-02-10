@@ -33,6 +33,7 @@
 @property (nonatomic, strong) NSString* currentRoundSTRING;
 
 -(instancetype)initWithWorkoutProperties:(Workout*)workout;
+-(void)setWithWorkoutProperties:(Workout*)workout;
 
 -(void)startButtonPressed;
 -(void)updateTimer;

@@ -54,8 +54,9 @@
 }
 
 -(void)testIfCreateTimerViewControllerHasATimerViewModel {
-    TimerViewController* timerViewController = [self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel];
-    XCTAssertNotNil(timerViewController.timerViewModel);
+    [self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel];
+    XCTAssertNotNil(self.setupViewModel.timerViewController);
+    XCTAssertNotNil(self.setupViewModel.timerViewController.timerViewModel);
 }
 
 -(void)testCreatingBackgroundArrayLoadsImages {

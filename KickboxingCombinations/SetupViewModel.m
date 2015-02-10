@@ -27,12 +27,12 @@
     return self;
 }
 
--(TimerViewController*)createTimerViewControllerFromStoryboardWithTimerViewModel {
+-(void)createTimerViewControllerFromStoryboardWithTimerViewModel {
     UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     TimerViewController* timerViewController = [storyboard instantiateViewControllerWithIdentifier:@"TimerViewController"];
     TimerViewModel* timerViewModel = [[TimerViewModel alloc] initWithWorkoutProperties:self.workout];
     timerViewController.timerViewModel = timerViewModel;
-    return timerViewController;
+    self.timerViewController = timerViewController;
 }
 
 -(void)createWorkout {

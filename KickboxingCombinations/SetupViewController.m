@@ -164,10 +164,16 @@
 
 -(void)swipeLeft:(UISwipeGestureRecognizer*)swipe {
     [self.setupViewModel createWorkout];
-    [self.setupViewModel createWorkout];
     [UIView animateWithDuration:0.3 animations:^{
         [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-        [self.navigationController pushViewController:[self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel] animated:false];
+        if (self.setupViewModel.timerViewController == nil) {
+            [self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel];
+            [self.navigationController pushViewController:self.setupViewModel.timerViewController animated:false];
+        }
+        else {
+            [self.setupViewModel.timerViewController.timerViewModel setWithWorkoutProperties:self.setupViewModel.workout];
+            [self.navigationController pushViewController:self.setupViewModel.timerViewController animated:false];
+        }
         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:false];
     }];
 }

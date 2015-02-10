@@ -38,6 +38,23 @@
     return self;
 }
 
+-(void)setWithWorkoutProperties:(Workout *)workout {
+    self.workout = workout;
+    self.roundModeIsOn = true;
+    self.isPaused = true;
+    self.helper = [[Helper alloc] init];
+    self.currentWorkoutType = workout.type;
+    self.currentNumberOfRoundsINT = workout.rounds;
+    self.currentRoundTimeINT = workout.roundTime;
+    self.currentRestTimeINT = workout.restTime;
+    self.currentWarningTimeINT = workout.countdownTimer;
+    self.currentRoundSTRING = @"1";
+    self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%@ / %ld", self.currentRoundSTRING, (long)self.currentNumberOfRoundsINT];
+    self.currentRoundTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRoundTimeINT];
+    self.currentRestTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRestTimeINT];
+    self.currentWarningTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentWarningTimeINT];
+}
+
 -(void)updateTimer {
     //Round Mode
     if (self.roundModeIsOn == true && [self workoutComplete] == false) {
