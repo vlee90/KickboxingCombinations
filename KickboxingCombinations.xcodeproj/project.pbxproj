@@ -14,6 +14,9 @@
 		EB4BDFE01A79B34700C56F6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4BDFDE1A79B34700C56F6B /* Main.storyboard */; };
 		EB4BDFE21A79B34700C56F6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB4BDFE11A79B34700C56F6B /* Images.xcassets */; };
 		EB4BDFE51A79B34700C56F6B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB4BDFE31A79B34700C56F6B /* LaunchScreen.xib */; };
+		EB51E6661A8C294600860409 /* ComboListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB51E6651A8C294600860409 /* ComboListViewController.m */; };
+		EB51E6691A8C296000860409 /* ComboListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB51E6681A8C296000860409 /* ComboListViewModel.m */; };
+		EB51E66B1A8C296F00860409 /* ComboListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB51E66A1A8C296F00860409 /* ComboListTests.m */; };
 		EB94D1A61A79B88900774138 /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1A51A79B88900774138 /* SetupViewController.m */; };
 		EB94D1A91A79B89A00774138 /* SetupViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1A81A79B89A00774138 /* SetupViewModel.m */; };
 		EB94D1AC1A79B8CE00774138 /* SetupFeatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1AB1A79B8CE00774138 /* SetupFeatureTests.m */; };
@@ -49,6 +52,11 @@
 		EB4BDFE41A79B34700C56F6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EB4BDFEA1A79B34700C56F6B /* KickboxingCombinationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KickboxingCombinationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4BDFEF1A79B34700C56F6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB51E6641A8C294600860409 /* ComboListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComboListViewController.h; sourceTree = "<group>"; };
+		EB51E6651A8C294600860409 /* ComboListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboListViewController.m; sourceTree = "<group>"; };
+		EB51E6671A8C296000860409 /* ComboListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComboListViewModel.h; sourceTree = "<group>"; };
+		EB51E6681A8C296000860409 /* ComboListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboListViewModel.m; sourceTree = "<group>"; };
+		EB51E66A1A8C296F00860409 /* ComboListTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboListTests.m; sourceTree = "<group>"; };
 		EB94D1A41A79B88900774138 /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
 		EB94D1A51A79B88900774138 /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		EB94D1A71A79B89A00774138 /* SetupViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewModel.h; sourceTree = "<group>"; };
@@ -129,6 +137,7 @@
 				EBABEB111A801FAF0049BA93 /* Helper */,
 				EB94D1AA1A79B8A800774138 /* Model */,
 				EB94D1A31A79B86800774138 /* SetupFeature */,
+				EB51E6631A8C292600860409 /* ComboListFeature */,
 				EBDFA78C1A7AFC2B00905488 /* TimerFeature */,
 				EB4BDFD51A79B34700C56F6B /* AppDelegate.h */,
 				EB4BDFD61A79B34700C56F6B /* AppDelegate.m */,
@@ -155,6 +164,7 @@
 			children = (
 				EB4BDFEE1A79B34700C56F6B /* Supporting Files */,
 				EB94D1AB1A79B8CE00774138 /* SetupFeatureTests.m */,
+				EB51E66A1A8C296F00860409 /* ComboListTests.m */,
 				EBDFA7931A7AFC7600905488 /* TimerFeatureTests.m */,
 				EBABEB151A8020140049BA93 /* HelperTests.m */,
 			);
@@ -167,6 +177,17 @@
 				EB4BDFEF1A79B34700C56F6B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB51E6631A8C292600860409 /* ComboListFeature */ = {
+			isa = PBXGroup;
+			children = (
+				EB51E6641A8C294600860409 /* ComboListViewController.h */,
+				EB51E6651A8C294600860409 /* ComboListViewController.m */,
+				EB51E6671A8C296000860409 /* ComboListViewModel.h */,
+				EB51E6681A8C296000860409 /* ComboListViewModel.m */,
+			);
+			name = ComboListFeature;
 			sourceTree = "<group>";
 		};
 		EB94D1A31A79B86800774138 /* SetupFeature */ = {
@@ -351,7 +372,9 @@
 				EB4BDFD71A79B34700C56F6B /* AppDelegate.m in Sources */,
 				EB4BDFD41A79B34700C56F6B /* main.m in Sources */,
 				EB4BDFDA1A79B34700C56F6B /* KickboxingCombinations.xcdatamodeld in Sources */,
+				EB51E6661A8C294600860409 /* ComboListViewController.m in Sources */,
 				EBABEB141A801FEC0049BA93 /* Helper.m in Sources */,
+				EB51E6691A8C296000860409 /* ComboListViewModel.m in Sources */,
 				EB94D1AF1A79BB0900774138 /* Workout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +385,7 @@
 			files = (
 				EBDFA7941A7AFC7600905488 /* TimerFeatureTests.m in Sources */,
 				EBABEB161A8020140049BA93 /* HelperTests.m in Sources */,
+				EB51E66B1A8C296F00860409 /* ComboListTests.m in Sources */,
 				EB94D1AC1A79B8CE00774138 /* SetupFeatureTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
