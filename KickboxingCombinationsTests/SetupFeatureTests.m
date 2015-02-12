@@ -58,6 +58,16 @@
     XCTAssertNotNil(timerViewController.timerViewModel);
 }
 
+-(void)testIfCreateComboViewControllerHasAComboListViewModel {
+    ComboListViewController * comboListViewController = [self.setupViewModel createComboListViewControllerFromStoryboardWithComboViewModel];
+    XCTAssertNotNil(comboListViewController.comboListViewModel);
+}
+
+-(void)testIfComboViewControllerIsCreated {
+    ComboListViewController * comboListViewController = [self.setupViewModel createComboListViewControllerFromStoryboardWithComboViewModel];
+    XCTAssertNotNil(comboListViewController);
+}
+
 -(void)testCreatingBackgroundArrayLoadsImages {
     [self.setupViewModel loadImagesIntoBackgroundArray];
     XCTAssertTrue(self.setupViewModel.backgroundArray.count > 0);
@@ -142,13 +152,6 @@
     self.setupViewModel.currentWarningTimeINT = 5;
     [self.setupViewModel warningTimeNegativeIncrement];
     XCTAssertTrue(self.setupViewModel.currentWarningTimeINT == 5);
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
 }
 
 @end

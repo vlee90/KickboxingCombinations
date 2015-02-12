@@ -35,6 +35,16 @@
     return timerViewController;
 }
 
+-(ComboListViewController*)createComboListViewControllerFromStoryboardWithComboViewModel {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    ComboListViewController *comboListViewController = [storyboard instantiateViewControllerWithIdentifier:@"ComboListViewController"];
+    ComboListViewModel *comboListViewModel = [[ComboListViewModel alloc] init];
+    comboListViewController.comboListViewModel = comboListViewModel;
+    return comboListViewController;
+}
+
+
+
 -(void)createWorkout {
     self.workout = [[Workout alloc] initWithType:self.currentWorkoutType withRoundTimerOf:self.currentRoundTimeINT withRestTimeOf:self.currentRestTimeINT withNumberOfRounds:self.currentNumberOfRoundsINT withCountdownTimer:self.currentWarningTimeINT];
 }

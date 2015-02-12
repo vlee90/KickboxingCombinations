@@ -62,7 +62,7 @@
         [UIView setAnimationCurve:UIViewAnimationCurveLinear];
         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:false];
     }];
-    [self.navigationController popToRootViewControllerAnimated:true];
+    [self.navigationController popToRootViewControllerAnimated:false];
 }
 
 - (void)didReceiveMemoryWarning {

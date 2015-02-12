@@ -55,6 +55,10 @@
     UISwipeGestureRecognizer* swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeft:)];
     [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
     [self.view addGestureRecognizer:swipeLeft];
+    
+    UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeUp:)];
+    [swipeUp setDirection:UISwipeGestureRecognizerDirectionUp];
+    [self.view addGestureRecognizer:swipeUp];
 
     //BackgroundAnimation
     [self.setupViewModel loadImagesIntoBackgroundArray];
@@ -164,7 +168,6 @@
 
 -(void)swipeLeft:(UISwipeGestureRecognizer*)swipe {
     [self.setupViewModel createWorkout];
-    [self.setupViewModel createWorkout];
     [UIView animateWithDuration:0.3 animations:^{
         [UIView setAnimationCurve:UIViewAnimationCurveLinear];
         [self.navigationController pushViewController:[self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel] animated:false];
@@ -172,14 +175,12 @@
     }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)swipeUp:(UISwipeGestureRecognizer*)swipe {
+    [UIView animateWithDuration:0.3 animations:^{
+        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+        [self.navigationController pushViewController:[self.setupViewModel createComboListViewControllerFromStoryboardWithComboViewModel] animated:false];
+        [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationController.view cache:false];
+    }];
 }
-*/
 
 @end
