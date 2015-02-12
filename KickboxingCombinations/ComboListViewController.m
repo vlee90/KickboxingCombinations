@@ -22,7 +22,11 @@
 }
 
 -(void)swipeDown:(UISwipeGestureRecognizer*)swipe {
-    [self.navigationController popViewControllerAnimated:false];
+    [UIView animateWithDuration:0.3 animations:^{
+        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+        [UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.navigationController.view cache:false];
+    }];
+    [self.navigationController popToRootViewControllerAnimated:false];
 }
 
 - (void)didReceiveMemoryWarning {
