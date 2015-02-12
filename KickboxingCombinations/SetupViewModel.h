@@ -11,6 +11,8 @@
 #import "TimerViewModel.h"
 #import "TimerViewController.h"
 #import "Helper.h"
+#import "ComboListViewController.h"
+#import "ComboListViewModel.h"
 
 @interface SetupViewModel : NSObject
 
@@ -50,5 +52,6 @@
 
 -(void)createWorkout;
 -(TimerViewController*)createTimerViewControllerFromStoryboardWithTimerViewModel;
+-(ComboListViewController*)createComboListViewControllerFromStoryboardWithComboViewModel;
 
 @end

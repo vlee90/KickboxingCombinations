@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ComboListViewModel.h"
 
 @interface ComboListViewController : UIViewController
+
+@property (strong, nonatomic) ComboListViewModel *comboListViewModel;
 
 @end
