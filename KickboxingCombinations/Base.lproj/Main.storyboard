@@ -493,6 +493,9 @@
                             <constraint firstItem="OCx-22-XGZ" firstAttribute="top" secondItem="jpc-RF-hCb" secondAttribute="bottom" constant="20" id="zN0-0j-3ho"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="techTwoLabel" destination="d79-Tt-83P" id="MMN-vr-yng"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rTo-eV-ttU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

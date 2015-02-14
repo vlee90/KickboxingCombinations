@@ -17,6 +17,11 @@
 		EB51E6661A8C294600860409 /* ComboListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB51E6651A8C294600860409 /* ComboListViewController.m */; };
 		EB51E6691A8C296000860409 /* ComboListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB51E6681A8C296000860409 /* ComboListViewModel.m */; };
 		EB51E66B1A8C296F00860409 /* ComboListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB51E66A1A8C296F00860409 /* ComboListTests.m */; };
+		EB562DDD1A8FFFB100F037AD /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB562DDC1A8FFFB100F037AD /* libGoogleAnalyticsServices.a */; };
+		EB562DDF1A8FFFD000F037AD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB562DDE1A8FFFD000F037AD /* CoreData.framework */; };
+		EB562DE11A8FFFD800F037AD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB562DE01A8FFFD800F037AD /* SystemConfiguration.framework */; };
+		EB562DE31A8FFFE200F037AD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB562DE21A8FFFE200F037AD /* libz.dylib */; };
+		EB562DE51A8FFFEF00F037AD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB562DE41A8FFFEF00F037AD /* libsqlite3.dylib */; };
 		EB94D1A61A79B88900774138 /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1A51A79B88900774138 /* SetupViewController.m */; };
 		EB94D1A91A79B89A00774138 /* SetupViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1A81A79B89A00774138 /* SetupViewModel.m */; };
 		EB94D1AC1A79B8CE00774138 /* SetupFeatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1AB1A79B8CE00774138 /* SetupFeatureTests.m */; };
@@ -57,6 +62,17 @@
 		EB51E6671A8C296000860409 /* ComboListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComboListViewModel.h; sourceTree = "<group>"; };
 		EB51E6681A8C296000860409 /* ComboListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboListViewModel.m; sourceTree = "<group>"; };
 		EB51E66A1A8C296F00860409 /* ComboListTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboListTests.m; sourceTree = "<group>"; };
+		EB562DD71A8FFFA300F037AD /* TAGContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGContainer.h; sourceTree = "<group>"; };
+		EB562DD81A8FFFA300F037AD /* TAGContainerOpener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGContainerOpener.h; sourceTree = "<group>"; };
+		EB562DD91A8FFFA300F037AD /* TAGDataLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGDataLayer.h; sourceTree = "<group>"; };
+		EB562DDA1A8FFFA300F037AD /* TAGLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGLogger.h; sourceTree = "<group>"; };
+		EB562DDB1A8FFFA300F037AD /* TAGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGManager.h; sourceTree = "<group>"; };
+		EB562DDC1A8FFFB100F037AD /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		EB562DDE1A8FFFD000F037AD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EB562DE01A8FFFD800F037AD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EB562DE21A8FFFE200F037AD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		EB562DE41A8FFFEF00F037AD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		EB562DE61A90013A00F037AD /* GTM-M9CBHM */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTM-M9CBHM"; sourceTree = "<group>"; };
 		EB94D1A41A79B88900774138 /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
 		EB94D1A51A79B88900774138 /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		EB94D1A71A79B89A00774138 /* SetupViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewModel.h; sourceTree = "<group>"; };
@@ -80,7 +96,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB562DE51A8FFFEF00F037AD /* libsqlite3.dylib in Frameworks */,
+				EB562DE31A8FFFE200F037AD /* libz.dylib in Frameworks */,
+				EB562DE11A8FFFD800F037AD /* SystemConfiguration.framework in Frameworks */,
+				EB562DDF1A8FFFD000F037AD /* CoreData.framework in Frameworks */,
 				3BC6FC0F5312CCF059545958 /* libPods.a in Frameworks */,
+				EB562DDD1A8FFFB100F037AD /* libGoogleAnalyticsServices.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +118,10 @@
 		9632C34545D96678694F484F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB562DE41A8FFFEF00F037AD /* libsqlite3.dylib */,
+				EB562DE21A8FFFE200F037AD /* libz.dylib */,
+				EB562DE01A8FFFD800F037AD /* SystemConfiguration.framework */,
+				EB562DDE1A8FFFD000F037AD /* CoreData.framework */,
 				EC28EB7736237EA5702BD7FB /* libPods.a */,
 			);
 			name = Frameworks;
@@ -153,6 +178,9 @@
 		EB4BDFD11A79B34700C56F6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EB562DE61A90013A00F037AD /* GTM-M9CBHM */,
+				EB562DDC1A8FFFB100F037AD /* libGoogleAnalyticsServices.a */,
+				EB562DD61A8FFFA300F037AD /* Library */,
 				EB4BDFD21A79B34700C56F6B /* Info.plist */,
 				EB4BDFD31A79B34700C56F6B /* main.m */,
 			);
@@ -188,6 +216,18 @@
 				EB51E6681A8C296000860409 /* ComboListViewModel.m */,
 			);
 			name = ComboListFeature;
+			sourceTree = "<group>";
+		};
+		EB562DD61A8FFFA300F037AD /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				EB562DD71A8FFFA300F037AD /* TAGContainer.h */,
+				EB562DD81A8FFFA300F037AD /* TAGContainerOpener.h */,
+				EB562DD91A8FFFA300F037AD /* TAGDataLayer.h */,
+				EB562DDA1A8FFFA300F037AD /* TAGLogger.h */,
+				EB562DDB1A8FFFA300F037AD /* TAGManager.h */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 		EB94D1A31A79B86800774138 /* SetupFeature */ = {
@@ -506,6 +546,10 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				INFOPLIST_FILE = KickboxingCombinations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KickboxingCombinations",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -518,6 +562,10 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				INFOPLIST_FILE = KickboxingCombinations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KickboxingCombinations",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

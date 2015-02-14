@@ -10,4 +10,6 @@
 
 @interface ComboListViewModel : NSObject
 
+@property (strong, nonatomic) NSString *
+
 @end

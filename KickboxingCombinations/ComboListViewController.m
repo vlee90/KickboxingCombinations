@@ -10,6 +10,9 @@
 
 @interface ComboListViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *techTwoLabel;
+
+
 @end
 
 @implementation ComboListViewController

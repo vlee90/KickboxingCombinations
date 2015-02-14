@@ -9,7 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
+@class TAGManager;
+@class TAGContainer;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (nonatomic, strong) TAGManager *tagManager;
+@property (nonatomic, strong) TAGContainer *container;
 
 @property (strong, nonatomic) UIWindow *window;
 
