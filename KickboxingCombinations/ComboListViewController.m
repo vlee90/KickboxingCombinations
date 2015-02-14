@@ -7,6 +7,7 @@
 //
 
 #import "ComboListViewController.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface ComboListViewController ()
 
@@ -19,6 +20,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.comboListViewModel setTechTwo:@"2 - Cross"];
+    [self.comboListViewModel getTAGContainerFromAppDelegate];
+    [self.comboListViewModel setTechTwoFromContainer];
+    
+    RAC(self.techTwoLabel, text) = RACObserve(self.comboListViewModel, techTwo);
+    
     UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDown:)];
     swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
     [self.view addGestureRecognizer:swipeDown];

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3BC6FC0F5312CCF059545958 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC28EB7736237EA5702BD7FB /* libPods.a */; };
+		EB0789611A900C0F008EAA28 /* GTM-M9CBHM in Resources */ = {isa = PBXBuildFile; fileRef = EB0789601A900C08008EAA28 /* GTM-M9CBHM */; };
 		EB4BDFD41A79B34700C56F6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4BDFD31A79B34700C56F6B /* main.m */; };
 		EB4BDFD71A79B34700C56F6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4BDFD61A79B34700C56F6B /* AppDelegate.m */; };
 		EB4BDFDA1A79B34700C56F6B /* KickboxingCombinations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB4BDFD81A79B34700C56F6B /* KickboxingCombinations.xcdatamodeld */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		0439385E3D562D79ED88AA0E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6CFB3815D096D9FE6DA3CC1A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EB0789601A900C08008EAA28 /* GTM-M9CBHM */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTM-M9CBHM"; sourceTree = "<group>"; };
 		EB4BDFCE1A79B34700C56F6B /* KickboxingCombinations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KickboxingCombinations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4BDFD21A79B34700C56F6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB4BDFD31A79B34700C56F6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -72,7 +74,6 @@
 		EB562DE01A8FFFD800F037AD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EB562DE21A8FFFE200F037AD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		EB562DE41A8FFFEF00F037AD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		EB562DE61A90013A00F037AD /* GTM-M9CBHM */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTM-M9CBHM"; sourceTree = "<group>"; };
 		EB94D1A41A79B88900774138 /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
 		EB94D1A51A79B88900774138 /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		EB94D1A71A79B89A00774138 /* SetupViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewModel.h; sourceTree = "<group>"; };
@@ -178,7 +179,7 @@
 		EB4BDFD11A79B34700C56F6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EB562DE61A90013A00F037AD /* GTM-M9CBHM */,
+				EB0789601A900C08008EAA28 /* GTM-M9CBHM */,
 				EB562DDC1A8FFFB100F037AD /* libGoogleAnalyticsServices.a */,
 				EB562DD61A8FFFA300F037AD /* Library */,
 				EB4BDFD21A79B34700C56F6B /* Info.plist */,
@@ -355,6 +356,7 @@
 				EB4BDFE01A79B34700C56F6B /* Main.storyboard in Resources */,
 				EB4BDFE51A79B34700C56F6B /* LaunchScreen.xib in Resources */,
 				EB4BDFE21A79B34700C56F6B /* Images.xcassets in Resources */,
+				EB0789611A900C0F008EAA28 /* GTM-M9CBHM in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
