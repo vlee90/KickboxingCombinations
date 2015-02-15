@@ -16,11 +16,16 @@
     self.container = appDelegate.container;
 }
 
--(void)setTechTwoFromContainer {
+-(void)setTechniquesFromContainer {
     if (self.container != nil) {
-        NSString *techTwoFromContainer = [self.container stringForKey:@"techTwoLeadStraight"];
-        NSLog(@"Tech: %@", techTwoFromContainer);
-        self.techTwo = techTwoFromContainer;
+        self.techOne = [self.container stringForKey:@"techOne"];
+        self.techTwo= [self.container stringForKey:@"techTwo"];
+        self.techThree = [self.container stringForKey:@"techThree"];
+        self.techFour = [self.container stringForKey:@"techFour"];
+        self.techFive = [self.container stringForKey:@"techFive"];
+        self.techSix = [self.container stringForKey:@"techSix"];
+        self.techSeven = [self.container stringForKey:@"techSeven"];
+        self.techEight = [self.container stringForKey:@"techEight"];
     }
     else {
         [self getTAGContainerFromAppDelegate];

@@ -12,9 +12,16 @@
 @interface ComboListViewModel : NSObject
 
 @property (weak, nonatomic) TAGContainer *container;
+@property (strong, nonatomic) NSString *techOne;
 @property (strong, nonatomic) NSString *techTwo;
+@property (strong, nonatomic) NSString *techThree;
+@property (strong, nonatomic) NSString *techFour;
+@property (strong, nonatomic) NSString *techFive;
+@property (strong, nonatomic) NSString *techSix;
+@property (strong, nonatomic) NSString *techSeven;
+@property (strong, nonatomic) NSString *techEight;
 
 -(void)getTAGContainerFromAppDelegate;
--(void)setTechTwoFromContainer;
+-(void)setTechniquesFromContainer;
 
 @end

@@ -11,7 +11,7 @@
 #import "TAGContainerOpener.h"
 #import "TAGManager.h"
 
-@interface AppDelegate ()<TAGContainerOpenerNotifier>
+@interface AppDelegate ()<TAGContainerOpenerNotifier, TAGContainerCallback>
 
 @end
 
@@ -21,18 +21,66 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.tagManager = [TAGManager instance];
     [self.tagManager.logger setLogLevel:kTAGLoggerLogLevelVerbose];
+    
+
     [TAGContainerOpener openContainerWithId:@"GTM-M9CBHM"
                                  tagManager:self.tagManager
-                                   openType:kTAGOpenTypePreferFresh
+                                   openType:kTAGOpenTypePreferNonDefault
                                     timeout:nil
                                    notifier:self];
-    
     return YES;
+}
+
+//These three methods do no seem to be firing...
+-(void)containerRefreshBegin:(TAGContainer *)container refreshType:(TAGContainerCallbackRefreshType)refreshType {
+    if (refreshType == kTAGContainerCallbackRefreshTypeSaved) {
+        NSLog(@"Will Refresh From Saved File");
+    }
+    else {
+        NSLog(@"Will Refresh From Network Call");
+    }
+}
+
+-(void)containerRefreshSuccess:(TAGContainer *)container refreshType:(TAGContainerCallbackRefreshType)refreshType {
+    if (refreshType == kTAGContainerCallbackRefreshTypeSaved) {
+        NSLog(@"Refreshed From Saved File");
+    }
+    else {
+        NSLog(@"Refreshed From Network Call");
+    }
+}
+
+-(void)containerRefreshFailure:(TAGContainer *)container failure:(TAGContainerCallbackRefreshFailure)failure refreshType:(TAGContainerCallbackRefreshType)refreshType {
+    switch (failure) {
+        case kTAGContainerCallbackRefreshFailureIoError:
+            NSLog(@"Refresh Error: IO Error");
+            break;
+        case kTAGContainerCallbackRefreshFailureNetworkError:
+            NSLog(@"Refresh Error: Network Error");
+            break;
+        case kTAGContainerCallbackRefreshFailureNoNetwork:
+            NSLog(@"Refresh Error: No Network");
+            break;
+        case kTAGContainerCallbackRefreshFailureNoSavedContainer:
+            NSLog(@"Refresh Error: No Saved Container");
+            break;
+        case kTAGContainerCallbackRefreshFailureServerError:
+            NSLog(@"Refresh Error: Server Error");
+            break;
+        case kTAGContainerCallbackRefreshFailureUnknownError:
+            NSLog(@"Refresh Error: Unknown Error");
+            break;
+        default:
+            break;
+    }
+    
 }
 
 -(void)containerAvailable:(TAGContainer *)container {
     dispatch_async(dispatch_get_main_queue(), ^{
         self.container = container;
+        NSLog(@"Language: %@", [self.container stringForKey:@"Language"]);
+        [self.container refresh];
     });
 }
 

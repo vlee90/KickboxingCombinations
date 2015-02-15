@@ -11,8 +11,14 @@
 
 @interface ComboListViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *techOneLabel;
 @property (weak, nonatomic) IBOutlet UILabel *techTwoLabel;
-
+@property (weak, nonatomic) IBOutlet UILabel *techThreeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *techFourLabel;
+@property (weak, nonatomic) IBOutlet UILabel *techFiveLabel;
+@property (weak, nonatomic) IBOutlet UILabel *techSixLabel;
+@property (weak, nonatomic) IBOutlet UILabel *techSevenLabel;
+@property (weak, nonatomic) IBOutlet UILabel *techEightLabel;
 
 @end
 
@@ -20,11 +26,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.comboListViewModel setTechTwo:@"2 - Cross"];
+//    [self.comboListViewModel setTechTwo:@"2 - Cross"];
     [self.comboListViewModel getTAGContainerFromAppDelegate];
-    [self.comboListViewModel setTechTwoFromContainer];
+    [self.comboListViewModel setTechniquesFromContainer];
     
+    RAC(self.techOneLabel, text) = RACObserve(self.comboListViewModel, techOne);
     RAC(self.techTwoLabel, text) = RACObserve(self.comboListViewModel, techTwo);
+    RAC(self.techThreeLabel, text) = RACObserve(self.comboListViewModel, techThree);
+    RAC(self.techFourLabel, text) = RACObserve(self.comboListViewModel, techFour);
+    RAC(self.techFiveLabel, text) = RACObserve(self.comboListViewModel, techFive);
+    RAC(self.techSixLabel, text) = RACObserve(self.comboListViewModel, techSix);
+    RAC(self.techSevenLabel, text) = RACObserve(self.comboListViewModel, techSeven);
+    RAC(self.techEightLabel, text) = RACObserve(self.comboListViewModel, techEight);
     
     UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDown:)];
     swipeDown.direction = UISwipeGestureRecognizerDirectionDown;

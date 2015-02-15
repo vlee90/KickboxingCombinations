@@ -494,6 +494,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="techEightLabel" destination="Zzr-9D-HPI" id="JgI-No-k23"/>
+                        <outlet property="techFiveLabel" destination="Aya-sQ-CTq" id="NET-I3-kOy"/>
+                        <outlet property="techFourLabel" destination="MxI-be-OzA" id="kvN-zd-Azj"/>
+                        <outlet property="techOneLabel" destination="8vR-pH-35y" id="qds-Rm-cUI"/>
+                        <outlet property="techSevenLabel" destination="OCx-22-XGZ" id="OPg-4e-kua"/>
+                        <outlet property="techSixLabel" destination="jpc-RF-hCb" id="3K9-oL-f5K"/>
+                        <outlet property="techThreeLabel" destination="0E7-xZ-ipn" id="QTk-iJ-QE0"/>
                         <outlet property="techTwoLabel" destination="d79-Tt-83P" id="MMN-vr-yng"/>
                     </connections>
                 </viewController>
