@@ -48,6 +48,16 @@
 		0439385E3D562D79ED88AA0E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6CFB3815D096D9FE6DA3CC1A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EB0789601A900C08008EAA28 /* GTM-M9CBHM */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTM-M9CBHM"; sourceTree = "<group>"; };
+		EB0789631A903EDA008EAA28 /* GAI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		EB0789641A903EDA008EAA28 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		EB0789651A903EDA008EAA28 /* GAIEcommerceFields.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
+		EB0789661A903EDA008EAA28 /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		EB0789671A903EDA008EAA28 /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		EB0789681A903EDA008EAA28 /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		EB0789691A903EDA008EAA28 /* GAIFields.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		EB07896A1A903EDA008EAA28 /* GAILogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		EB07896B1A903EDA008EAA28 /* GAITrackedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		EB07896C1A903EDA008EAA28 /* GAITracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
 		EB4BDFCE1A79B34700C56F6B /* KickboxingCombinations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KickboxingCombinations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4BDFD21A79B34700C56F6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB4BDFD31A79B34700C56F6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -137,6 +147,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EB0789621A903ECC008EAA28 /* GA Library */ = {
+			isa = PBXGroup;
+			children = (
+				EB0789631A903EDA008EAA28 /* GAI.h */,
+				EB0789641A903EDA008EAA28 /* GAIDictionaryBuilder.h */,
+				EB0789651A903EDA008EAA28 /* GAIEcommerceFields.h */,
+				EB0789661A903EDA008EAA28 /* GAIEcommerceProduct.h */,
+				EB0789671A903EDA008EAA28 /* GAIEcommerceProductAction.h */,
+				EB0789681A903EDA008EAA28 /* GAIEcommercePromotion.h */,
+				EB0789691A903EDA008EAA28 /* GAIFields.h */,
+				EB07896A1A903EDA008EAA28 /* GAILogger.h */,
+				EB07896B1A903EDA008EAA28 /* GAITrackedViewController.h */,
+				EB07896C1A903EDA008EAA28 /* GAITracker.h */,
+			);
+			name = "GA Library";
+			sourceTree = "<group>";
+		};
 		EB4BDFC51A79B34700C56F6B = {
 			isa = PBXGroup;
 			children = (
@@ -179,9 +206,10 @@
 		EB4BDFD11A79B34700C56F6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EB0789621A903ECC008EAA28 /* GA Library */,
 				EB0789601A900C08008EAA28 /* GTM-M9CBHM */,
 				EB562DDC1A8FFFB100F037AD /* libGoogleAnalyticsServices.a */,
-				EB562DD61A8FFFA300F037AD /* Library */,
+				EB562DD61A8FFFA300F037AD /* GTM Library */,
 				EB4BDFD21A79B34700C56F6B /* Info.plist */,
 				EB4BDFD31A79B34700C56F6B /* main.m */,
 			);
@@ -219,7 +247,7 @@
 			name = ComboListFeature;
 			sourceTree = "<group>";
 		};
-		EB562DD61A8FFFA300F037AD /* Library */ = {
+		EB562DD61A8FFFA300F037AD /* GTM Library */ = {
 			isa = PBXGroup;
 			children = (
 				EB562DD71A8FFFA300F037AD /* TAGContainer.h */,
@@ -228,6 +256,7 @@
 				EB562DDA1A8FFFA300F037AD /* TAGLogger.h */,
 				EB562DDB1A8FFFA300F037AD /* TAGManager.h */,
 			);
+			name = "GTM Library";
 			path = Library;
 			sourceTree = "<group>";
 		};
