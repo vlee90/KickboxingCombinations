@@ -66,6 +66,11 @@
     }
     //End of workout
     else {
+        id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Achievement"
+                                                              action:@"Finished Workout"
+                                                               label:nil
+                                                               value:@1] build]];
         [self.timer invalidate];
         self.timer = nil;
     }
