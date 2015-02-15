@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ComboListViewModel.h"
+#import "GAITrackedViewController.h"
 
-@interface ComboListViewController : UIViewController
+@interface ComboListViewController : GAITrackedViewController
 
 @property (strong, nonatomic) ComboListViewModel *comboListViewModel;
 

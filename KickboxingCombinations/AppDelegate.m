@@ -19,15 +19,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //GTM
     self.tagManager = [TAGManager instance];
     [self.tagManager.logger setLogLevel:kTAGLoggerLogLevelVerbose];
-    
-
     [TAGContainerOpener openContainerWithId:@"GTM-M9CBHM"
                                  tagManager:self.tagManager
                                    openType:kTAGOpenTypePreferNonDefault
                                     timeout:nil
                                    notifier:self];
+    //GA
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    [GAI sharedInstance].dispatchInterval = 20;
+    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
+    [[GAI sharedInstance] trackerWithTrackingId:@"UA-59762855-1"];
     return YES;
 }
 

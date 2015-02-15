@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "TimerViewModel.h"
+#import "GAITrackedViewController.h"
 
-@interface TimerViewController : UIViewController
+@interface TimerViewController : GAITrackedViewController
 
 @property (strong, nonatomic) TimerViewModel* timerViewModel;
 

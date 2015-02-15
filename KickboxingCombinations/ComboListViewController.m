@@ -44,6 +44,11 @@
     [self.view addGestureRecognizer:swipeDown];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.screenName = @"ComboList Screen";
+}
+
 -(void)swipeDown:(UISwipeGestureRecognizer*)swipe {
     [UIView animateWithDuration:0.3 animations:^{
         [UIView setAnimationCurve:UIViewAnimationCurveLinear];
