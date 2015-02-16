@@ -51,7 +51,6 @@
     TAGDataLayer *dataLayer = [TAGManager instance].dataLayer;
     [dataLayer push:@{@"event" : @"openScreen",
                       @"screenName" : @"ComboList Screen GTM"}];
-//    self.screenName = @"ComboList Screen";
 }
 
 -(void)swipeDown:(UISwipeGestureRecognizer*)swipe {

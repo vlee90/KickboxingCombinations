@@ -153,7 +153,6 @@
     TAGDataLayer *dataLayer = [TAGManager instance].dataLayer;
     [dataLayer push:@{@"event" : @"openScreen",
                       @"screenName" : @"Setup Screen GTM"}];
-//    self.screenName = @"Setup Screen";
 }
 
 - (void)didReceiveMemoryWarning {

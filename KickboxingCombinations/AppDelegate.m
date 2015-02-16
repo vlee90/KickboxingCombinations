@@ -29,10 +29,10 @@
                                     timeout:nil
                                    notifier:self];
     //GA
-    [GAI sharedInstance].trackUncaughtExceptions = YES;
-    [GAI sharedInstance].dispatchInterval = 20;
-    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelNone];
-    [[GAI sharedInstance] trackerWithTrackingId:@"UA-59762855-1"];
+//    [GAI sharedInstance].trackUncaughtExceptions = YES;
+//    [GAI sharedInstance].dispatchInterval = 20;
+//    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelNone];
+//    [[GAI sharedInstance] trackerWithTrackingId:@"UA-59762855-1"];
     return YES;
 }
 
