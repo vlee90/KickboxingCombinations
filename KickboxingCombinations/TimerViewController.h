@@ -10,7 +10,7 @@
 #import "TimerViewModel.h"
 #import "GAITrackedViewController.h"
 
-@interface TimerViewController : GAITrackedViewController
+@interface TimerViewController : UIViewController
 
 @property (strong, nonatomic) TimerViewModel* timerViewModel;
 

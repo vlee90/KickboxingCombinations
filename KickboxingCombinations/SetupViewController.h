@@ -10,6 +10,6 @@
 #import "SetupViewModel.h"
 #import "GAITrackedViewController.h"
 
-@interface SetupViewController : GAITrackedViewController
+@interface SetupViewController : UIViewController
 
 @end

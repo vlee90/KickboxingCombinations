@@ -151,8 +151,9 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     TAGDataLayer *dataLayer = [TAGManager instance].dataLayer;
-    [dataLayer push:@{@"event" : @"openScreen",
-                      @"screenName" : @"Setup Screen GTM"}];
+    [dataLayer push:@{@"screenName" : @"Setup Screen GTM",
+                      @"event" : @"openScreen" }
+                      ];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -176,6 +177,8 @@
 }
 
 -(void)swipeLeft:(UISwipeGestureRecognizer*)swipe {
+    TAGDataLayer *dataLayer = [TAGManager instance].dataLayer;
+    [dataLayer push:@{@"event" : @"swipeOccuried"}];
     [self.setupViewModel createWorkout];
     [UIView animateWithDuration:0.3 animations:^{
         [UIView setAnimationCurve:UIViewAnimationCurveLinear];
@@ -185,6 +188,8 @@
 }
 
 -(void)swipeUp:(UISwipeGestureRecognizer*)swipe {
+    TAGDataLayer *dataLayer = [TAGManager instance].dataLayer;
+    [dataLayer push:@{@"event" : @"swipeOccuried"}];
     [UIView animateWithDuration:0.3 animations:^{
         [UIView setAnimationCurve:UIViewAnimationCurveLinear];
         [self.navigationController pushViewController:[self.setupViewModel createComboListViewControllerFromStoryboardWithComboViewModel] animated:false];

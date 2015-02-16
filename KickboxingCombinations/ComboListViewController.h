@@ -10,7 +10,7 @@
 #import "ComboListViewModel.h"
 #import "GAITrackedViewController.h"
 
-@interface ComboListViewController : GAITrackedViewController
+@interface ComboListViewController : UIViewController
 
 @property (strong, nonatomic) ComboListViewModel *comboListViewModel;
 
