@@ -8,6 +8,8 @@
 
 #import "SetupViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "TAGDataLayer.h"
+#import "TAGManager.h"
 
 @interface SetupViewController ()
 
@@ -148,7 +150,10 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.screenName = @"Setup Screen";
+    TAGDataLayer *dataLayer = [TAGManager instance].dataLayer;
+    [dataLayer push:@{@"event" : @"openScreen",
+                      @"screenName" : @"Setup Screen GTM"}];
+//    self.screenName = @"Setup Screen";
 }
 
 - (void)didReceiveMemoryWarning {

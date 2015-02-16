@@ -10,6 +10,7 @@
 #import "TAGContainer.h"
 #import "TAGContainerOpener.h"
 #import "TAGManager.h"
+#import "TAGDataLayer.h"
 
 @interface AppDelegate ()<TAGContainerOpenerNotifier, TAGContainerCallback>
 
@@ -30,7 +31,7 @@
     //GA
     [GAI sharedInstance].trackUncaughtExceptions = YES;
     [GAI sharedInstance].dispatchInterval = 20;
-    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
+    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelNone];
     [[GAI sharedInstance] trackerWithTrackingId:@"UA-59762855-1"];
     return YES;
 }
@@ -83,7 +84,6 @@
 -(void)containerAvailable:(TAGContainer *)container {
     dispatch_async(dispatch_get_main_queue(), ^{
         self.container = container;
-        NSLog(@"Language: %@", [self.container stringForKey:@"Language"]);
         [self.container refresh];
     });
 }
