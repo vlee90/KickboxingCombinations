@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *techSixLabel;
 @property (weak, nonatomic) IBOutlet UILabel *techSevenLabel;
 @property (weak, nonatomic) IBOutlet UILabel *techEightLabel;
+@property (weak, nonatomic) TAGDataLayer *dataLayer;
 
 @end
 
@@ -28,7 +29,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self.comboListViewModel setTechTwo:@"2 - Cross"];
     [self.comboListViewModel getTAGContainerFromAppDelegate];
     [self.comboListViewModel setTechniquesFromContainer];
     
@@ -48,15 +48,14 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    TAGDataLayer *dataLayer = [TAGManager instance].dataLayer;
-    [dataLayer push:@{@"screenName" : @"ComboList GTM",
+    self.dataLayer = [TAGManager instance].dataLayer;
+    [self.dataLayer push:@{@"screenName" : @"ComboList GTM",
                       @"event" : @"openScreen"}
                         ];
 }
 
 -(void)swipeDown:(UISwipeGestureRecognizer*)swipe {
-    TAGDataLayer *dataLayer = [TAGManager instance].dataLayer;
-    [dataLayer push:@{@"event" : @"swipeOccuried"}];
+    [self.dataLayer push:@{@"event" : @"swipeOccuried"}];
     [UIView animateWithDuration:0.3 animations:^{
         [UIView setAnimationCurve:UIViewAnimationCurveLinear];
         [UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.navigationController.view cache:false];
