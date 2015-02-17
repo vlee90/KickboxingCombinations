@@ -7,8 +7,6 @@
 //
 
 #import "SetupViewModel.h"
-#import "GAI.h"
-#import "GAIDictionaryBuilder.h"
 
 @implementation SetupViewModel
 
@@ -52,11 +50,6 @@
 }
 
 -(void)typePositiveIncrement {
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Setup"
-                                                          action:@"Increment Positive Type"
-                                                           label:nil
-                                                           value:@1] build]];
     NSInteger currentIndex = [self.typeArray indexOfObject:self.currentWorkoutType];
     switch(currentIndex) {
         case 0:
@@ -69,11 +62,6 @@
 }
 
 -(void)typeNegativeIncrement {
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Setup"
-                                                          action:@"Increment Negative Type"
-                                                           label:nil
-                                                           value:@1] build]];
     NSInteger currentIndex = [self.typeArray indexOfObject:self.currentWorkoutType];
     switch(currentIndex) {
         case 0:
@@ -95,20 +83,10 @@
 }
 
 -(void)numberOfRoundsPositiveIncrement {
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Setup"
-                                                          action:@"Increment Positive Round#"
-                                                           label:nil
-                                                           value:@1] build]];
     self.currentNumberOfRoundsINT++;
     self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%ld", (long)self.currentNumberOfRoundsINT];
 }
 -(void)numberOfRoundsNegativeIncrement {
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Setup"
-                                                          action:@"Increment Negative Round#"
-                                                           label:nil
-                                                           value:@1] build]];
     if(self.currentNumberOfRoundsINT > 1) {
         self.currentNumberOfRoundsINT--;
         self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%ld", (long)self.currentNumberOfRoundsINT];
@@ -116,21 +94,11 @@
 }
 
 -(void)roundTimePositiveIncrement {
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Setup"
-                                                          action:@"Increment Positive Round Time"
-                                                           label:nil
-                                                           value:@1] build]];
     self.currentRoundTimeINT = self.currentRoundTimeINT + 10;
     self.currentRoundTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRoundTimeINT];
 }
 
 -(void)roundTimeNegativeIncrement {
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Setup"
-                                                          action:@"Increment Negative Round Time"
-                                                           label:nil
-                                                           value:@1] build]];
     if(self.currentRoundTimeINT > 10) {
         self.currentRoundTimeINT = self.currentRoundTimeINT - 10;
         self.currentRoundTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRoundTimeINT];
@@ -138,21 +106,11 @@
 }
 
 -(void)roundRestPositiveIncrement {
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Setup"
-                                                          action:@"Increment Positive Rest Time"
-                                                           label:nil
-                                                           value:@1] build]];
     self.currentRestTimeINT = self.currentRestTimeINT + 10;
     self.currentRestTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRestTimeINT];
 }
 
 -(void)roundRestNegativeIncrement {
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Setup"
-                                                          action:@"Increment Negative Rest Time"
-                                                           label:nil
-                                                           value:@1] build]];
     if(self.currentRestTimeINT > 10) {
         self.currentRestTimeINT = self.currentRestTimeINT - 10;
         self.currentRestTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRestTimeINT];
@@ -160,21 +118,11 @@
 }
 
 -(void)warningTimePositiveIncrement {
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Setup"
-                                                          action:@"Increment Positive Warning Time"
-                                                           label:nil
-                                                           value:@1] build]];
     self.currentWarningTimeINT = self.currentWarningTimeINT + 5;
     self.currentWarningTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentWarningTimeINT];
 }
 
 -(void)warningTimeNegativeIncrement {
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Setup"
-                                                          action:@"Increment Negative Warning Time"
-                                                           label:nil
-                                                           value:@1] build]];
     if(self.currentWarningTimeINT > 5) {
         self.currentWarningTimeINT = self.currentWarningTimeINT - 5;
         self.currentWarningTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentWarningTimeINT];

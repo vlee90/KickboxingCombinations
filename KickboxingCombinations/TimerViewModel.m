@@ -7,8 +7,6 @@
 //
 
 #import "TimerViewModel.h"
-//#import "GAI.h"
-//#import "GAIDictionaryBuilder.h"
 #import "TAGDataLayer.h"
 #import "TAGManager.h"
 
@@ -71,11 +69,6 @@
     }
     //End of workout
     else {
-//        id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-//        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Achievement"
-//                                                              action:@"Finished Workout"
-//                                                               label:nil
-//                                                               value:@1] build]];
         [self.dataLayer push:@{@"event" : @"workoutComplete"}];
         [self.timer invalidate];
         self.timer = nil;
@@ -83,22 +76,13 @@
 }
 
 -(void)startButtonPressed {
-//    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
     if (self.isPaused) {
-//        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Timer"
-//                                                              action:@"Start"
-//                                                               label:nil
-//                                                               value:@1] build]];
         [self.dataLayer push:@{@"event" : @"timerStartPressed"}];
         self.isPaused = false;
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:true];
         [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     }
     else {
-//        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Timer"
-//                                                              action:@"Stop"
-//                                                               label:nil
-//                                                               value:@1] build]];
         [self.dataLayer push:@{@"event" : @"timerPausePressed"}];
         self.isPaused = true;
         [self.timer invalidate];
