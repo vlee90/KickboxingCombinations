@@ -7,14 +7,17 @@
 //
 
 #import "TimerViewModel.h"
-#import "GAI.h"
-#import "GAIDictionaryBuilder.h"
+//#import "GAI.h"
+//#import "GAIDictionaryBuilder.h"
+#import "TAGDataLayer.h"
+#import "TAGManager.h"
 
 @interface TimerViewModel ()
 
 @property NSDate* startDate;
 @property NSDate* stopDate;
 @property NSTimeInterval deltaTime;
+@property (weak, nonatomic) TAGDataLayer *dataLayer;
 
 @end
 
@@ -36,6 +39,8 @@
         self.currentRoundTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRoundTimeINT];
         self.currentRestTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRestTimeINT];
         self.currentWarningTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentWarningTimeINT];
+        
+        self.dataLayer = [TAGManager instance].dataLayer;
     }
     return self;
 }
@@ -66,32 +71,35 @@
     }
     //End of workout
     else {
-        id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Achievement"
-                                                              action:@"Finished Workout"
-                                                               label:nil
-                                                               value:@1] build]];
+//        id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+//        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Achievement"
+//                                                              action:@"Finished Workout"
+//                                                               label:nil
+//                                                               value:@1] build]];
+        [self.dataLayer push:@{@"event" : @"workoutComplete"}];
         [self.timer invalidate];
         self.timer = nil;
     }
 }
 
 -(void)startButtonPressed {
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+//    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
     if (self.isPaused) {
-        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Timer"
-                                                              action:@"Start"
-                                                               label:nil
-                                                               value:@1] build]];
+//        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Timer"
+//                                                              action:@"Start"
+//                                                               label:nil
+//                                                               value:@1] build]];
+        [self.dataLayer push:@{@"event" : @"timerStartPressed"}];
         self.isPaused = false;
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:true];
         [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     }
     else {
-        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Timer"
-                                                              action:@"Stop"
-                                                               label:nil
-                                                               value:@1] build]];
+//        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Timer"
+//                                                              action:@"Stop"
+//                                                               label:nil
+//                                                               value:@1] build]];
+        [self.dataLayer push:@{@"event" : @"timerPausePressed"}];
         self.isPaused = true;
         [self.timer invalidate];
         self.timer = nil;
@@ -138,8 +146,5 @@
     self.currentRestTimeINT -= self.deltaTime;
     self.currentRestTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRestTimeINT];
 }
-
-
-
 
 @end

@@ -28,6 +28,9 @@
                                    openType:kTAGOpenTypePreferNonDefault
                                     timeout:nil
                                    notifier:self];
+    NSTimeInterval dispatchTime = 10;
+    self.tagManager.dispatchInterval = dispatchTime;
+    NSLog(@"Dispatch Time: %f", [[TAGManager instance] dispatchInterval]);
     //GA
 //    [GAI sharedInstance].trackUncaughtExceptions = YES;
 //    [GAI sharedInstance].dispatchInterval = 20;
