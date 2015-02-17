@@ -23,6 +23,12 @@
     //GTM
     self.tagManager = [TAGManager instance];
     [self.tagManager.logger setLogLevel:kTAGLoggerLogLevelVerbose];
+    
+    NSURL *url = [launchOptions valueForKey:UIApplicationLaunchOptionsURLKey];
+    if (url != nil) {
+        [self.tagManager previewWithUrl:url];
+    }
+    
     [TAGContainerOpener openContainerWithId:@"GTM-M9CBHM"
                                  tagManager:self.tagManager
                                    openType:kTAGOpenTypePreferNonDefault
@@ -37,6 +43,13 @@
 //    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelNone];
 //    [[GAI sharedInstance] trackerWithTrackingId:@"UA-59762855-1"];
     return YES;
+}
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    if ([self.tagManager previewWithUrl:url]) {
+        return YES;
+    }
+    return NO;
 }
 
 //These three methods do no seem to be firing...
