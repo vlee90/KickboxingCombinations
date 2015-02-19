@@ -12,7 +12,7 @@
 #import "TAGManager.h"
 #import "TAGDataLayer.h"
 
-@interface AppDelegate ()<TAGContainerOpenerNotifier, TAGContainerCallback>
+@interface AppDelegate ()<TAGContainerCallback>
 
 @end
 
@@ -20,6 +20,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSLog(@"AppDelegate did FinishLaunchingWithOptions Fired");
     //GTM
     self.tagManager = [TAGManager instance];
     [self.tagManager.logger setLogLevel:kTAGLoggerLogLevelVerbose];
@@ -28,15 +29,6 @@
     if (url != nil) {
         [self.tagManager previewWithUrl:url];
     }
-    
-    [TAGContainerOpener openContainerWithId:@"GTM-M9CBHM"
-                                 tagManager:self.tagManager
-                                   openType:kTAGOpenTypePreferNonDefault
-                                    timeout:nil
-                                   notifier:self];
-    NSTimeInterval dispatchTime = 10;
-    self.tagManager.dispatchInterval = dispatchTime;
-    NSLog(@"Dispatch Time: %f", [[TAGManager instance] dispatchInterval]);
     //GA
 //    [GAI sharedInstance].trackUncaughtExceptions = YES;
 //    [GAI sharedInstance].dispatchInterval = 20;
@@ -95,13 +87,6 @@
             break;
     }
     
-}
-
--(void)containerAvailable:(TAGContainer *)container {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.container = container;
-        [self.container refresh];
-    });
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

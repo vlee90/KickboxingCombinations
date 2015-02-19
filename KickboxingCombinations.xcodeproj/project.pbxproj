@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3BC6FC0F5312CCF059545958 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC28EB7736237EA5702BD7FB /* libPods.a */; };
 		EB0789611A900C0F008EAA28 /* GTM-M9CBHM in Resources */ = {isa = PBXBuildFile; fileRef = EB0789601A900C08008EAA28 /* GTM-M9CBHM */; };
+		EB4694561A95603D00FDD3A9 /* ContainerLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4694551A95603D00FDD3A9 /* ContainerLoadViewController.m */; };
 		EB4BDFD41A79B34700C56F6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4BDFD31A79B34700C56F6B /* main.m */; };
 		EB4BDFD71A79B34700C56F6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4BDFD61A79B34700C56F6B /* AppDelegate.m */; };
 		EB4BDFDA1A79B34700C56F6B /* KickboxingCombinations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB4BDFD81A79B34700C56F6B /* KickboxingCombinations.xcdatamodeld */; };
@@ -58,6 +59,8 @@
 		EB07896A1A903EDA008EAA28 /* GAILogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
 		EB07896B1A903EDA008EAA28 /* GAITrackedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
 		EB07896C1A903EDA008EAA28 /* GAITracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		EB4694541A95603D00FDD3A9 /* ContainerLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerLoadViewController.h; sourceTree = "<group>"; };
+		EB4694551A95603D00FDD3A9 /* ContainerLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerLoadViewController.m; sourceTree = "<group>"; };
 		EB4BDFCE1A79B34700C56F6B /* KickboxingCombinations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KickboxingCombinations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4BDFD21A79B34700C56F6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB4BDFD31A79B34700C56F6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -194,6 +197,8 @@
 				EBDFA78C1A7AFC2B00905488 /* TimerFeature */,
 				EB4BDFD51A79B34700C56F6B /* AppDelegate.h */,
 				EB4BDFD61A79B34700C56F6B /* AppDelegate.m */,
+				EB4694541A95603D00FDD3A9 /* ContainerLoadViewController.h */,
+				EB4694551A95603D00FDD3A9 /* ContainerLoadViewController.m */,
 				EB4BDFDE1A79B34700C56F6B /* Main.storyboard */,
 				EB4BDFE11A79B34700C56F6B /* Images.xcassets */,
 				EB4BDFE31A79B34700C56F6B /* LaunchScreen.xib */,
@@ -438,6 +443,7 @@
 			files = (
 				EBDFA7921A7AFC6200905488 /* TimerViewModel.m in Sources */,
 				EB94D1A91A79B89A00774138 /* SetupViewModel.m in Sources */,
+				EB4694561A95603D00FDD3A9 /* ContainerLoadViewController.m in Sources */,
 				EB94D1A61A79B88900774138 /* SetupViewController.m in Sources */,
 				EBDFA78F1A7AFC5300905488 /* TimerViewController.m in Sources */,
 				EB4BDFD71A79B34700C56F6B /* AppDelegate.m in Sources */,

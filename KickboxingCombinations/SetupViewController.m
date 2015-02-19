@@ -52,6 +52,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"viewDidLoad Fired");
     self.setupViewModel = [[SetupViewModel alloc] initWithStateProperties];
     [self.navigationController setNavigationBarHidden:true];
     
@@ -151,6 +152,7 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    NSLog(@"viewWillAppear Fired");
     self.dataLayer = [TAGManager instance].dataLayer;
     [self.dataLayer push:@{@"screenName" : @"Setup Screen GTM",
                       @"event" : @"openScreen" }
