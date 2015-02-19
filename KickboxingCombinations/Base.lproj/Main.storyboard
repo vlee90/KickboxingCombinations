@@ -14,12 +14,31 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="6Gm-5b-JzN" kind="relationship" relationship="rootViewController" id="LuC-Er-oz9"/>
+                        <segue destination="mVq-A9-dq5" kind="relationship" relationship="rootViewController" id="CkE-a1-mLt"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZoA-cY-Ugk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-701" y="-263"/>
+            <point key="canvasLocation" x="-906" y="-29"/>
+        </scene>
+        <!--ContainerLoadScreen-->
+        <scene sceneID="6ma-SQ-07d">
+            <objects>
+                <viewController storyboardIdentifier="ContainerLoadViewController" title="ContainerLoadScreen" id="mVq-A9-dq5" customClass="ContainerLoadViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LoB-HW-DcL"/>
+                        <viewControllerLayoutGuide type="bottom" id="ET2-60-R4F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="containerLoadView" id="M0o-3o-XXr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.023529411760000001" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mwt-cO-cdi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ILP-SW-LBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-338" y="395"/>
         </scene>
         <!--SetupViewController-->
         <scene sceneID="DJ5-h2-XsJ">
@@ -493,6 +512,16 @@
                             <constraint firstItem="OCx-22-XGZ" firstAttribute="top" secondItem="jpc-RF-hCb" secondAttribute="bottom" constant="20" id="zN0-0j-3ho"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="techEightLabel" destination="Zzr-9D-HPI" id="JgI-No-k23"/>
+                        <outlet property="techFiveLabel" destination="Aya-sQ-CTq" id="NET-I3-kOy"/>
+                        <outlet property="techFourLabel" destination="MxI-be-OzA" id="kvN-zd-Azj"/>
+                        <outlet property="techOneLabel" destination="8vR-pH-35y" id="qds-Rm-cUI"/>
+                        <outlet property="techSevenLabel" destination="OCx-22-XGZ" id="OPg-4e-kua"/>
+                        <outlet property="techSixLabel" destination="jpc-RF-hCb" id="3K9-oL-f5K"/>
+                        <outlet property="techThreeLabel" destination="0E7-xZ-ipn" id="QTk-iJ-QE0"/>
+                        <outlet property="techTwoLabel" destination="d79-Tt-83P" id="MMN-vr-yng"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rTo-eV-ttU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

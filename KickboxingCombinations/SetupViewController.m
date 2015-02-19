@@ -8,6 +8,8 @@
 
 #import "SetupViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "TAGDataLayer.h"
+#import "TAGManager.h"
 
 @interface SetupViewController ()
 
@@ -40,6 +42,7 @@
 
 //State
 @property (strong, nonatomic) SetupViewModel* setupViewModel;
+@property (weak, nonatomic) TAGDataLayer *dataLayer;
 @property NSInteger randX;
 @property NSInteger randY;
 
@@ -49,6 +52,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"viewDidLoad Fired");
     self.setupViewModel = [[SetupViewModel alloc] initWithStateProperties];
     [self.navigationController setNavigationBarHidden:true];
     
@@ -146,6 +150,15 @@
 //    }];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"viewWillAppear Fired");
+    self.dataLayer = [TAGManager instance].dataLayer;
+    [self.dataLayer push:@{@"screenName" : @"Setup Screen GTM",
+                      @"event" : @"openScreen" }
+                      ];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -167,6 +180,7 @@
 }
 
 -(void)swipeLeft:(UISwipeGestureRecognizer*)swipe {
+    [self.dataLayer push:@{@"event" : @"swipeOccuried"}];
     [self.setupViewModel createWorkout];
     [UIView animateWithDuration:0.3 animations:^{
         [UIView setAnimationCurve:UIViewAnimationCurveLinear];
@@ -176,6 +190,7 @@
 }
 
 -(void)swipeUp:(UISwipeGestureRecognizer*)swipe {
+    [self.dataLayer push:@{@"event" : @"swipeOccuried"}];
     [UIView animateWithDuration:0.3 animations:^{
         [UIView setAnimationCurve:UIViewAnimationCurveLinear];
         [self.navigationController pushViewController:[self.setupViewModel createComboListViewControllerFromStoryboardWithComboViewModel] animated:false];

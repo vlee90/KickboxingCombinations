@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TimerViewModel.h"
+#import "GAITrackedViewController.h"
 
 @interface TimerViewController : UIViewController
 

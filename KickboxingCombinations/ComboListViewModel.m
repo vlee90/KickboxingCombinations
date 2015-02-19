@@ -7,7 +7,29 @@
 //
 
 #import "ComboListViewModel.h"
+#import "AppDelegate.h"
 
 @implementation ComboListViewModel
+
+-(void)getTAGContainerFromAppDelegate {
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.container = appDelegate.container;
+}
+
+-(void)setTechniquesFromContainer {
+    if (self.container != nil) {
+        self.techOne = [self.container stringForKey:@"techOne"];
+        self.techTwo= [self.container stringForKey:@"techTwo"];
+        self.techThree = [self.container stringForKey:@"techThree"];
+        self.techFour = [self.container stringForKey:@"techFour"];
+        self.techFive = [self.container stringForKey:@"techFive"];
+        self.techSix = [self.container stringForKey:@"techSix"];
+        self.techSeven = [self.container stringForKey:@"techSeven"];
+        self.techEight = [self.container stringForKey:@"techEight"];
+    }
+    else {
+        [self getTAGContainerFromAppDelegate];
+    }
+}
 
 @end

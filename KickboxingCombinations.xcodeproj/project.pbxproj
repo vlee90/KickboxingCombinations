@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3BC6FC0F5312CCF059545958 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC28EB7736237EA5702BD7FB /* libPods.a */; };
+		EB0789611A900C0F008EAA28 /* GTM-M9CBHM in Resources */ = {isa = PBXBuildFile; fileRef = EB0789601A900C08008EAA28 /* GTM-M9CBHM */; };
+		EB4694561A95603D00FDD3A9 /* ContainerLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4694551A95603D00FDD3A9 /* ContainerLoadViewController.m */; };
 		EB4BDFD41A79B34700C56F6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4BDFD31A79B34700C56F6B /* main.m */; };
 		EB4BDFD71A79B34700C56F6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4BDFD61A79B34700C56F6B /* AppDelegate.m */; };
 		EB4BDFDA1A79B34700C56F6B /* KickboxingCombinations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB4BDFD81A79B34700C56F6B /* KickboxingCombinations.xcdatamodeld */; };
@@ -17,6 +19,11 @@
 		EB51E6661A8C294600860409 /* ComboListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB51E6651A8C294600860409 /* ComboListViewController.m */; };
 		EB51E6691A8C296000860409 /* ComboListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB51E6681A8C296000860409 /* ComboListViewModel.m */; };
 		EB51E66B1A8C296F00860409 /* ComboListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB51E66A1A8C296F00860409 /* ComboListTests.m */; };
+		EB562DDD1A8FFFB100F037AD /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB562DDC1A8FFFB100F037AD /* libGoogleAnalyticsServices.a */; };
+		EB562DDF1A8FFFD000F037AD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB562DDE1A8FFFD000F037AD /* CoreData.framework */; };
+		EB562DE11A8FFFD800F037AD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB562DE01A8FFFD800F037AD /* SystemConfiguration.framework */; };
+		EB562DE31A8FFFE200F037AD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB562DE21A8FFFE200F037AD /* libz.dylib */; };
+		EB562DE51A8FFFEF00F037AD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB562DE41A8FFFEF00F037AD /* libsqlite3.dylib */; };
 		EB94D1A61A79B88900774138 /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1A51A79B88900774138 /* SetupViewController.m */; };
 		EB94D1A91A79B89A00774138 /* SetupViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1A81A79B89A00774138 /* SetupViewModel.m */; };
 		EB94D1AC1A79B8CE00774138 /* SetupFeatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1AB1A79B8CE00774138 /* SetupFeatureTests.m */; };
@@ -41,6 +48,19 @@
 /* Begin PBXFileReference section */
 		0439385E3D562D79ED88AA0E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6CFB3815D096D9FE6DA3CC1A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EB0789601A900C08008EAA28 /* GTM-M9CBHM */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTM-M9CBHM"; sourceTree = "<group>"; };
+		EB0789631A903EDA008EAA28 /* GAI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		EB0789641A903EDA008EAA28 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		EB0789651A903EDA008EAA28 /* GAIEcommerceFields.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
+		EB0789661A903EDA008EAA28 /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		EB0789671A903EDA008EAA28 /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		EB0789681A903EDA008EAA28 /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		EB0789691A903EDA008EAA28 /* GAIFields.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		EB07896A1A903EDA008EAA28 /* GAILogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		EB07896B1A903EDA008EAA28 /* GAITrackedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		EB07896C1A903EDA008EAA28 /* GAITracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		EB4694541A95603D00FDD3A9 /* ContainerLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerLoadViewController.h; sourceTree = "<group>"; };
+		EB4694551A95603D00FDD3A9 /* ContainerLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerLoadViewController.m; sourceTree = "<group>"; };
 		EB4BDFCE1A79B34700C56F6B /* KickboxingCombinations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KickboxingCombinations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4BDFD21A79B34700C56F6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB4BDFD31A79B34700C56F6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -57,6 +77,16 @@
 		EB51E6671A8C296000860409 /* ComboListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComboListViewModel.h; sourceTree = "<group>"; };
 		EB51E6681A8C296000860409 /* ComboListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboListViewModel.m; sourceTree = "<group>"; };
 		EB51E66A1A8C296F00860409 /* ComboListTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboListTests.m; sourceTree = "<group>"; };
+		EB562DD71A8FFFA300F037AD /* TAGContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGContainer.h; sourceTree = "<group>"; };
+		EB562DD81A8FFFA300F037AD /* TAGContainerOpener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGContainerOpener.h; sourceTree = "<group>"; };
+		EB562DD91A8FFFA300F037AD /* TAGDataLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGDataLayer.h; sourceTree = "<group>"; };
+		EB562DDA1A8FFFA300F037AD /* TAGLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGLogger.h; sourceTree = "<group>"; };
+		EB562DDB1A8FFFA300F037AD /* TAGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGManager.h; sourceTree = "<group>"; };
+		EB562DDC1A8FFFB100F037AD /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		EB562DDE1A8FFFD000F037AD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EB562DE01A8FFFD800F037AD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EB562DE21A8FFFE200F037AD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		EB562DE41A8FFFEF00F037AD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		EB94D1A41A79B88900774138 /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
 		EB94D1A51A79B88900774138 /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		EB94D1A71A79B89A00774138 /* SetupViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewModel.h; sourceTree = "<group>"; };
@@ -80,7 +110,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB562DE51A8FFFEF00F037AD /* libsqlite3.dylib in Frameworks */,
+				EB562DE31A8FFFE200F037AD /* libz.dylib in Frameworks */,
+				EB562DE11A8FFFD800F037AD /* SystemConfiguration.framework in Frameworks */,
+				EB562DDF1A8FFFD000F037AD /* CoreData.framework in Frameworks */,
 				3BC6FC0F5312CCF059545958 /* libPods.a in Frameworks */,
+				EB562DDD1A8FFFB100F037AD /* libGoogleAnalyticsServices.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +132,10 @@
 		9632C34545D96678694F484F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB562DE41A8FFFEF00F037AD /* libsqlite3.dylib */,
+				EB562DE21A8FFFE200F037AD /* libz.dylib */,
+				EB562DE01A8FFFD800F037AD /* SystemConfiguration.framework */,
+				EB562DDE1A8FFFD000F037AD /* CoreData.framework */,
 				EC28EB7736237EA5702BD7FB /* libPods.a */,
 			);
 			name = Frameworks;
@@ -109,6 +148,23 @@
 				0439385E3D562D79ED88AA0E /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EB0789621A903ECC008EAA28 /* GA Library */ = {
+			isa = PBXGroup;
+			children = (
+				EB0789631A903EDA008EAA28 /* GAI.h */,
+				EB0789641A903EDA008EAA28 /* GAIDictionaryBuilder.h */,
+				EB0789651A903EDA008EAA28 /* GAIEcommerceFields.h */,
+				EB0789661A903EDA008EAA28 /* GAIEcommerceProduct.h */,
+				EB0789671A903EDA008EAA28 /* GAIEcommerceProductAction.h */,
+				EB0789681A903EDA008EAA28 /* GAIEcommercePromotion.h */,
+				EB0789691A903EDA008EAA28 /* GAIFields.h */,
+				EB07896A1A903EDA008EAA28 /* GAILogger.h */,
+				EB07896B1A903EDA008EAA28 /* GAITrackedViewController.h */,
+				EB07896C1A903EDA008EAA28 /* GAITracker.h */,
+			);
+			name = "GA Library";
 			sourceTree = "<group>";
 		};
 		EB4BDFC51A79B34700C56F6B = {
@@ -141,6 +197,8 @@
 				EBDFA78C1A7AFC2B00905488 /* TimerFeature */,
 				EB4BDFD51A79B34700C56F6B /* AppDelegate.h */,
 				EB4BDFD61A79B34700C56F6B /* AppDelegate.m */,
+				EB4694541A95603D00FDD3A9 /* ContainerLoadViewController.h */,
+				EB4694551A95603D00FDD3A9 /* ContainerLoadViewController.m */,
 				EB4BDFDE1A79B34700C56F6B /* Main.storyboard */,
 				EB4BDFE11A79B34700C56F6B /* Images.xcassets */,
 				EB4BDFE31A79B34700C56F6B /* LaunchScreen.xib */,
@@ -153,6 +211,10 @@
 		EB4BDFD11A79B34700C56F6B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EB0789621A903ECC008EAA28 /* GA Library */,
+				EB0789601A900C08008EAA28 /* GTM-M9CBHM */,
+				EB562DDC1A8FFFB100F037AD /* libGoogleAnalyticsServices.a */,
+				EB562DD61A8FFFA300F037AD /* GTM Library */,
 				EB4BDFD21A79B34700C56F6B /* Info.plist */,
 				EB4BDFD31A79B34700C56F6B /* main.m */,
 			);
@@ -188,6 +250,19 @@
 				EB51E6681A8C296000860409 /* ComboListViewModel.m */,
 			);
 			name = ComboListFeature;
+			sourceTree = "<group>";
+		};
+		EB562DD61A8FFFA300F037AD /* GTM Library */ = {
+			isa = PBXGroup;
+			children = (
+				EB562DD71A8FFFA300F037AD /* TAGContainer.h */,
+				EB562DD81A8FFFA300F037AD /* TAGContainerOpener.h */,
+				EB562DD91A8FFFA300F037AD /* TAGDataLayer.h */,
+				EB562DDA1A8FFFA300F037AD /* TAGLogger.h */,
+				EB562DDB1A8FFFA300F037AD /* TAGManager.h */,
+			);
+			name = "GTM Library";
+			path = Library;
 			sourceTree = "<group>";
 		};
 		EB94D1A31A79B86800774138 /* SetupFeature */ = {
@@ -315,6 +390,7 @@
 				EB4BDFE01A79B34700C56F6B /* Main.storyboard in Resources */,
 				EB4BDFE51A79B34700C56F6B /* LaunchScreen.xib in Resources */,
 				EB4BDFE21A79B34700C56F6B /* Images.xcassets in Resources */,
+				EB0789611A900C0F008EAA28 /* GTM-M9CBHM in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +443,7 @@
 			files = (
 				EBDFA7921A7AFC6200905488 /* TimerViewModel.m in Sources */,
 				EB94D1A91A79B89A00774138 /* SetupViewModel.m in Sources */,
+				EB4694561A95603D00FDD3A9 /* ContainerLoadViewController.m in Sources */,
 				EB94D1A61A79B88900774138 /* SetupViewController.m in Sources */,
 				EBDFA78F1A7AFC5300905488 /* TimerViewController.m in Sources */,
 				EB4BDFD71A79B34700C56F6B /* AppDelegate.m in Sources */,
@@ -506,6 +583,10 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				INFOPLIST_FILE = KickboxingCombinations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KickboxingCombinations",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -518,6 +599,10 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				INFOPLIST_FILE = KickboxingCombinations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KickboxingCombinations",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

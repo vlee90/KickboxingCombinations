@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SetupViewModel.h"
+#import "GAITrackedViewController.h"
 
 @interface SetupViewController : UIViewController
 
