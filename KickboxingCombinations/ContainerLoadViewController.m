@@ -36,7 +36,9 @@
                                    notifier:self];
     NSTimeInterval dispatchTime = 10;
     self.tagManager.dispatchInterval = dispatchTime;
-
+    appDelegate.tagManager = self.tagManager;
+    appDelegate.container = self.container;
+                                
 }
 
 -(void)containerAvailable:(TAGContainer *)container {
@@ -44,6 +46,8 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         self.container = container;
         [self.container refresh];
+        AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+        appDelegate.container = self.container;
         
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
         SetupViewController *setupViewController = [storyboard instantiateViewControllerWithIdentifier:@"SetupViewController"];
