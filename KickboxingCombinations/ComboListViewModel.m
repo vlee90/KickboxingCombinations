@@ -37,16 +37,49 @@
 }
 
 -(void)buyButtonPressed {
-    PurchaseItem *aliShuffle = 
+    PurchaseItem *aliShuffle = [[PurchaseItem alloc] initWithName:@"Ali Shuffle"
+                                                              sku:@"12345"
+                                                         category:@"Footwork"
+                                                            price:@"5"];
+    
+    PurchaseItem *tysonShift = [[PurchaseItem alloc] initWithName:@"Tyson Shift"
+                                                              sku:@"23456"
+                                                         category:@"Footwork"
+                                                            price:@"5"];
+    
+    
     NSMutableArray *purchasedCombinations = [NSMutableArray array];
-    [purchasedCombinations addObject:@{@"name" : @"Ali Shuffle",
-                                       @"sku" : @"12345",
-                                       @"category" : @"Footwork",
-                                       @"price" : @"5",
+    [purchasedCombinations addObject:@{@"name" : aliShuffle.name,
+                                       @"sku" : aliShuffle.sku,
+                                       @"category" : aliShuffle.category,
+                                       @"price" : aliShuffle.price,
                                        @"currency" : @"USD",
-                                       @"quantity" : @"1"];
+                                       @"quantity" : @"1"}];
+    [purchasedCombinations addObject:@{@"name" : tysonShift.name,
+                                       @"sku" : tysonShift.sku,
+                                       @"category" : tysonShift.category,
+                                       @"price" : tysonShift.price,
+                                       @"currency" : @"USD",
+                                       @"quantity" : @"1"}];
+    NSNumber *total = [NSNumber numberWithFloat:([aliShuffle.price floatValue] + [tysonShift.price floatValue])];
+    NSString *totalString = [NSString stringWithFormat:@"%@", total];
     TAGDataLayer *dataLayer = [TAGManager instance].dataLayer;
-    [dataLayer push:@{@"event" : @"buyCombination"}];
+    [dataLayer push:@{@"event" : @"buyCombination",
+                      @"transactionId" : @"0000",
+                      @"transactionTotal" : totalString,
+                      @"transactionAffliation" : @"The Kickboxing App",
+                      @"transactionTax" : @"0.01",
+                      @"transactionShipping" : @"1",
+                      @"transactionCurrency" : @"USD",
+                      @"transactionProducts" : purchasedCombinations}];
+    
+    [dataLayer push:@{@"transactionId" : [NSNull null],
+                      @"transactionTotal" : [NSNull null],
+                      @"transactionAffliation" : [NSNull null],
+                      @"transactionTax" : [NSNull null],
+                      @"transactionShipping" : [NSNull null],
+                      @"transactionCurrency" : [NSNull null],
+                      @"transactionProducts" : [NSNull null]}];
 }
 
 @end
