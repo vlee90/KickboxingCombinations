@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *techSevenLabel;
 @property (weak, nonatomic) IBOutlet UILabel *techEightLabel;
 @property (weak, nonatomic) TAGDataLayer *dataLayer;
+@property (weak, nonatomic) IBOutlet UIButton *buyButton;
 
 @end
 
@@ -41,6 +42,11 @@
     RAC(self.techSevenLabel, text) = RACObserve(self.comboListViewModel, techSeven);
     RAC(self.techEightLabel, text) = RACObserve(self.comboListViewModel, techEight);
     
+    self.buyButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        [self.comboListViewModel buyButtonPressed];
+        return [RACSignal empty];
+    }];
+    
     UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDown:)];
     swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
     [self.view addGestureRecognizer:swipeDown];
@@ -50,8 +56,7 @@
     [super viewWillAppear:animated];
     self.dataLayer = [TAGManager instance].dataLayer;
     [self.dataLayer push:@{@"screenName" : @"ComboList GTM",
-                      @"event" : @"openScreen"}
-                        ];
+                           @"event" : @"openScreen"}];
 }
 
 -(void)swipeDown:(UISwipeGestureRecognizer*)swipe {

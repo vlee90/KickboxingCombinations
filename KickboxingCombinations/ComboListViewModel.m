@@ -8,6 +8,8 @@
 
 #import "ComboListViewModel.h"
 #import "AppDelegate.h"
+#import "TAGDataLayer.h"
+#import "TAGManager.h"
 
 @implementation ComboListViewModel
 
@@ -30,6 +32,20 @@
     else {
         [self getTAGContainerFromAppDelegate];
     }
+}
+
+-(void)buyButtonPressed {
+    NSMutableArray *purchasedCombinations = [NSMutableArray array];
+    [purchasedCombinations addObject:@{@"name" : @"Ali Shuffle",
+                                       @"sku" : @"12345",
+                                       @"category" : @"Footwork",
+                                       @"price" : @"5",
+                                       @"currency" : @"USD",
+                                       @"quantity" : @"1"];
+                                       
+    TAGDataLayer *dataLayer = [TAGManager instance].dataLayer;
+    [dataLayer push:@{@"event" : @"buyCombination",
+                      @"transactionId" :}];
 }
 
 @end

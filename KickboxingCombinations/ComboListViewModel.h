@@ -24,4 +24,6 @@
 -(void)getTAGContainerFromAppDelegate;
 -(void)setTechniquesFromContainer;
 
+-(void)buyButtonPressed;
+
 @end

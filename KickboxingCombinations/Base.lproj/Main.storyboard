@@ -38,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ILP-SW-LBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-338" y="395"/>
+            <point key="canvasLocation" x="-316" y="733"/>
         </scene>
         <!--SetupViewController-->
         <scene sceneID="DJ5-h2-XsJ">
@@ -53,31 +53,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyA-qa-2BR">
-                                <rect key="frame" x="277" y="84" width="46" height="20"/>
+                                <rect key="frame" x="277" y="40" width="46" height="20"/>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="20"/>
                                 <color key="textColor" red="0.67450980392156867" green="0.71372549019607845" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round Duration:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo8-2v-eJO">
-                                <rect key="frame" x="222" y="218" width="157" height="20"/>
+                                <rect key="frame" x="222" y="174" width="157" height="20"/>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="20"/>
                                 <color key="textColor" red="0.67450980392156867" green="0.71372549019607845" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rest:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gx4-f7-oKv">
-                                <rect key="frame" x="277" y="280" width="46" height="20"/>
+                                <rect key="frame" x="277" y="236" width="46" height="20"/>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="20"/>
                                 <color key="textColor" red="0.67450980392156867" green="0.71372549019607845" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warning Bell:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htE-7m-R9b">
-                                <rect key="frame" x="238" y="342" width="124" height="20"/>
+                                <rect key="frame" x="238" y="298" width="124" height="20"/>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="20"/>
                                 <color key="textColor" red="0.67450980392156867" green="0.71372549019607845" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ4-W0-1T6">
-                                <rect key="frame" x="225" y="248" width="150" height="17"/>
+                                <rect key="frame" x="225" y="204" width="150" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="RJc-Iq-Khb"/>
                                 </constraints>
@@ -86,7 +86,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2x-1B-cl5">
-                                <rect key="frame" x="225" y="372" width="150" height="17"/>
+                                <rect key="frame" x="225" y="328" width="150" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="6M0-DK-MMB"/>
                                 </constraints>
@@ -95,7 +95,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqG-dD-JWw">
-                                <rect key="frame" x="225" y="310" width="150" height="17"/>
+                                <rect key="frame" x="225" y="266" width="150" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="wr4-bH-pw4"/>
                                 </constraints>
@@ -104,7 +104,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfb-eQ-hQv">
-                                <rect key="frame" x="225" y="186" width="150" height="17"/>
+                                <rect key="frame" x="225" y="142" width="150" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="EMj-ma-KEB"/>
                                 </constraints>
@@ -113,13 +113,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" # of Rounds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eC-6F-1Nc">
-                                <rect key="frame" x="240" y="156" width="120" height="20"/>
+                                <rect key="frame" x="240" y="112" width="120" height="20"/>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="20"/>
                                 <color key="textColor" red="0.67450980392156867" green="0.71372549019607845" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beginner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuc-eM-5A5">
-                                <rect key="frame" x="225" y="124" width="150" height="17"/>
+                                <rect key="frame" x="225" y="80" width="150" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="cXz-4b-FGQ"/>
                                 </constraints>
@@ -128,70 +128,70 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1v-Qg-7hx">
-                                <rect key="frame" x="195" y="118" width="30" height="30"/>
+                                <rect key="frame" x="195" y="74" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="&lt;-">
                                     <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUT-Wb-CME">
-                                <rect key="frame" x="375" y="118" width="30" height="30"/>
+                                <rect key="frame" x="375" y="74" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="-&gt;">
                                     <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shm-71-ssI">
-                                <rect key="frame" x="195" y="180" width="30" height="30"/>
+                                <rect key="frame" x="195" y="136" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="&lt;-">
                                     <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9s5-Y2-lKv">
-                                <rect key="frame" x="195" y="242" width="30" height="30"/>
+                                <rect key="frame" x="195" y="198" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="&lt;-">
                                     <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2c-Ym-DP6">
-                                <rect key="frame" x="375" y="242" width="30" height="30"/>
+                                <rect key="frame" x="375" y="198" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="-&gt;">
                                     <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1U9-gA-uen">
-                                <rect key="frame" x="195" y="304" width="30" height="30"/>
+                                <rect key="frame" x="195" y="260" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="&lt;-">
                                     <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIj-9c-FuB">
-                                <rect key="frame" x="375" y="304" width="30" height="30"/>
+                                <rect key="frame" x="375" y="260" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="-&gt;">
                                     <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Agt-vv-Rv2">
-                                <rect key="frame" x="195" y="366" width="30" height="30"/>
+                                <rect key="frame" x="195" y="322" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="&lt;-">
                                     <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quz-6U-gdE">
-                                <rect key="frame" x="375" y="366" width="30" height="30"/>
+                                <rect key="frame" x="375" y="322" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="-&gt;">
                                     <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqf-En-LOs">
-                                <rect key="frame" x="375" y="180" width="30" height="30"/>
+                                <rect key="frame" x="375" y="136" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="-&gt;">
                                     <color key="titleColor" red="0.30588235294117649" green="0.68235294117647061" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -489,6 +489,12 @@
                                 <color key="textColor" red="0.67450980390000004" green="0.71372549019999998" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhB-TN-82W">
+                                <rect key="frame" x="217" y="408" width="166" height="30"/>
+                                <state key="normal" title="Buy More Combinations">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.023529411760000001" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -502,9 +508,11 @@
                             <constraint firstItem="jpc-RF-hCb" firstAttribute="top" secondItem="Aya-sQ-CTq" secondAttribute="bottom" constant="20" id="V19-Hp-W6W"/>
                             <constraint firstAttribute="centerX" secondItem="Aya-sQ-CTq" secondAttribute="centerX" id="dja-f7-bLY"/>
                             <constraint firstAttribute="centerX" secondItem="OCx-22-XGZ" secondAttribute="centerX" id="hDZ-ku-jPg"/>
+                            <constraint firstAttribute="centerX" secondItem="jhB-TN-82W" secondAttribute="centerX" id="lfk-WT-eHt"/>
                             <constraint firstItem="Zzr-9D-HPI" firstAttribute="top" secondItem="OCx-22-XGZ" secondAttribute="bottom" constant="20" id="mdp-BO-t4j"/>
                             <constraint firstAttribute="centerX" secondItem="MxI-be-OzA" secondAttribute="centerX" id="r3Y-0B-kcg"/>
                             <constraint firstItem="MxI-be-OzA" firstAttribute="top" secondItem="0E7-xZ-ipn" secondAttribute="bottom" constant="20" id="sCR-Mh-59W"/>
+                            <constraint firstItem="jhB-TN-82W" firstAttribute="top" secondItem="Zzr-9D-HPI" secondAttribute="bottom" constant="20" id="vzQ-kb-XAO"/>
                             <constraint firstAttribute="centerX" secondItem="0E7-xZ-ipn" secondAttribute="centerX" id="x5A-i8-kCj"/>
                             <constraint firstAttribute="centerX" secondItem="d79-Tt-83P" secondAttribute="centerX" id="xaw-4N-gEd"/>
                             <constraint firstItem="o0c-Sf-QzU" firstAttribute="top" secondItem="XZt-9N-Qd0" secondAttribute="bottom" constant="10" id="yfD-cd-cA8"/>
@@ -513,6 +521,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buyButton" destination="jhB-TN-82W" id="4yR-I8-zWp"/>
                         <outlet property="techEightLabel" destination="Zzr-9D-HPI" id="JgI-No-k23"/>
                         <outlet property="techFiveLabel" destination="Aya-sQ-CTq" id="NET-I3-kOy"/>
                         <outlet property="techFourLabel" destination="MxI-be-OzA" id="kvN-zd-Azj"/>

@@ -190,7 +190,7 @@
 }
 
 -(void)swipeUp:(UISwipeGestureRecognizer*)swipe {
-    [self.dataLayer push:@{@"event" : @"swipeOccuried"}];
+//    [self.dataLayer push:@{@"event" : @"swipeOccuried"}];
     [UIView animateWithDuration:0.3 animations:^{
         [UIView setAnimationCurve:UIViewAnimationCurveLinear];
         [self.navigationController pushViewController:[self.setupViewModel createComboListViewControllerFromStoryboardWithComboViewModel] animated:false];
