@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3BC6FC0F5312CCF059545958 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC28EB7736237EA5702BD7FB /* libPods.a */; };
 		EB0789611A900C0F008EAA28 /* GTM-M9CBHM in Resources */ = {isa = PBXBuildFile; fileRef = EB0789601A900C08008EAA28 /* GTM-M9CBHM */; };
+		EB1B95AB1A98211700A81574 /* Technique.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1B95AA1A98211700A81574 /* Technique.m */; };
+		EB1B95AE1A9821D600A81574 /* PurchaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1B95AD1A9821D600A81574 /* PurchaseItem.m */; };
 		EB4694561A95603D00FDD3A9 /* ContainerLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4694551A95603D00FDD3A9 /* ContainerLoadViewController.m */; };
 		EB4BDFD41A79B34700C56F6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4BDFD31A79B34700C56F6B /* main.m */; };
 		EB4BDFD71A79B34700C56F6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4BDFD61A79B34700C56F6B /* AppDelegate.m */; };
@@ -59,6 +61,10 @@
 		EB07896A1A903EDA008EAA28 /* GAILogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
 		EB07896B1A903EDA008EAA28 /* GAITrackedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
 		EB07896C1A903EDA008EAA28 /* GAITracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		EB1B95A91A98211700A81574 /* Technique.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Technique.h; sourceTree = "<group>"; };
+		EB1B95AA1A98211700A81574 /* Technique.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Technique.m; sourceTree = "<group>"; };
+		EB1B95AC1A9821D600A81574 /* PurchaseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchaseItem.h; sourceTree = "<group>"; };
+		EB1B95AD1A9821D600A81574 /* PurchaseItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchaseItem.m; sourceTree = "<group>"; };
 		EB4694541A95603D00FDD3A9 /* ContainerLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerLoadViewController.h; sourceTree = "<group>"; };
 		EB4694551A95603D00FDD3A9 /* ContainerLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerLoadViewController.m; sourceTree = "<group>"; };
 		EB4BDFCE1A79B34700C56F6B /* KickboxingCombinations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KickboxingCombinations.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -279,6 +285,10 @@
 		EB94D1AA1A79B8A800774138 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EB1B95AC1A9821D600A81574 /* PurchaseItem.h */,
+				EB1B95AD1A9821D600A81574 /* PurchaseItem.m */,
+				EB1B95A91A98211700A81574 /* Technique.h */,
+				EB1B95AA1A98211700A81574 /* Technique.m */,
 				EB94D1AD1A79BB0900774138 /* Workout.h */,
 				EB94D1AE1A79BB0900774138 /* Workout.m */,
 			);
@@ -444,10 +454,12 @@
 				EBDFA7921A7AFC6200905488 /* TimerViewModel.m in Sources */,
 				EB94D1A91A79B89A00774138 /* SetupViewModel.m in Sources */,
 				EB4694561A95603D00FDD3A9 /* ContainerLoadViewController.m in Sources */,
+				EB1B95AE1A9821D600A81574 /* PurchaseItem.m in Sources */,
 				EB94D1A61A79B88900774138 /* SetupViewController.m in Sources */,
 				EBDFA78F1A7AFC5300905488 /* TimerViewController.m in Sources */,
 				EB4BDFD71A79B34700C56F6B /* AppDelegate.m in Sources */,
 				EB4BDFD41A79B34700C56F6B /* main.m in Sources */,
+				EB1B95AB1A98211700A81574 /* Technique.m in Sources */,
 				EB4BDFDA1A79B34700C56F6B /* KickboxingCombinations.xcdatamodeld in Sources */,
 				EB51E6661A8C294600860409 /* ComboListViewController.m in Sources */,
 				EBABEB141A801FEC0049BA93 /* Helper.m in Sources */,

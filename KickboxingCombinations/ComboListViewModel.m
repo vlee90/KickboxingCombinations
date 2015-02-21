@@ -10,6 +10,8 @@
 #import "AppDelegate.h"
 #import "TAGDataLayer.h"
 #import "TAGManager.h"
+#import "PurchaseItem.h"
+#import "Technique.h"
 
 @implementation ComboListViewModel
 
@@ -35,6 +37,7 @@
 }
 
 -(void)buyButtonPressed {
+    PurchaseItem *aliShuffle = 
     NSMutableArray *purchasedCombinations = [NSMutableArray array];
     [purchasedCombinations addObject:@{@"name" : @"Ali Shuffle",
                                        @"sku" : @"12345",
@@ -42,10 +45,8 @@
                                        @"price" : @"5",
                                        @"currency" : @"USD",
                                        @"quantity" : @"1"];
-                                       
     TAGDataLayer *dataLayer = [TAGManager instance].dataLayer;
-    [dataLayer push:@{@"event" : @"buyCombination",
-                      @"transactionId" :}];
+    [dataLayer push:@{@"event" : @"buyCombination"}];
 }
 
 @end
