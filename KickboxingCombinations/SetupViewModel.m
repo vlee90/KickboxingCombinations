@@ -7,6 +7,19 @@
 //
 
 #import "SetupViewModel.h"
+#import "Helper.h"
+
+@interface SetupViewModel ()
+
+@property(nonatomic, strong) Workout* workout;
+@property(nonatomic, strong) Helper* helper;
+@property NSInteger currentNumberOfRoundsINT;
+@property NSInteger currentRoundTimeINT;
+@property NSInteger currentRestTimeINT;
+@property NSInteger currentWarningTimeINT;
+//Backed Properties
+@property (nonatomic, strong) NSArray* typeArray;
+@end
 
 @implementation SetupViewModel
 

@@ -10,6 +10,19 @@
 
 @interface TimerViewModel ()
 
+@property (nonatomic, strong) Workout* workout;
+@property (nonatomic, strong) Helper* helper;
+@property (nonatomic, strong) NSTimer* timer;
+
+@property NSInteger currentNumberOfRoundsINT;
+@property NSInteger currentRoundTimeINT;
+@property NSInteger currentRestTimeINT;
+@property NSInteger currentWarningTimeINT;
+
+@end
+
+@interface TimerViewModel ()
+
 @property NSDate* startDate;
 @property NSDate* stopDate;
 @property NSTimeInterval deltaTime;
