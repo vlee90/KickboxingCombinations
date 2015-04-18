@@ -8,15 +8,12 @@
 
 #import "TimerViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import "TAGDataLayer.h"
-#import "TAGManager.h"
 
 @interface TimerViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *timerTextLabel;
 @property (weak, nonatomic) IBOutlet UILabel *roundsTextLabel;
 @property (weak, nonatomic) IBOutlet UILabel *restTextLabel;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
-@property (weak, nonatomic) TAGDataLayer *dataLayer;
 
 @end
 
@@ -59,15 +56,7 @@
     [self.view addGestureRecognizer:swipeRight];
 }
 
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    self.dataLayer = [TAGManager instance].dataLayer;
-    [self.dataLayer push:@{@"screenName" : @"Timer GTM",
-                      @"event" : @"openScreen"}];
-}
-
 -(void)swipeRight:(UISwipeGestureRecognizer*)swipe {
-    [self.dataLayer push:@{@"event" : @"swipeOccuried"}];
     [UIView animateWithDuration:0.3 animations:^{
         [UIView setAnimationCurve:UIViewAnimationCurveLinear];
         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:false];

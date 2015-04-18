@@ -7,15 +7,12 @@
 //
 
 #import "TimerViewModel.h"
-#import "TAGDataLayer.h"
-#import "TAGManager.h"
 
 @interface TimerViewModel ()
 
 @property NSDate* startDate;
 @property NSDate* stopDate;
 @property NSTimeInterval deltaTime;
-@property (weak, nonatomic) TAGDataLayer *dataLayer;
 
 @end
 
@@ -38,7 +35,6 @@
         self.currentRestTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRestTimeINT];
         self.currentWarningTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentWarningTimeINT];
         
-        self.dataLayer = [TAGManager instance].dataLayer;
     }
     return self;
 }
@@ -69,7 +65,6 @@
     }
     //End of workout
     else {
-        [self.dataLayer push:@{@"event" : @"workoutComplete"}];
         [self.timer invalidate];
         self.timer = nil;
     }
@@ -77,13 +72,11 @@
 
 -(void)startButtonPressed {
     if (self.isPaused) {
-        [self.dataLayer push:@{@"event" : @"timerStartPressed"}];
         self.isPaused = false;
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:true];
         [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     }
     else {
-        [self.dataLayer push:@{@"event" : @"timerPausePressed"}];
         self.isPaused = true;
         [self.timer invalidate];
         self.timer = nil;

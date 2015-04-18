@@ -8,8 +8,6 @@
 
 #import "SetupViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import "TAGDataLayer.h"
-#import "TAGManager.h"
 
 @interface SetupViewController ()
 
@@ -42,9 +40,6 @@
 
 //State
 @property (strong, nonatomic) SetupViewModel* setupViewModel;
-@property (weak, nonatomic) TAGDataLayer *dataLayer;
-@property NSInteger randX;
-@property NSInteger randY;
 
 @end
 
@@ -52,7 +47,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"viewDidLoad Fired");
     self.setupViewModel = [[SetupViewModel alloc] initWithStateProperties];
     [self.navigationController setNavigationBarHidden:true];
     
@@ -63,23 +57,6 @@
     UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeUp:)];
     [swipeUp setDirection:UISwipeGestureRecognizerDirectionUp];
     [self.view addGestureRecognizer:swipeUp];
-
-    //BackgroundAnimation
-    [self.setupViewModel loadImagesIntoBackgroundArray];
-    UIImageView* movingImageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
-    movingImageView.alpha = 0.3;
-    movingImageView.layer.cornerRadius = 50;
-    movingImageView.layer.masksToBounds = true;
-    movingImageView.layer.borderWidth = 10.0;
-    movingImageView.layer.borderColor = [[[UIColor alloc] initWithRed:0.675 green:0.714 blue:0.737 alpha:1.0] CGColor];
-    
-    movingImageView.animationImages = self.setupViewModel.backgroundArray;
-    movingImageView.animationDuration = 10;
-    [movingImageView startAnimating];
-    [self.view addSubview:movingImageView];
-//    6: 375 667
-//    4: 320 480
-    [self moveImage:movingImageView];
 
     
     RAC(self.typeTextLabel, text) = RACObserve(self.setupViewModel, currentWorkoutType);
@@ -150,37 +127,9 @@
 //    }];
 }
 
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    NSLog(@"viewWillAppear Fired");
-    self.dataLayer = [TAGManager instance].dataLayer;
-    [self.dataLayer push:@{@"screenName" : @"Setup Screen GTM",
-                      @"event" : @"openScreen" }
-                      ];
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void)moveImage:(UIView*)imageView {
-    [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-        imageView.center = CGPointMake(self.randX, self.randY);
-    } completion:^(BOOL finished) {
-        imageView.center = CGPointMake(self.randX, self.randY);
-        [self calculateNewRandomPosition];
-        [self moveImage:imageView];
-    }];
-}
-
--(void)calculateNewRandomPosition {
-    self.randX = arc4random_uniform(375);
-    self.randY = arc4random_uniform(667);
-}
 
 -(void)swipeLeft:(UISwipeGestureRecognizer*)swipe {
-    [self.dataLayer push:@{@"event" : @"swipeOccuried"}];
     [self.setupViewModel createWorkout];
     [UIView animateWithDuration:0.3 animations:^{
         [UIView setAnimationCurve:UIViewAnimationCurveLinear];
@@ -190,7 +139,6 @@
 }
 
 -(void)swipeUp:(UISwipeGestureRecognizer*)swipe {
-    [self.dataLayer push:@{@"event" : @"swipeOccuried"}];
     [UIView animateWithDuration:0.3 animations:^{
         [UIView setAnimationCurve:UIViewAnimationCurveLinear];
         [self.navigationController pushViewController:[self.setupViewModel createComboListViewControllerFromStoryboardWithComboViewModel] animated:false];

@@ -7,11 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TAGContainer.h"
 
 @interface ComboListViewModel : NSObject
 
-@property (weak, nonatomic) TAGContainer *container;
 @property (strong, nonatomic) NSString *techOne;
 @property (strong, nonatomic) NSString *techTwo;
 @property (strong, nonatomic) NSString *techThree;
@@ -20,8 +18,5 @@
 @property (strong, nonatomic) NSString *techSix;
 @property (strong, nonatomic) NSString *techSeven;
 @property (strong, nonatomic) NSString *techEight;
-
--(void)getTAGContainerFromAppDelegate;
--(void)setTechniquesFromContainer;
 
 @end

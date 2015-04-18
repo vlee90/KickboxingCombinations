@@ -7,12 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "TAGContainer.h"
-#import "TAGContainerOpener.h"
-#import "TAGManager.h"
-#import "TAGDataLayer.h"
 
-@interface AppDelegate ()<TAGContainerCallback>
+@interface AppDelegate ()
 
 @end
 
@@ -20,73 +16,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSLog(@"AppDelegate did FinishLaunchingWithOptions Fired");
-    //GTM
-    self.tagManager = [TAGManager instance];
-    [self.tagManager.logger setLogLevel:kTAGLoggerLogLevelVerbose];
-    
-    NSURL *url = [launchOptions valueForKey:UIApplicationLaunchOptionsURLKey];
-    if (url != nil) {
-        [self.tagManager previewWithUrl:url];
-    }
-    //GA
-//    [GAI sharedInstance].trackUncaughtExceptions = YES;
-//    [GAI sharedInstance].dispatchInterval = 20;
-//    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelNone];
-//    [[GAI sharedInstance] trackerWithTrackingId:@"UA-59762855-1"];
+
     return YES;
-}
-
--(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    if ([self.tagManager previewWithUrl:url]) {
-        return YES;
-    }
-    return NO;
-}
-
-//These three methods do no seem to be firing...
--(void)containerRefreshBegin:(TAGContainer *)container refreshType:(TAGContainerCallbackRefreshType)refreshType {
-    if (refreshType == kTAGContainerCallbackRefreshTypeSaved) {
-        NSLog(@"Will Refresh From Saved File");
-    }
-    else {
-        NSLog(@"Will Refresh From Network Call");
-    }
-}
-
--(void)containerRefreshSuccess:(TAGContainer *)container refreshType:(TAGContainerCallbackRefreshType)refreshType {
-    if (refreshType == kTAGContainerCallbackRefreshTypeSaved) {
-        NSLog(@"Refreshed From Saved File");
-    }
-    else {
-        NSLog(@"Refreshed From Network Call");
-    }
-}
-
--(void)containerRefreshFailure:(TAGContainer *)container failure:(TAGContainerCallbackRefreshFailure)failure refreshType:(TAGContainerCallbackRefreshType)refreshType {
-    switch (failure) {
-        case kTAGContainerCallbackRefreshFailureIoError:
-            NSLog(@"Refresh Error: IO Error");
-            break;
-        case kTAGContainerCallbackRefreshFailureNetworkError:
-            NSLog(@"Refresh Error: Network Error");
-            break;
-        case kTAGContainerCallbackRefreshFailureNoNetwork:
-            NSLog(@"Refresh Error: No Network");
-            break;
-        case kTAGContainerCallbackRefreshFailureNoSavedContainer:
-            NSLog(@"Refresh Error: No Saved Container");
-            break;
-        case kTAGContainerCallbackRefreshFailureServerError:
-            NSLog(@"Refresh Error: Server Error");
-            break;
-        case kTAGContainerCallbackRefreshFailureUnknownError:
-            NSLog(@"Refresh Error: Unknown Error");
-            break;
-        default:
-            break;
-    }
-    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
