@@ -17,4 +17,6 @@
  */
 @property (strong, nonatomic) NSString *name;
 
+-(instancetype)initWithName:(NSString *)name;
+
 @end

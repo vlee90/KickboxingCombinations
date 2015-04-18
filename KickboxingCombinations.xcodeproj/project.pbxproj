@@ -17,6 +17,9 @@
 		EB51E6661A8C294600860409 /* ComboListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB51E6651A8C294600860409 /* ComboListViewController.m */; };
 		EB51E6691A8C296000860409 /* ComboListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB51E6681A8C296000860409 /* ComboListViewModel.m */; };
 		EB51E66B1A8C296F00860409 /* ComboListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB51E66A1A8C296F00860409 /* ComboListTests.m */; };
+		EB558BD01AE21C0F00E179F1 /* TechniqueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB558BCF1AE21C0F00E179F1 /* TechniqueManager.m */; };
+		EB558BD31AE21ED500E179F1 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = EB558BD21AE21ED500E179F1 /* Constants.m */; };
+		EB558BD51AE2210500E179F1 /* TechniqueManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB558BD41AE2210500E179F1 /* TechniqueManagerTests.m */; };
 		EB94D1A61A79B88900774138 /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1A51A79B88900774138 /* SetupViewController.m */; };
 		EB94D1A91A79B89A00774138 /* SetupViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1A81A79B89A00774138 /* SetupViewModel.m */; };
 		EB94D1AC1A79B8CE00774138 /* SetupFeatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB94D1AB1A79B8CE00774138 /* SetupFeatureTests.m */; };
@@ -59,6 +62,11 @@
 		EB51E6671A8C296000860409 /* ComboListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComboListViewModel.h; sourceTree = "<group>"; };
 		EB51E6681A8C296000860409 /* ComboListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboListViewModel.m; sourceTree = "<group>"; };
 		EB51E66A1A8C296F00860409 /* ComboListTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComboListTests.m; sourceTree = "<group>"; };
+		EB558BCE1AE21C0F00E179F1 /* TechniqueManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TechniqueManager.h; sourceTree = "<group>"; };
+		EB558BCF1AE21C0F00E179F1 /* TechniqueManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TechniqueManager.m; sourceTree = "<group>"; };
+		EB558BD11AE21ED500E179F1 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		EB558BD21AE21ED500E179F1 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		EB558BD41AE2210500E179F1 /* TechniqueManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TechniqueManagerTests.m; sourceTree = "<group>"; };
 		EB94D1A41A79B88900774138 /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
 		EB94D1A51A79B88900774138 /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		EB94D1A71A79B89A00774138 /* SetupViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewModel.h; sourceTree = "<group>"; };
@@ -172,6 +180,7 @@
 				EB94D1AB1A79B8CE00774138 /* SetupFeatureTests.m */,
 				EB51E66A1A8C296F00860409 /* ComboListTests.m */,
 				EBDFA7931A7AFC7600905488 /* TimerFeatureTests.m */,
+				EB558BD41AE2210500E179F1 /* TechniqueManagerTests.m */,
 				EBABEB151A8020140049BA93 /* HelperTests.m */,
 			);
 			path = KickboxingCombinationsTests;
@@ -223,8 +232,12 @@
 		EBABEB111A801FAF0049BA93 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				EB558BD11AE21ED500E179F1 /* Constants.h */,
+				EB558BD21AE21ED500E179F1 /* Constants.m */,
 				EBABEB121A801FEC0049BA93 /* Helper.h */,
 				EBABEB131A801FEC0049BA93 /* Helper.m */,
+				EB558BCE1AE21C0F00E179F1 /* TechniqueManager.h */,
+				EB558BCF1AE21C0F00E179F1 /* TechniqueManager.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -381,6 +394,7 @@
 				EB94D1A61A79B88900774138 /* SetupViewController.m in Sources */,
 				EBDFA78F1A7AFC5300905488 /* TimerViewController.m in Sources */,
 				EBE26E5D1AE2145B0076615F /* Technique.m in Sources */,
+				EB558BD31AE21ED500E179F1 /* Constants.m in Sources */,
 				EB4BDFD71A79B34700C56F6B /* AppDelegate.m in Sources */,
 				EB4BDFD41A79B34700C56F6B /* main.m in Sources */,
 				EB4BDFDA1A79B34700C56F6B /* KickboxingCombinations.xcdatamodeld in Sources */,
@@ -388,6 +402,7 @@
 				EBE26E601AE215140076615F /* Combination.m in Sources */,
 				EBABEB141A801FEC0049BA93 /* Helper.m in Sources */,
 				EB51E6691A8C296000860409 /* ComboListViewModel.m in Sources */,
+				EB558BD01AE21C0F00E179F1 /* TechniqueManager.m in Sources */,
 				EB94D1AF1A79BB0900774138 /* Workout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +415,7 @@
 				EBABEB161A8020140049BA93 /* HelperTests.m in Sources */,
 				EB51E66B1A8C296F00860409 /* ComboListTests.m in Sources */,
 				EB94D1AC1A79B8CE00774138 /* SetupFeatureTests.m in Sources */,
+				EB558BD51AE2210500E179F1 /* TechniqueManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

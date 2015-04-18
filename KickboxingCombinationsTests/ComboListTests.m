@@ -28,4 +28,16 @@
     [super tearDown];
 }
 
+- (void)testSetComboList {
+    
+}
+
+-(void)testRightListButtonPressed {
+    
+}
+
+-(void)testLeftListButtonPressed {
+    
+}
+
 @end

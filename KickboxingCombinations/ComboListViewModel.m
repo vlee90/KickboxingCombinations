@@ -11,8 +11,6 @@
 
 @implementation ComboListViewModel
 
-
-
 -(void)setTechniqueLabels {
     self.techOne = @"1";
     self.techTwo = @"2";
