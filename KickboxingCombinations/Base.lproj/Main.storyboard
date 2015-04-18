@@ -471,7 +471,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaD-Xw-ZrR">
-                                <rect key="frame" x="190" y="76" width="30" height="30"/>
+                                <rect key="frame" x="207" y="76" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="&lt;-">
                                     <color key="titleColor" red="0.30588235289999999" green="0.68235294120000001" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -481,7 +481,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFm-KJ-fPD">
-                                <rect key="frame" x="381" y="76" width="30" height="30"/>
+                                <rect key="frame" x="363" y="76" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="-&gt;">
                                     <color key="titleColor" red="0.30588235289999999" green="0.68235294120000001" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -508,6 +508,7 @@
                             <constraint firstItem="MxI-be-OzA" firstAttribute="leading" secondItem="o0c-Sf-QzU" secondAttribute="leading" id="HZ6-da-glF"/>
                             <constraint firstAttribute="centerX" secondItem="jpc-RF-hCb" secondAttribute="centerX" id="Hr0-hC-mGV"/>
                             <constraint firstItem="wLy-eO-5S6" firstAttribute="centerY" secondItem="cFm-KJ-fPD" secondAttribute="centerY" id="KEs-lB-ROy"/>
+                            <constraint firstItem="o0c-Sf-QzU" firstAttribute="trailing" secondItem="cFm-KJ-fPD" secondAttribute="trailing" id="KrH-Si-0dy"/>
                             <constraint firstItem="8vR-pH-35y" firstAttribute="top" secondItem="wLy-eO-5S6" secondAttribute="bottom" constant="20" id="Mmm-Tn-XgO"/>
                             <constraint firstItem="d79-Tt-83P" firstAttribute="top" secondItem="8vR-pH-35y" secondAttribute="bottom" constant="20" id="Mn2-9x-V0u"/>
                             <constraint firstAttribute="centerX" secondItem="o0c-Sf-QzU" secondAttribute="centerX" id="Omb-B8-P6e"/>
@@ -527,6 +528,7 @@
                             <constraint firstItem="0E7-xZ-ipn" firstAttribute="leading" secondItem="o0c-Sf-QzU" secondAttribute="leading" id="qtY-5M-Had"/>
                             <constraint firstAttribute="centerX" secondItem="MxI-be-OzA" secondAttribute="centerX" id="r3Y-0B-kcg"/>
                             <constraint firstItem="MxI-be-OzA" firstAttribute="top" secondItem="0E7-xZ-ipn" secondAttribute="bottom" constant="20" id="sCR-Mh-59W"/>
+                            <constraint firstItem="HaD-Xw-ZrR" firstAttribute="leading" secondItem="o0c-Sf-QzU" secondAttribute="leading" id="suj-c7-Q5U"/>
                             <constraint firstAttribute="centerX" secondItem="0E7-xZ-ipn" secondAttribute="centerX" id="x5A-i8-kCj"/>
                             <constraint firstAttribute="centerX" secondItem="d79-Tt-83P" secondAttribute="centerX" id="xaw-4N-gEd"/>
                             <constraint firstItem="o0c-Sf-QzU" firstAttribute="top" secondItem="XZt-9N-Qd0" secondAttribute="bottom" constant="10" id="yfD-cd-cA8"/>
@@ -536,6 +538,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="mCo-To-oBo"/>
                                 <exclude reference="8l5-WN-NDF"/>
                                 <exclude reference="zLQ-Gg-eHd"/>
                                 <exclude reference="lCR-6T-QkO"/>
@@ -544,6 +547,7 @@
                                 <exclude reference="r3Y-0B-kcg"/>
                                 <exclude reference="dja-f7-bLY"/>
                                 <exclude reference="Hr0-hC-mGV"/>
+                                <exclude reference="aOO-8t-9kQ"/>
                                 <exclude reference="hDZ-ku-jPg"/>
                                 <exclude reference="1P7-EZ-YGH"/>
                             </mask>

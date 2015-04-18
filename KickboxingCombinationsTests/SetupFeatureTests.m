@@ -13,6 +13,16 @@
 #import "TimerViewController.h"
 #import <OCMock/OCMock.h>
 
+@interface SetupViewModel (Testing)
+
+@property NSInteger currentNumberOfRoundsINT;
+@property NSInteger currentRoundTimeINT;
+@property NSInteger currentRestTimeINT;
+@property NSInteger currentWarningTimeINT;
+@property(nonatomic, strong) Workout* workout;
+
+@end
+
 @interface SetupFeatureTests : XCTestCase
 
 @property (nonatomic, strong) SetupViewModel* setupViewModel;

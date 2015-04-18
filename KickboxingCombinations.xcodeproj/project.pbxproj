@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3BC6FC0F5312CCF059545958 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC28EB7736237EA5702BD7FB /* libPods.a */; };
+		636C3C251AE24C7800820F81 /* WorkoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 636C3C241AE24C7800820F81 /* WorkoutManager.m */; };
+		636C3C271AE255B200820F81 /* One.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 636C3C261AE255B200820F81 /* One.m4a */; };
 		EB4BDFD41A79B34700C56F6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4BDFD31A79B34700C56F6B /* main.m */; };
 		EB4BDFD71A79B34700C56F6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4BDFD61A79B34700C56F6B /* AppDelegate.m */; };
 		EB4BDFDA1A79B34700C56F6B /* KickboxingCombinations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB4BDFD81A79B34700C56F6B /* KickboxingCombinations.xcdatamodeld */; };
@@ -45,6 +47,9 @@
 
 /* Begin PBXFileReference section */
 		0439385E3D562D79ED88AA0E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		636C3C231AE24C7800820F81 /* WorkoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutManager.h; sourceTree = "<group>"; };
+		636C3C241AE24C7800820F81 /* WorkoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutManager.m; sourceTree = "<group>"; };
+		636C3C261AE255B200820F81 /* One.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = One.m4a; sourceTree = "<group>"; };
 		6CFB3815D096D9FE6DA3CC1A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EB4BDFCE1A79B34700C56F6B /* KickboxingCombinations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KickboxingCombinations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4BDFD21A79B34700C56F6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -159,6 +164,7 @@
 				EB4BDFE11A79B34700C56F6B /* Images.xcassets */,
 				EB4BDFE31A79B34700C56F6B /* LaunchScreen.xib */,
 				EB4BDFD81A79B34700C56F6B /* KickboxingCombinations.xcdatamodeld */,
+				636C3C261AE255B200820F81 /* One.m4a */,
 				EB4BDFD11A79B34700C56F6B /* Supporting Files */,
 			);
 			path = KickboxingCombinations;
@@ -238,6 +244,8 @@
 				EBABEB131A801FEC0049BA93 /* Helper.m */,
 				EB558BCE1AE21C0F00E179F1 /* TechniqueManager.h */,
 				EB558BCF1AE21C0F00E179F1 /* TechniqueManager.m */,
+				636C3C231AE24C7800820F81 /* WorkoutManager.h */,
+				636C3C241AE24C7800820F81 /* WorkoutManager.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -337,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB4BDFE01A79B34700C56F6B /* Main.storyboard in Resources */,
+				636C3C271AE255B200820F81 /* One.m4a in Resources */,
 				EB4BDFE51A79B34700C56F6B /* LaunchScreen.xib in Resources */,
 				EB4BDFE21A79B34700C56F6B /* Images.xcassets in Resources */,
 			);
@@ -390,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBDFA7921A7AFC6200905488 /* TimerViewModel.m in Sources */,
+				636C3C251AE24C7800820F81 /* WorkoutManager.m in Sources */,
 				EB94D1A91A79B89A00774138 /* SetupViewModel.m in Sources */,
 				EB94D1A61A79B88900774138 /* SetupViewController.m in Sources */,
 				EBDFA78F1A7AFC5300905488 /* TimerViewController.m in Sources */,

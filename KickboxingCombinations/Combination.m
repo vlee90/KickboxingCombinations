@@ -10,4 +10,12 @@
 
 @implementation Combination
 
+-(instancetype)initWithName:(NSString *)name andTechniques:(NSArray *)techniques {
+    if (self = [super init]) {
+        self.name = name;
+        self.technqiues = techniques;
+    }
+    return self;
+}
+
 @end

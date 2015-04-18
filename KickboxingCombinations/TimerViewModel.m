@@ -7,6 +7,20 @@
 //
 
 #import "TimerViewModel.h"
+#import "WorkoutManager.h"
+
+@interface TimerViewModel ()
+
+@property (nonatomic, strong) Workout* workout;
+@property (nonatomic, strong) Helper* helper;
+@property (nonatomic, strong) NSTimer* timer;
+
+@property NSInteger currentNumberOfRoundsINT;
+@property NSInteger currentRoundTimeINT;
+@property NSInteger currentRestTimeINT;
+@property NSInteger currentWarningTimeINT;
+
+@end
 
 @interface TimerViewModel ()
 
@@ -24,7 +38,6 @@
         self.roundModeIsOn = true;
         self.isPaused = true;
         self.helper = [[Helper alloc] init];
-        self.currentWorkoutType = workout.type;
         self.currentNumberOfRoundsINT = workout.rounds;
         self.currentRoundTimeINT = workout.roundTime;
         self.currentRestTimeINT = workout.restTime;

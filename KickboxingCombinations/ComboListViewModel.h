@@ -18,7 +18,11 @@
 @property (strong, nonatomic) NSString *techSix;
 @property (strong, nonatomic) NSString *techSeven;
 @property (strong, nonatomic) NSString *techEight;
+@property (strong, nonatomic) NSString *listName;
 
--(void)setTechniqueLabels;
+-(instancetype)init;
+-(void)setTechniqueLabelsWithList:(NSString *)kListType;
+-(void)listRightButtonPressed;
+-(void)listLeftButtonPressed;
 
 @end

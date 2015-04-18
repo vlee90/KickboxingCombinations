@@ -10,26 +10,14 @@
 #import "Workout.h"
 #import "TimerViewModel.h"
 #import "TimerViewController.h"
-#import "Helper.h"
+
 #import "ComboListViewController.h"
 #import "ComboListViewModel.h"
 
 @interface SetupViewModel : NSObject
 
-@property(nonatomic, strong) Workout* workout;
-@property(nonatomic, strong) Helper* helper;
-
-//Backed Properties
-@property (nonatomic, strong) NSArray* typeArray;
-@property (nonatomic, strong) NSMutableArray* backgroundArray;
-
 //State Properties
 @property (nonatomic, strong) NSString* currentWorkoutType;
-@property NSInteger currentNumberOfRoundsINT;
-@property NSInteger currentRoundTimeINT;
-@property NSInteger currentRestTimeINT;
-@property NSInteger currentWarningTimeINT;
-
 @property (nonatomic, strong) NSString* currentNumberOfRoundsSTRING;
 @property (nonatomic, strong) NSString* currentRoundTimeSTRING;
 @property (nonatomic, strong) NSString* currentRestTimeSTRING;
