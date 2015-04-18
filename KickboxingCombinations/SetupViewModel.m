@@ -8,10 +8,10 @@
 
 #import "SetupViewModel.h"
 #import "Helper.h"
+#import "WorkoutManager.h"
 
 @interface SetupViewModel ()
 
-@property(nonatomic, strong) Workout* workout;
 @property(nonatomic, strong) Helper* helper;
 @property NSInteger currentNumberOfRoundsINT;
 @property NSInteger currentRoundTimeINT;
@@ -32,10 +32,8 @@
         self.currentRoundTimeINT = 300;
         self.currentRestTimeINT = 60;
         self.currentWarningTimeINT = 10;
-        self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%ld",(long)self.currentNumberOfRoundsINT];
-        self.currentRestTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRestTimeINT];
-        self.currentRoundTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRoundTimeINT];
-        self.currentWarningTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentWarningTimeINT];
+        [self updateINTtoSTRING];
+        [self createWorkout];
     }
     return self;
 }
@@ -43,7 +41,7 @@
 -(TimerViewController*)createTimerViewControllerFromStoryboardWithTimerViewModel {
     UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     TimerViewController* timerViewController = [storyboard instantiateViewControllerWithIdentifier:@"TimerViewController"];
-    TimerViewModel* timerViewModel = [[TimerViewModel alloc] initWithWorkoutProperties:self.workout];
+    TimerViewModel* timerViewModel = [[TimerViewModel alloc] initWithWorkoutProperties:[WorkoutManager singleton].workout];
     timerViewController.timerViewModel = timerViewModel;
     return timerViewController;
 }
@@ -59,7 +57,7 @@
 
 
 -(void)createWorkout {
-    self.workout = [[Workout alloc] initWithType:self.currentWorkoutType withRoundTimerOf:self.currentRoundTimeINT withRestTimeOf:self.currentRestTimeINT withNumberOfRounds:self.currentNumberOfRoundsINT withCountdownTimer:self.currentWarningTimeINT];
+    [WorkoutManager singleton].workout = [[Workout alloc] initWithType:self.currentWorkoutType withRoundTimerOf:self.currentRoundTimeINT withRestTimeOf:self.currentRestTimeINT withNumberOfRounds:self.currentNumberOfRoundsINT withCountdownTimer:self.currentWarningTimeINT];
 }
 
 -(void)typePositiveIncrement {
@@ -85,51 +83,57 @@
             break;
     }
 }
+-(void)updateINTtoSTRING {
+    self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%ld",(long)self.currentNumberOfRoundsINT];
+    self.currentRestTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRestTimeINT];
+    self.currentRoundTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRoundTimeINT];
+    self.currentWarningTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentWarningTimeINT];
+}
 
 -(void)numberOfRoundsPositiveIncrement {
     self.currentNumberOfRoundsINT++;
-    self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%ld", (long)self.currentNumberOfRoundsINT];
+    [self updateINTtoSTRING];
 }
 -(void)numberOfRoundsNegativeIncrement {
     if(self.currentNumberOfRoundsINT > 1) {
         self.currentNumberOfRoundsINT--;
-        self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%ld", (long)self.currentNumberOfRoundsINT];
+        [self updateINTtoSTRING];
     }
 }
 
 -(void)roundTimePositiveIncrement {
     self.currentRoundTimeINT = self.currentRoundTimeINT + 10;
-    self.currentRoundTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRoundTimeINT];
+    [self updateINTtoSTRING];
 }
 
 -(void)roundTimeNegativeIncrement {
     if(self.currentRoundTimeINT > 10) {
         self.currentRoundTimeINT = self.currentRoundTimeINT - 10;
-        self.currentRoundTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRoundTimeINT];
+        [self updateINTtoSTRING];
     }
 }
 
 -(void)roundRestPositiveIncrement {
     self.currentRestTimeINT = self.currentRestTimeINT + 10;
-    self.currentRestTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRestTimeINT];
+    [self updateINTtoSTRING];
 }
 
 -(void)roundRestNegativeIncrement {
     if(self.currentRestTimeINT > 10) {
         self.currentRestTimeINT = self.currentRestTimeINT - 10;
-        self.currentRestTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRestTimeINT];
+        [self updateINTtoSTRING];
     }
 }
 
 -(void)warningTimePositiveIncrement {
     self.currentWarningTimeINT = self.currentWarningTimeINT + 5;
-    self.currentWarningTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentWarningTimeINT];
+    [self updateINTtoSTRING];
 }
 
 -(void)warningTimeNegativeIncrement {
     if(self.currentWarningTimeINT > 5) {
         self.currentWarningTimeINT = self.currentWarningTimeINT - 5;
-        self.currentWarningTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentWarningTimeINT];
+        [self updateINTtoSTRING];
     }
 }
 

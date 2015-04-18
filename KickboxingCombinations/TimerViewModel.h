@@ -17,15 +17,13 @@
 @property BOOL roundModeIsOn;
 @property BOOL isPaused;
 @property (nonatomic, strong) NSString* currentWorkoutType;
-
-
 @property (nonatomic, strong) NSString* currentNumberOfRoundsSTRING;
 @property (nonatomic, strong) NSString* currentRoundTimeSTRING;
 @property (nonatomic, strong) NSString* currentRestTimeSTRING;
 @property (nonatomic, strong) NSString* currentWarningTimeSTRING;
 @property (nonatomic, strong) NSString* currentRoundSTRING;
 
--(instancetype)initWithWorkoutProperties:(Workout*)workout;
+-(instancetype)initWithWorkoutProperties:(Workout *)workout;
 
 -(void)startButtonPressed;
 -(void)updateTimer;
@@ -35,6 +33,5 @@
 -(void)resetRestTimer;
 -(void)incrementRoundTimer;
 -(void)incrementRestTimer;
-
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "TimerViewModel.h"
+#import "WorkoutManager.h"
 
 @interface TimerViewModel ()
 
@@ -37,7 +38,6 @@
         self.roundModeIsOn = true;
         self.isPaused = true;
         self.helper = [[Helper alloc] init];
-        self.currentWorkoutType = workout.type;
         self.currentNumberOfRoundsINT = workout.rounds;
         self.currentRoundTimeINT = workout.roundTime;
         self.currentRestTimeINT = workout.restTime;

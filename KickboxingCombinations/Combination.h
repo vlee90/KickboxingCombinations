@@ -18,4 +18,7 @@
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSArray *technqiues;
+
+-(instancetype)initWithName:(NSString *)name andTechniques:(NSArray *)techniques;
+
 @end
