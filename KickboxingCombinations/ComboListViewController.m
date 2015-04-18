@@ -8,6 +8,7 @@
 
 #import "ComboListViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "Constants.h"
 
 @interface ComboListViewController ()
 
@@ -30,7 +31,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.comboListViewModel setTechniqueLabels];
+    [self.comboListViewModel setTechniqueLabelsWithList:self.comboListViewModel.listName];
+    RAC(self.listLabel, text) = RACObserve(self.comboListViewModel, listName);
     RAC(self.techOneLabel, text) = RACObserve(self.comboListViewModel, techOne);
     RAC(self.techTwoLabel, text) = RACObserve(self.comboListViewModel, techTwo);
     RAC(self.techThreeLabel, text) = RACObserve(self.comboListViewModel, techThree);
@@ -46,11 +48,11 @@
 }
 
 -(IBAction)leftListButtonPressed:(id)sender {
-    
+    [self.comboListViewModel listLeftButtonPressed];
 }
 
 -(IBAction)rightListButtonPressed:(id)sender {
-    
+    [self.comboListViewModel listRightButtonPressed];
 }
 
 -(void)swipeDown:(UISwipeGestureRecognizer*)swipe {

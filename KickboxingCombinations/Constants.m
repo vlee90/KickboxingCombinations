@@ -10,7 +10,7 @@
 
 //List Types
 NSString *const kBOXING = @"Boxing";
-NSString *const kKICKBOXING;
+NSString *const kKICKBOXING = @"Kickboxing";
 
 //Techniques
 NSString *const kBOXING_TECH_ONE = @"Jab";

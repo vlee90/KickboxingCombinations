@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+//  Goal of this class is to retrieve technique lists and combinations
 @interface TechniqueManager : NSObject
 
 +(instancetype)singleton;
+
+@property (strong, nonatomic) NSArray *techniqueLists;
+
+-(NSArray *)getTechniquesOfType:(NSString *)type;
 
 @end

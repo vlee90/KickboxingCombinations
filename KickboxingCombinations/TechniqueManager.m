@@ -22,9 +22,11 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[self alloc] init];
+        sharedInstance.techniqueLists = @[kBOXING, kKICKBOXING];
     });
     return sharedInstance;
 }
+
 
 -(NSArray *)getTechniquesOfType:(NSString *)type {
     NSMutableArray *techniqueList = [NSMutableArray new];
@@ -33,14 +35,14 @@
         nameArray = [self getBoxingTechniqueList];
         for (NSString *name in nameArray) {
             Technique *tech = [[Technique alloc] initWithName:name];
-            [techniqueList addObject:tech];
+            [techniqueList addObject:tech.name];
         }
     }
     else if ([type isEqualToString:kKICKBOXING]) {
         nameArray = [self getKickboxingTechniqueList];
         for (NSString *name in nameArray) {
             Technique *tech = [[Technique alloc] initWithName:name];
-            [techniqueList addObject:tech];
+            [techniqueList addObject:tech.name];
         }
     }
     return techniqueList;
