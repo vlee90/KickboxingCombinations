@@ -20,13 +20,17 @@
 @property (weak, nonatomic) IBOutlet UILabel *techSevenLabel;
 @property (weak, nonatomic) IBOutlet UILabel *techEightLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *listLabel;
+@property (weak, nonatomic) IBOutlet UIButton *leftListButton;
+@property (weak, nonatomic) IBOutlet UIButton *rightListButton;
+
 @end
 
 @implementation ComboListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self.comboListViewModel setTechniqueLabels];
     RAC(self.techOneLabel, text) = RACObserve(self.comboListViewModel, techOne);
     RAC(self.techTwoLabel, text) = RACObserve(self.comboListViewModel, techTwo);
     RAC(self.techThreeLabel, text) = RACObserve(self.comboListViewModel, techThree);
@@ -39,6 +43,14 @@
     UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDown:)];
     swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
     [self.view addGestureRecognizer:swipeDown];
+}
+
+-(IBAction)leftListButtonPressed:(id)sender {
+    
+}
+
+-(IBAction)rightListButtonPressed:(id)sender {
+    
 }
 
 -(void)swipeDown:(UISwipeGestureRecognizer*)swipe {

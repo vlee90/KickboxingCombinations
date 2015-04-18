@@ -19,4 +19,6 @@
 @property (strong, nonatomic) NSString *techSeven;
 @property (strong, nonatomic) NSString *techEight;
 
+-(void)setTechniqueLabels;
+
 @end
