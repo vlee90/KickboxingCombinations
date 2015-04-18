@@ -8,8 +8,6 @@
 
 #import "ComboListViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import "TAGDataLayer.h"
-#import "TAGManager.h"
 
 @interface ComboListViewController ()
 
@@ -21,7 +19,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *techSixLabel;
 @property (weak, nonatomic) IBOutlet UILabel *techSevenLabel;
 @property (weak, nonatomic) IBOutlet UILabel *techEightLabel;
-@property (weak, nonatomic) TAGDataLayer *dataLayer;
+
+@property (weak, nonatomic) IBOutlet UILabel *listLabel;
+@property (weak, nonatomic) IBOutlet UIButton *leftListButton;
+@property (weak, nonatomic) IBOutlet UIButton *rightListButton;
 
 @end
 
@@ -29,9 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.comboListViewModel getTAGContainerFromAppDelegate];
-    [self.comboListViewModel setTechniquesFromContainer];
-    
+    [self.comboListViewModel setTechniqueLabels];
     RAC(self.techOneLabel, text) = RACObserve(self.comboListViewModel, techOne);
     RAC(self.techTwoLabel, text) = RACObserve(self.comboListViewModel, techTwo);
     RAC(self.techThreeLabel, text) = RACObserve(self.comboListViewModel, techThree);
@@ -46,16 +45,15 @@
     [self.view addGestureRecognizer:swipeDown];
 }
 
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    self.dataLayer = [TAGManager instance].dataLayer;
-    [self.dataLayer push:@{@"screenName" : @"ComboList GTM",
-                      @"event" : @"openScreen"}
-                        ];
+-(IBAction)leftListButtonPressed:(id)sender {
+    
+}
+
+-(IBAction)rightListButtonPressed:(id)sender {
+    
 }
 
 -(void)swipeDown:(UISwipeGestureRecognizer*)swipe {
-    [self.dataLayer push:@{@"event" : @"swipeOccuried"}];
     [UIView animateWithDuration:0.3 animations:^{
         [UIView setAnimationCurve:UIViewAnimationCurveLinear];
         [UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.navigationController.view cache:false];

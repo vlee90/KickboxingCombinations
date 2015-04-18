@@ -48,8 +48,6 @@
 -(void)warningTimePositiveIncrement;
 -(void)warningTimeNegativeIncrement;
 
--(void)loadImagesIntoBackgroundArray;
-
 -(void)createWorkout;
 -(TimerViewController*)createTimerViewControllerFromStoryboardWithTimerViewModel;
 -(ComboListViewController*)createComboListViewControllerFromStoryboardWithComboViewModel;
