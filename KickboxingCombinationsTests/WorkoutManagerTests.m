@@ -29,7 +29,7 @@
 - (void)setUp {
     [super setUp];
     self.workoutManager = [WorkoutManager singleton];
-    NSArray *boxingCombos = [[TechniqueManager singleton] getTechniquesOfType:kBOXING];
+    NSArray *boxingCombos = [[TechniqueManager singleton] getCombinations];
     [self.workoutManager setWorkoutCombintationList:boxingCombos];
 }
 
@@ -39,7 +39,7 @@
 }
 
 - (void)testSetWorkoutCombinationList {
-    NSArray *boxingCombos = [[TechniqueManager singleton] getTechniquesOfType:kBOXING];
+    NSArray *boxingCombos = [[TechniqueManager singleton] getCombinations];
     [self.workoutManager setWorkoutCombintationList:boxingCombos];
     XCTAssert([[self.workoutManager.combinationList objectAtIndex:0] isEqualToString:kBOXING_TECH_ONE]);
 }

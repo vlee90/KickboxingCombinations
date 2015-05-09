@@ -33,7 +33,9 @@
 }
 
 -(void)callCombination {
-    NSInteger comboIndex = arc4random_uniform(self.combinationList.count);
+    NSInteger comboIndex = arc4random_uniform((int)self.combinationList.count);
+    Combination *combo = [self.combinationList objectAtIndex:comboIndex];
+    NSLog(@"Index: %ld - Combo %@", (long)comboIndex, combo.name);
 }
 
 @end

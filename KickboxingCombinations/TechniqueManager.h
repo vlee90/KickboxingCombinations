@@ -14,7 +14,9 @@
 +(instancetype)singleton;
 
 @property (strong, nonatomic) NSArray *techniqueLists;
+@property (strong, nonatomic) NSString *techniqueType;
 
--(NSArray *)getTechniquesOfType:(NSString *)type;
+-(NSArray *)getTechniques;
+-(NSArray *)getCombinations;
 
 @end

@@ -12,7 +12,7 @@
 #import "Constants.h"
 @interface TechniqueManager (Testing)
 
--(NSArray *)getTechniquesOfType:(NSString *)type;
+-(NSArray *)getCombinations;
 -(NSArray *)getBoxingTechniqueList;
 -(NSArray *)getKickboxingTechniqueList;
 
@@ -37,7 +37,7 @@
 }
 
 - (void)testGetTechniquesOfTypeBoxingHasEightCount {
-    NSArray *boxingTech = [self.manager getTechniquesOfType:kBOXING];
+    NSArray *boxingTech = [self.manager getCombinations];
     XCTAssertEqual(boxingTech.count, 8);
 }
 

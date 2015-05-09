@@ -33,11 +33,11 @@
         self.currentRestTimeINT = [WorkoutManager singleton].workout.restTime;
         self.currentWarningTimeINT = [WorkoutManager singleton].workout.countdownTimer;
         [self updateINTtoSTRING];
-        RAC(self, currentNumberOfRoundsINT) = RACObserve([WorkoutManager singleton].workout, rounds);
-        RAC(self, currentRoundTimeINT) = RACObserve([WorkoutManager singleton].workout, roundTime);
-        RAC(self, currentRestTimeINT) = RACObserve([WorkoutManager singleton].workout, restTime);
-        RAC(self, currentWarningTimeINT) = RACObserve([WorkoutManager singleton].workout, countdownTimer);
-        RAC(self, currentWorkoutType) = RACObserve([WorkoutManager singleton].workout, type);
+        RAC([WorkoutManager singleton].workout, rounds) = RACObserve(self, currentNumberOfRoundsINT);
+        RAC([WorkoutManager singleton].workout, roundTime) = RACObserve(self, currentRoundTimeINT);
+        RAC([WorkoutManager singleton].workout, restTime) = RACObserve(self, currentRestTimeINT);
+        RAC([WorkoutManager singleton].workout, countdownTimer) = RACObserve(self, currentWarningTimeINT);
+        RAC([WorkoutManager singleton].workout, type) = RACObserve(self, currentWorkoutType);
     }
     return self;
 }

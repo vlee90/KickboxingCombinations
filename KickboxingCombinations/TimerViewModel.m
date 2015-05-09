@@ -8,10 +8,10 @@
 
 #import "TimerViewModel.h"
 #import "WorkoutManager.h"
+#import "TechniqueManager.h"
 
 @interface TimerViewModel ()
 
-@property (nonatomic, strong) Workout* workout;
 @property (nonatomic, strong) Helper* helper;
 @property (nonatomic, strong) NSTimer* timer;
 
@@ -34,20 +34,18 @@
 
 -(instancetype)initWithWorkoutProperties:(Workout *)workout {
     if (self = [super init]) {
-        self.workout = workout;
         self.roundModeIsOn = true;
         self.isPaused = true;
         self.helper = [[Helper alloc] init];
-        self.currentNumberOfRoundsINT = workout.rounds;
-        self.currentRoundTimeINT = workout.roundTime;
-        self.currentRestTimeINT = workout.restTime;
-        self.currentWarningTimeINT = workout.countdownTimer;
+        self.currentNumberOfRoundsINT = [WorkoutManager singleton].workout.rounds;
+        self.currentRoundTimeINT = [WorkoutManager singleton].workout.roundTime;
+        self.currentRestTimeINT = [WorkoutManager singleton].workout.restTime;
+        self.currentWarningTimeINT = [WorkoutManager singleton].workout.countdownTimer;
         self.currentRoundSTRING = @"1";
         self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%@ / %ld", self.currentRoundSTRING, (long)self.currentNumberOfRoundsINT];
         self.currentRoundTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRoundTimeINT];
         self.currentRestTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRestTimeINT];
         self.currentWarningTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentWarningTimeINT];
-        
     }
     return self;
 }
@@ -85,6 +83,10 @@
 
 -(void)startButtonPressed {
     if (self.isPaused) {
+        NSLog(@"Type: %@", [TechniqueManager singleton].techniqueType);
+        NSArray *combinations = [[TechniqueManager singleton] getCombinations];
+        [[WorkoutManager singleton] setWorkoutCombintationList:combinations];
+        [[WorkoutManager singleton] callCombination];
         self.isPaused = false;
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:true];
         [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
@@ -97,7 +99,7 @@
 }
 
 -(BOOL)workoutComplete {
-    if ([self.currentRoundSTRING integerValue] <= self.workout.rounds) {
+    if ([self.currentRoundSTRING integerValue] <= [WorkoutManager singleton].workout.rounds) {
         return false;
     }
     else {
@@ -108,18 +110,18 @@
 -(void)increaseRound {
     self.currentRoundSTRING = [NSString stringWithFormat:@"%ld",[self.currentRoundSTRING integerValue] + 1];
     //If on final round, don't update the round UI (ex: 3/3)
-    if ([self.currentRoundSTRING integerValue] <= self.workout.rounds) {
+    if ([self.currentRoundSTRING integerValue] <= [WorkoutManager singleton].workout.rounds) {
         self.currentNumberOfRoundsSTRING = [NSString stringWithFormat:@"%@ / %ld", self.currentRoundSTRING, (long) self.currentNumberOfRoundsINT];
     }
 }
 
 -(void)resetRoundTimer {
-    self.currentRoundTimeINT = self.workout.roundTime;
+    self.currentRoundTimeINT = [WorkoutManager singleton].workout.roundTime;
     self.currentRoundTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRoundTimeINT];
 }
 
 -(void)resetRestTimer {
-    self.currentRestTimeINT = self.workout.restTime;
+    self.currentRestTimeINT = [WorkoutManager singleton].workout.restTime;
     self.currentRestTimeSTRING = [self.helper convertTimeIntegerIntoString:self.currentRestTimeINT];
 }
 

@@ -10,6 +10,7 @@
 #import "ComboListViewModel.h"
 #import "TechniqueManager.h"
 #import "Constants.h"
+#import "WorkoutManager.h"
 
 @interface ComboListViewModel ()
 
@@ -22,6 +23,7 @@
 -(instancetype)init {
     if (self = [super init]) {
         self.listName = kBOXING;
+        RAC([TechniqueManager singleton], techniqueType) = RACObserve(self, listName);
     }
     return self;
 }
@@ -52,7 +54,7 @@
 
 
 -(void)setTechniqueLabelsWithList:(NSString *)kListType {
-    NSArray *techniqueList = [[TechniqueManager singleton] getTechniquesOfType:kListType];
+    NSArray *techniqueList = [[TechniqueManager singleton] getTechniques];
     self.techOne = [NSString stringWithFormat:@"1) %@",[techniqueList objectAtIndex:0]];
     self.techTwo = [NSString stringWithFormat:@"2) %@",[techniqueList objectAtIndex:1]];
     self.techThree = [NSString stringWithFormat:@"3) %@",[techniqueList objectAtIndex:2]];

@@ -24,22 +24,23 @@
     dispatch_once(&onceToken, ^{
         sharedInstance = [[self alloc] init];
         sharedInstance.techniqueLists = @[kBOXING, kKICKBOXING];
+        sharedInstance.techniqueType = [sharedInstance.techniqueLists objectAtIndex:0];
     });
     return sharedInstance;
 }
 
 
--(NSArray *)getTechniquesOfType:(NSString *)type {
+-(NSArray *)getTechniques {
     NSMutableArray *techniqueList = [NSMutableArray new];
     NSArray *nameArray = [NSArray new];
-    if ([type isEqualToString:kBOXING]) {
+    if ([self.techniqueType isEqualToString:kBOXING]) {
         nameArray = [self getBoxingTechniqueList];
         for (NSString *name in nameArray) {
             Technique *tech = [[Technique alloc] initWithName:name];
             [techniqueList addObject:tech.name];
         }
     }
-    else if ([type isEqualToString:kKICKBOXING]) {
+    else if ([self.techniqueType isEqualToString:kKICKBOXING]) {
         nameArray = [self getKickboxingTechniqueList];
         for (NSString *name in nameArray) {
             Technique *tech = [[Technique alloc] initWithName:name];
@@ -73,6 +74,17 @@
     return kickboxingList;
 }
 
+-(NSArray *)getCombinations {
+    if ([self.techniqueType isEqualToString:kBOXING]) {
+        return [self getBoxingCombinations];
+    }
+    else if ([self.techniqueType isEqualToString:kKICKBOXING]) {
+        return [self getKickboxingCombinations];
+    }
+    return @[];
+}
+
+#pragma mark Boxing Combinations
 -(NSArray *)getBoxingCombinations {
     NSMutableArray *combos = [NSMutableArray new];
     Technique *techOne = [[Technique alloc] initWithName:kBOXING_TECH_ONE];
@@ -147,4 +159,54 @@
     return combos;
 }
 
+#pragma mark Kickboxing Combinations
+-(NSArray *)getKickboxingCombinations {
+    NSMutableArray *combos = [NSMutableArray new];
+    Technique *techOne = [[Technique alloc] initWithName:kKICKBOXING_TECH_ONE];
+    Technique *techTwo = [[Technique alloc] initWithName:kKICKBOXING_TECH_TWO];
+    Technique *techThree = [[Technique alloc] initWithName:kKICKBOXING_TECH_THREE];
+    Technique *techFour = [[Technique alloc] initWithName:kKICKBOXING_TECH_FOUR];
+    Technique *techFive = [[Technique alloc] initWithName:kKICKBOXING_TECH_FIVE];
+    Technique *techSix = [[Technique alloc] initWithName:kKICKBOXING_TECH_SIX];
+    Technique *techSeven = [[Technique alloc] initWithName:kKICKBOXING_TECH_SEVEN];
+    Technique *techEight = [[Technique alloc] initWithName:kKICKBOXING_TECH_EIGHT];
+    //Build One
+    Combination *comboOne =  [[Combination alloc] initWithName:@"Jab-Cross"
+                                                 andTechniques:@[techOne,
+                                                                 techTwo]];
+    [combos addObject:comboOne];
+    Combination *comboTwo =  [[Combination alloc] initWithName:@"Jab-Cross-LeftHook"
+                                                 andTechniques:@[techOne,
+                                                                 techTwo,
+                                                                 techThree]];
+    [combos addObject:comboTwo];
+    Combination *comboThree =  [[Combination alloc] initWithName:@"Jab-Cross-LeftHook-RightUpperCut"
+                                                   andTechniques:@[techOne,
+                                                                   techTwo,
+                                                                   techThree,
+                                                                   techFour]];
+    [combos addObject:comboThree];
+    //Build Two
+    Combination *comboFour =  [[Combination alloc] initWithName:@"Jab-LegKick"
+                                                  andTechniques:@[techOne,
+                                                                  techSix]];
+    [combos addObject:comboFour];
+    //Build Three
+    Combination *comboFive =  [[Combination alloc] initWithName:@"Jab-Cross-SwitchKick"
+                                                  andTechniques:@[techOne,
+                                                                  techTwo,
+                                                                  techSeven]];
+    [combos addObject:comboFive];
+
+    Combination *comboSix =  [[Combination alloc] initWithName:@"Jab-Cross-HeadKick"
+                                                 andTechniques:@[techOne,
+                                                                 techEight]];
+    [combos addObject:comboSix];
+    //Build Three
+    Combination *comboSeven =  [[Combination alloc] initWithName:@"InsideLegKick-HeadKick"
+                                                   andTechniques:@[techFive,
+                                                                   techEight]];
+    [combos addObject:comboSeven];
+    return combos;
+}
 @end
