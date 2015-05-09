@@ -9,6 +9,7 @@
 #import "SetupViewModel.h"
 #import "Helper.h"
 #import "WorkoutManager.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface SetupViewModel ()
 
@@ -17,8 +18,7 @@
 @property NSInteger currentRoundTimeINT;
 @property NSInteger currentRestTimeINT;
 @property NSInteger currentWarningTimeINT;
-//Backed Properties
-@property (nonatomic, strong) NSArray* typeArray;
+@property (strong, nonatomic) NSArray *typeArray;
 @end
 
 @implementation SetupViewModel
@@ -32,8 +32,12 @@
         self.currentRoundTimeINT = [WorkoutManager singleton].workout.roundTime;
         self.currentRestTimeINT = [WorkoutManager singleton].workout.restTime;
         self.currentWarningTimeINT = [WorkoutManager singleton].workout.countdownTimer;
-
         [self updateINTtoSTRING];
+        RAC(self, currentNumberOfRoundsINT) = RACObserve([WorkoutManager singleton].workout, rounds);
+        RAC(self, currentRoundTimeINT) = RACObserve([WorkoutManager singleton].workout, roundTime);
+        RAC(self, currentRestTimeINT) = RACObserve([WorkoutManager singleton].workout, restTime);
+        RAC(self, currentWarningTimeINT) = RACObserve([WorkoutManager singleton].workout, countdownTimer);
+        RAC(self, currentWorkoutType) = RACObserve([WorkoutManager singleton].workout, type);
     }
     return self;
 }
