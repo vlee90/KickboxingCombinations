@@ -116,7 +116,6 @@
     
     //Start Button
 //    self.startButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-//        [self.setupViewModel createWorkout];
 //        [UIView animateWithDuration:1.0 animations:^{
 //            [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
 //            [self.navigationController pushViewController:[self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel] animated:false];
@@ -130,7 +129,7 @@
 
 
 -(void)swipeLeft:(UISwipeGestureRecognizer*)swipe {
-    [self.setupViewModel createWorkout];
+//    [self.setupViewModel createWorkout];
     [UIView animateWithDuration:0.3 animations:^{
         [UIView setAnimationCurve:UIViewAnimationCurveLinear];
         [self.navigationController pushViewController:[self.setupViewModel createTimerViewControllerFromStoryboardWithTimerViewModel] animated:false];

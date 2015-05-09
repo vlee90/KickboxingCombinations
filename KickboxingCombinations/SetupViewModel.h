@@ -36,7 +36,6 @@
 -(void)warningTimePositiveIncrement;
 -(void)warningTimeNegativeIncrement;
 
--(void)createWorkout;
 -(TimerViewController*)createTimerViewControllerFromStoryboardWithTimerViewModel;
 -(ComboListViewController*)createComboListViewControllerFromStoryboardWithComboViewModel;
 

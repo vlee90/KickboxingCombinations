@@ -12,6 +12,7 @@
 #import "Workout.h"
 #import "TimerViewController.h"
 #import <OCMock/OCMock.h>
+#import "WorkoutManager.h"
 
 @interface SetupViewModel (Testing)
 
@@ -19,7 +20,6 @@
 @property NSInteger currentRoundTimeINT;
 @property NSInteger currentRestTimeINT;
 @property NSInteger currentWarningTimeINT;
-@property(nonatomic, strong) Workout* workout;
 
 @end
 
@@ -41,26 +41,12 @@
     self.setupViewModel = nil;
 }
 
-- (void)testIfCreateWorkoutCreatesWorkoutObject {
-    [self.setupViewModel createWorkout];
-    XCTAssertTrue([self.setupViewModel.workout isKindOfClass:[Workout class]]);
-    XCTAssertNotNil(self.setupViewModel.workout);
-}
-
 -(void)testIfCreateWorkoutAssignsSetupViewModelPropertiesCorrectly {
     self.setupViewModel.currentWorkoutType = @"Advanced";
     self.setupViewModel.currentRoundTimeINT = 180;
     self.setupViewModel.currentRestTimeINT = 30;
     self.setupViewModel.currentWarningTimeINT = 30;
     self.setupViewModel.currentNumberOfRoundsINT = 10;
-    
-    [self.setupViewModel createWorkout];
-
-    XCTAssertTrue(self.setupViewModel.workout.type == self.setupViewModel.currentWorkoutType);
-    XCTAssertTrue(self.setupViewModel.workout.roundTime == self.setupViewModel.currentRoundTimeINT);
-    XCTAssertTrue(self.setupViewModel.workout.restTime == self.setupViewModel.currentRestTimeINT);
-    XCTAssertTrue(self.setupViewModel.workout.rounds == self.setupViewModel.currentNumberOfRoundsINT);
-    XCTAssertTrue(self.setupViewModel.workout.countdownTimer == self.setupViewModel.currentWarningTimeINT);
 }
 
 -(void)testIfCreateTimerViewControllerHasATimerViewModel {
@@ -94,13 +80,11 @@
 }
 
 -(void)testPositiveIncrementOfNumberOfRounds {
-    //Starts with 3 rounds
     [self.setupViewModel numberOfRoundsPositiveIncrement];
     XCTAssertTrue(self.setupViewModel.currentNumberOfRoundsINT == 4);
 }
 
 -(void)testNegativeIncrementOfNumberOfRounds {
-    //Starts with 3 rounds
     [self.setupViewModel numberOfRoundsNegativeIncrement];
     XCTAssertTrue(self.setupViewModel.currentNumberOfRoundsINT == 2);
 }
@@ -113,6 +97,8 @@
 
 -(void)testPositiveIncrementOfRoundTime {
     [self.setupViewModel roundTimePositiveIncrement];
+    
+    
     XCTAssertTrue(self.setupViewModel.currentRoundTimeINT == 310);
 }
 

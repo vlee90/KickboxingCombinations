@@ -26,14 +26,14 @@
 -(instancetype)initWithStateProperties {
     if (self = [super init]) {
         self.helper = [[Helper alloc] init];
-        self.typeArray = @[@"Beginner", @"Advanced"];
-        self.currentWorkoutType = [self.typeArray objectAtIndex:0];
-        self.currentNumberOfRoundsINT = 3;
-        self.currentRoundTimeINT = 300;
-        self.currentRestTimeINT = 60;
-        self.currentWarningTimeINT = 10;
+        self.typeArray = [WorkoutManager singleton].workoutTypeArray;
+        self.currentWorkoutType = [[WorkoutManager singleton].workoutTypeArray objectAtIndex:0];
+        self.currentNumberOfRoundsINT = [WorkoutManager singleton].workout.rounds;
+        self.currentRoundTimeINT = [WorkoutManager singleton].workout.roundTime;
+        self.currentRestTimeINT = [WorkoutManager singleton].workout.restTime;
+        self.currentWarningTimeINT = [WorkoutManager singleton].workout.countdownTimer;
+
         [self updateINTtoSTRING];
-        [self createWorkout];
     }
     return self;
 }
@@ -52,12 +52,6 @@
     ComboListViewModel *comboListViewModel = [[ComboListViewModel alloc] init];
     comboListViewController.comboListViewModel = comboListViewModel;
     return comboListViewController;
-}
-
-
-
--(void)createWorkout {
-    [WorkoutManager singleton].workout = [[Workout alloc] initWithType:self.currentWorkoutType withRoundTimerOf:self.currentRoundTimeINT withRestTimeOf:self.currentRestTimeINT withNumberOfRounds:self.currentNumberOfRoundsINT withCountdownTimer:self.currentWarningTimeINT];
 }
 
 -(void)typePositiveIncrement {

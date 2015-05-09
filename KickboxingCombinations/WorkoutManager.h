@@ -10,12 +10,16 @@
 #import "Combination.h"
 #import "Workout.h"
 
+//  Given an array of combintations - this should be able to fire off workout cominbations.
+//  I don't want this class to communicate at all with the technique manager. They will pass information to each other via the viewModels.
 @interface WorkoutManager : NSObject
 
-@property (strong, nonatomic) Workout *workout;)
+@property (strong, nonatomic) Workout *workout;
+@property (strong, nonatomic) NSArray *workoutTypeArray;
 
 +(instancetype)singleton;
 
--(Combination *)callCombination;
+-(void)setWorkoutCombintationList:(NSArray *)comboList;
+-(void)callCombination;
 
 @end
